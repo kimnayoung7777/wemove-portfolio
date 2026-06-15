@@ -35,18 +35,4 @@ public class WebConfig implements WebMvcConfigurer {
         .maxAge(3600);
   }
 
-  @Bean
-  public CorsFilter corsFilter() {
-    CorsConfiguration configuration = new CorsConfiguration();
-    configuration.setAllowedOrigins(allowedOrigins());
-    configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
-    configuration.setAllowedHeaders(List.of("*"));
-    configuration.setExposedHeaders(List.of("Set-Cookie"));
-    configuration.setAllowCredentials(true);
-    configuration.setMaxAge(3600L);
-
-    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-    source.registerCorsConfiguration("/api/**", configuration);
-    return new CorsFilter(source);
-  }
 }
