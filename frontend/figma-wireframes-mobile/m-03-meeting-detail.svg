@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932" fill="none">
+  <title>WeMove 모바일 모임상세</title>
+  <defs>
+    <linearGradient id="primaryButton" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="heroOverlay" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10213e"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="430" height="932" fill="#f6f7f8"/>
+  <rect x="16" y="16" width="398" height="74" rx="22" fill="#fff" stroke="#e5e7eb"/>
+<rect x="28" y="34" width="40" height="40" rx="20" fill="#2563eb" stroke="#2563eb"/>
+<text x="48" y="60" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#fff" text-anchor="middle"><tspan x="48" dy="0">W</tspan></text>
+<text x="80" y="60" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="800" fill="#111827" text-anchor="start"><tspan x="80" dy="0">WeMove</tspan></text>
+<rect x="28" y="102" width="386" height="48" rx="16" fill="#fff" stroke="#e5e7eb"/>
+<text x="56" y="132" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="56" dy="0">모임, 지역, 운동 종목을 검색해보세요</tspan></text>
+<rect x="290" y="34" width="58" height="34" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="319" y="56" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="middle"><tspan x="319" dy="0">로그인</tspan></text>
+<rect x="356" y="34" width="58" height="34" rx="14" fill="url(#primaryButton)" stroke="#2563eb"/>
+<text x="385" y="56" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="385" dy="0">가입</tspan></text>
+<rect x="16" y="164" width="398" height="194" rx="22" fill="url(#heroOverlay)" stroke="transparent"/>
+<text x="34" y="240" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="800" fill="#fff" text-anchor="start"><tspan x="34" dy="0">야당역 5km 러닝 크루 모집</tspan></text>
+<text x="34" y="278" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#dbeafe" text-anchor="start"><tspan x="34" dy="0">퇴근 후 가볍게 뛰는 5km 러닝 모임입니다.</tspan></text>
+<rect x="16" y="374" width="398" height="114" rx="18" fill="#fff" stroke="#e5e7eb"/>
+<text x="34" y="410" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="start"><tspan x="34" dy="0">장소  야당역 2번 출구</tspan></text>
+<text x="34" y="434" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">시간  오늘 20:00</tspan></text>
+<text x="34" y="458" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">인원  6 / 10명</tspan></text>
+<rect x="16" y="504" width="398" height="154" rx="18" fill="#fff" stroke="#e5e7eb"/>
+<text x="34" y="540" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#111827" text-anchor="start"><tspan x="34" dy="0">모임 정보</tspan></text>
+<text x="34" y="574" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">모임 방식  1회성 모임</tspan></text>
+<text x="34" y="600" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">반복 방식  없음</tspan></text>
+<text x="34" y="626" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">준비물  편한 운동복, 물, 이어폰</tspan></text>
+<rect x="16" y="676" width="122" height="44" rx="14" fill="url(#primaryButton)" stroke="#2563eb"/>
+<text x="77" y="703" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="77" dy="0">참가 신청</tspan></text>
+<rect x="146" y="676" width="76" height="44" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="184" y="703" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="middle"><tspan x="184" dy="0">수정</tspan></text>
+<rect x="230" y="676" width="132" height="44" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="296" y="703" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="middle"><tspan x="296" dy="0">신청자 관리</tspan></text>
+<rect x="16" y="738" width="398" height="160" rx="18" fill="#fff" stroke="#e5e7eb"/>
+<text x="34" y="774" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#111827" text-anchor="start"><tspan x="34" dy="0">댓글 및 문의</tspan></text>
+<text x="34" y="806" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">헬린이탈출  초보도 괜찮을까요?</tspan></text>
+<text x="34" y="834" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">배드민턴민지  주차 가능한가요?</tspan></text>
+
+<rect x="34" y="852" width="270" height="34" rx="14" fill="#fff" stroke="#e5e7eb"/>
+<text x="48" y="874" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="48" dy="0">댓글 남기기</tspan></text>
+<rect x="312" y="852" width="84" height="34" rx="14" fill="url(#primaryButton)" stroke="#2563eb"/>
+<text x="354" y="874" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="354" dy="0">등록</tspan></text>
+</svg>

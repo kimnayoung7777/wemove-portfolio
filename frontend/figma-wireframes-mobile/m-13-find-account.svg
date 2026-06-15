@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932" fill="none">
+  <title>WeMove 모바일 계정 찾기</title>
+  <defs>
+    <linearGradient id="primaryButton" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="heroOverlay" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10213e"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="430" height="932" fill="#f6f7f8"/>
+  <rect x="0" y="0" width="430" height="932" rx="0" fill="#0f172a" stroke="transparent"/>
+<rect x="0" y="0" width="430" height="932" rx="0" fill="url(#heroOverlay)" stroke="transparent"/>
+<rect x="20" y="22" width="138" height="44" rx="18" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.18)"/>
+<rect x="28" y="28" width="30" height="30" rx="15" fill="#2563eb" stroke="#2563eb"/>
+<text x="43" y="49" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#fff" text-anchor="middle"><tspan x="43" dy="0">W</tspan></text>
+<text x="70" y="50" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="16" font-weight="800" fill="#fff" text-anchor="start"><tspan x="70" dy="0">WeMove</tspan></text>
+<rect x="20" y="134" width="390" height="520" rx="28" fill="rgba(255,255,255,0.96)" stroke="#e5e7eb"/>
+<rect x="46" y="162" width="76" height="26" rx="999" fill="#eff6ff" stroke="#eff6ff"/>
+<text x="84" y="180" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="11" font-weight="700" fill="#2563eb" text-anchor="middle"><tspan x="84" dy="0">계정 찾기</tspan></text>
+<text x="46" y="220" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="800" fill="#111827" text-anchor="start"><tspan x="46" dy="0">계정 정보가 기억나지 않아도</tspan><tspan x="46" dy="37">안전하게 다시 연결할 수 있어요</tspan></text>
+<rect x="46" y="300" width="90" height="32" rx="999" fill="#eff6ff" stroke="#bfdbfe"/>
+<text x="91" y="321" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#2563eb" text-anchor="middle"><tspan x="91" dy="0">아이디 찾기</tspan></text>
+<rect x="140" y="300" width="114" height="32" rx="999" fill="#fff" stroke="#e5e7eb"/>
+<text x="197" y="321" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#6b7280" text-anchor="middle"><tspan x="197" dy="0">비밀번호 재설정</tspan></text>
+<text x="46" y="348" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="46" dy="0">이름 또는 닉네임</tspan></text>
+<rect x="46" y="356" width="340" height="44" rx="14" fill="#fff" stroke="#e5e7eb"/>
+<text x="60" y="383" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="60" dy="0">러너민수</tspan></text>
+<text x="46" y="418" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="46" dy="0">가입 이메일</tspan></text>
+<rect x="46" y="426" width="244" height="44" rx="14" fill="#fff" stroke="#e5e7eb"/>
+<text x="60" y="453" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="60" dy="0">runner@wemove.kr</tspan></text>
+<rect x="300" y="444" width="86" height="44" rx="14" fill="url(#primaryButton)" stroke="#2563eb"/>
+<text x="343" y="471" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="343" dy="0">인증</tspan></text>
+<text x="46" y="488" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="46" dy="0">인증번호</tspan></text>
+<rect x="46" y="496" width="340" height="44" rx="14" fill="#fff" stroke="#e5e7eb"/>
+<text x="60" y="523" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="60" dy="0">123456</tspan></text>
+<text x="46" y="558" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="46" dy="0">결과 안내</tspan></text>
+<rect x="46" y="566" width="340" height="44" rx="14" fill="#fff" stroke="#e5e7eb"/>
+<text x="60" y="593" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="60" dy="0">가입된 아이디: wemove_runner</tspan></text>
+<rect x="46" y="646" width="340" height="48" rx="14" fill="url(#primaryButton)" stroke="#2563eb"/>
+<text x="216" y="675" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="216" dy="0">아이디 확인</tspan></text>
+<text x="216" y="728" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="middle"><tspan x="216" dy="0">로그인으로 돌아가기 · 회원가입</tspan></text>
+</svg>

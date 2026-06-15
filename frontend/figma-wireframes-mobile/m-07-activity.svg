@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932" fill="none">
+  <title>WeMove 모바일 내활동</title>
+  <defs>
+    <linearGradient id="primaryButton" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="heroOverlay" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10213e"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="430" height="932" fill="#f6f7f8"/>
+  <rect x="16" y="16" width="398" height="74" rx="22" fill="#fff" stroke="#e5e7eb"/>
+<rect x="28" y="34" width="40" height="40" rx="20" fill="#2563eb" stroke="#2563eb"/>
+<text x="48" y="60" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#fff" text-anchor="middle"><tspan x="48" dy="0">W</tspan></text>
+<text x="80" y="60" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="800" fill="#111827" text-anchor="start"><tspan x="80" dy="0">WeMove</tspan></text>
+<rect x="28" y="102" width="386" height="48" rx="16" fill="#fff" stroke="#e5e7eb"/>
+<text x="56" y="132" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="56" dy="0">모임, 지역, 운동 종목을 검색해보세요</tspan></text>
+<rect x="290" y="34" width="58" height="34" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="319" y="56" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="middle"><tspan x="319" dy="0">로그인</tspan></text>
+<rect x="356" y="34" width="58" height="34" rx="14" fill="url(#primaryButton)" stroke="#2563eb"/>
+<text x="385" y="56" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="385" dy="0">가입</tspan></text>
+<text x="16" y="186" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="800" fill="#111827" text-anchor="start"><tspan x="16" dy="0">내 활동</tspan></text>
+<rect x="16" y="214" width="398" height="88" rx="18" fill="#fff" stroke="#e5e7eb"/>
+<text x="34" y="248" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">참여 기록 18   ·   작성 댓글 24</tspan></text>
+<text x="34" y="276" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">좋아요 36   ·   완료 모임 9</tspan></text>
+<rect x="16" y="320" width="398" height="188" rx="18" fill="#fff" stroke="#e5e7eb"/>
+<text x="34" y="356" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#111827" text-anchor="start"><tspan x="34" dy="0">최근 활동</tspan></text>
+<text x="34" y="390" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">야당역 러닝 모임에 참가 신청했어요.</tspan></text>
+<text x="34" y="424" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">운정 풋살장 경기 신청이 승인되었어요.</tspan></text>
+<text x="34" y="458" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">후기 작성이 가능한 모임이 생겼어요.</tspan></text>
+<rect x="16" y="528" width="398" height="152" rx="18" fill="#fff" stroke="#e5e7eb"/>
+<rect x="30" y="546" width="94" height="94" rx="16" fill="#eef2f7" stroke="#e5e7eb"/>
+<rect x="138" y="546" width="52" height="26" rx="999" fill="#eff6ff" stroke="#eff6ff"/>
+<text x="164" y="564" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="11" font-weight="700" fill="#2563eb" text-anchor="middle"><tspan x="164" dy="0">헬스</tspan></text>
+<rect x="196" y="546" width="52" height="26" rx="999" fill="#ecfdf3" stroke="#ecfdf3"/>
+<text x="222" y="564" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="11" font-weight="700" fill="#15803d" text-anchor="middle"><tspan x="222" dy="0">모집중</tspan></text>
+<text x="138" y="588" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#111827" text-anchor="start"><tspan x="138" dy="0">헬린이 루틴 공유 모임</tspan></text>
+<text x="138" y="618" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#6b7280" text-anchor="start"><tspan x="138" dy="0">운동 루틴과 식단을 편하게 나누는 소규모 모임입니다.</tspan></text>
+<text x="138" y="644" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="138" dy="0">금촌동 피트니스 센터 · 내일 19:00</tspan></text>
+<rect x="302" y="630" width="90" height="36" rx="14" fill="url(#primaryButton)" stroke="#2563eb"/>
+<text x="347" y="653" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="347" dy="0">참가 신청</tspan></text>
+</svg>

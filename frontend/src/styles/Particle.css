@@ -1,0 +1,81 @@
+/* =========================================
+   1. 애니메이션 Keyframes
+========================================= */
+/* 나뭇잎 마우스 트래킹 */
+@keyframes leaf-fade-out {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(-20px, 60px) rotate(180deg) scale(0);
+        opacity: 0;
+    }
+}
+
+/* 비눗방울 둥둥 떠다니기 */
+@keyframes float-around {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* 반딧불이 반짝임 */
+@keyframes firefly-glow {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1.3);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.8);
+    }
+}
+
+
+/* =========================================
+   2. 파티클 및 디자인 요소 클래스
+========================================= */
+/* 마우스 따라다니는 나뭇잎 */
+.particle-leaf {
+    position: fixed !important; /* 화면 밀림 완벽 방지 */
+    background-color: #2e7d32;
+    border-radius: 80% 0 80% 0;
+    pointer-events: none;
+    opacity: 0.7;
+    z-index: 9999;
+    animation: leaf-fade-out 1.5s ease-out forwards;
+}
+
+/* 마우스 피하는 비눗방울 */
+.eco-bubble {
+    position: fixed !important;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    filter: blur(2px);
+    z-index: 9999;
+    pointer-events: none;
+    animation: float-around 6s infinite ease-in-out;
+}
+
+/* 배경 반딧불이 */
+.firefly {
+    position: fixed !important;
+    width: 4px;
+    height: 4px;
+    background-color: #e6ee9c;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px #cddc39, 0 0 20px 5px #8bc34a;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    animation: firefly-glow infinite alternate ease-in-out;
+}
+

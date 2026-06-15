@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="notification">
+
+    <insert id="insertNotification"
+            parameterType="kr.co.iei.notification.model.vo.NotificationRecord"
+            useGeneratedKeys="true"
+            keyProperty="notificationId">
+        INSERT INTO notifications (
+            userId,
+            type,
+            title,
+            message,
+            targetType,
+            targetId,
+            isRead,
+            createdAt
+        )
+        VALUES (
+            #{userId},
+            #{type},
+            #{title},
+            #{message},
+            #{targetType},
+            #{targetId},
+            COALESCE(#{isRead}, 0),
+            COALESCE(#{createdAt}, NOW())
+        )
+    </insert>
+
+    <select id="selectNotifications"
+            resultType="kr.co.iei.notification.model.vo.NotificationRecord">
+        SELECT
+            notificationId,
+            userId,
+            type,
+            title,
+            message,
+            targetType,
+            targetId,
+            isRead,
+            createdAt
+        FROM notifications
+        WHERE userId = #{userId}
+        ORDER BY createdAt DESC, notificationId DESC
+        LIMIT #{limit}
+    </select>
+
+    <select id="selectNoticeNotifications"
+            resultType="kr.co.iei.notification.model.vo.NotificationRecord">
+        SELECT
+            MIN(notificationId) AS notificationId,
+            MIN(userId) AS userId,
+            type,
+            title,
+            message,
+            targetType,
+            targetId,
+            0 AS isRead,
+            createdAt
+        FROM notifications
+        WHERE type = 'notice'
+        GROUP BY
+            type,
+            title,
+            message,
+            targetType,
+            targetId,
+            createdAt
+        ORDER BY createdAt ASC, notificationId ASC
+    </select>
+
+    <select id="countUnread" resultType="int">
+        SELECT COUNT(*)
+        FROM notifications
+        WHERE userId = #{userId}
+          AND isRead = 0
+    </select>
+
+    <update id="markAllRead">
+        UPDATE notifications
+        SET isRead = 1
+        WHERE userId = #{userId}
+          AND isRead = 0
+    </update>
+
+    <delete id="deleteNotification">
+        DELETE FROM notifications
+        WHERE userId = #{userId}
+          AND notificationId = #{notificationId}
+    </delete>
+
+    <delete id="deleteAll">
+        DELETE FROM notifications
+        WHERE userId = #{userId}
+    </delete>
+
+    <select id="selectActiveUserIds" resultType="long">
+        SELECT userId
+        FROM users
+        WHERE status = 'ACTIVE'
+    </select>
+
+</mapper>

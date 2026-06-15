@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1024" viewBox="0 0 1600 1024" fill="none">
+  <title>WeMove 홈</title>
+  <defs>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="rgba(15,23,42,0.03)"/>
+    </filter>
+    <linearGradient id="primaryButton" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="heroOverlay" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10213e"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1600" height="1024" fill="#f6f7f8"/>
+  
+    <rect x="24" y="24" width="1552" height="72" rx="22" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" filter="url(#cardShadow)"/>
+    <rect x="40" y="43" width="34" height="34" rx="17" fill="#2563eb" stroke="#2563eb" stroke-width="1" opacity="1" />
+<text x="57" y="65" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="57" dy="0">W</tspan></text>
+    <text x="88" y="68" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="26" font-weight="800" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="88" dy="0">WeMove</tspan></text>
+    <rect x="192" y="41" width="1162" height="48" rx="16" fill="#fbfbfb" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+    <text x="240" y="71" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#8b95a1" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="240" dy="0">모임, 지역, 운동 종목 검색</tspan></text>
+    <rect x="1388" y="41" width="94" height="48" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<text x="1435" y="71" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="15" font-weight="700" fill="#111827" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="1435" dy="0">로그인</tspan></text>
+    <rect x="1490" y="41" width="86" height="48" rx="12" fill="url(#primaryButton)" stroke="#2563eb" stroke-width="1" opacity="1" />
+<text x="1533" y="71" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="1533" dy="0">회원가입</tspan></text>
+  
+<rect x="24" y="116" width="190" height="560" rx="22" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" filter="url(#cardShadow)"/>
+<rect x="40" y="140" width="158" height="42" rx="14" fill="#eff6ff" stroke="#dbeafe" stroke-width="1" opacity="1" />
+<text x="84" y="167" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="15" font-weight="700" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="84" dy="0">홈</tspan></text>
+<rect x="54" y="144" width="34" height="34" rx="17" fill="#2563eb" stroke="#2563eb" stroke-width="1" opacity="1" />
+<text x="71" y="166" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="71" dy="0">•</tspan></text>
+<rect x="40" y="190" width="158" height="42" rx="14" fill="transparent" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="84" y="217" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="15" font-weight="600" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="84" dy="0">모임찾기</tspan></text>
+<rect x="54" y="194" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="71" y="216" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="71" dy="0">•</tspan></text>
+<rect x="40" y="240" width="158" height="42" rx="14" fill="transparent" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="84" y="267" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="15" font-weight="600" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="84" dy="0">내활동</tspan></text>
+<rect x="54" y="244" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="71" y="266" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="71" dy="0">•</tspan></text>
+<rect x="40" y="290" width="158" height="42" rx="14" fill="transparent" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="84" y="317" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="15" font-weight="600" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="84" dy="0">마이페이지</tspan></text>
+<rect x="54" y="294" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="71" y="316" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="71" dy="0">•</tspan></text>
+<rect x="40" y="430" width="158" height="220" rx="18" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<text x="58" y="458" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="58" dy="0">관심 운동</tspan></text>
+<rect x="56" y="474" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="73" y="496" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="73" dy="0">•</tspan></text>
+<text x="94" y="496" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="94" dy="0">러닝</tspan></text>
+<rect x="56" y="510" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="73" y="532" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="73" dy="0">•</tspan></text>
+<text x="94" y="532" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="94" dy="0">헬스</tspan></text>
+<rect x="56" y="546" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="73" y="568" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="73" dy="0">•</tspan></text>
+<text x="94" y="568" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="94" dy="0">풋살</tspan></text>
+<rect x="56" y="582" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="73" y="604" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="73" dy="0">•</tspan></text>
+<text x="94" y="604" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="94" dy="0">등산</tspan></text>
+<rect x="56" y="618" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="73" y="640" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="73" dy="0">•</tspan></text>
+<text x="94" y="640" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="94" dy="0">배드민턴</tspan></text>
+<rect x="232" y="116" width="800" height="300" rx="22" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" filter="url(#cardShadow)"/>
+<rect x="252" y="136" width="760" height="260" rx="20" fill="url(#heroOverlay)" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="284" y="180" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#dbeafe" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="284" dy="0">LOCAL FITNESS COMMUNITY</tspan></text>
+<text x="284" y="244" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="800" fill="#ffffff" text-anchor="start" letter-spacing="-0.03em" opacity="1"><tspan x="284" dy="0">이번 주말엔 새로운 크루와</tspan><tspan x="284" dy="41">같이 운동할 사람을 찾아보세요</tspan></text>
+<text x="284" y="320" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="15" font-weight="500" fill="#dbeafe" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="284" dy="0">관심 운동과 지역을 고르면 지금 참여 가능한 모임을 바로 볼 수 있어요.</tspan></text>
+<rect x="284" y="342" width="560" height="60" rx="18" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.24)" stroke-width="1" opacity="1" />
+<rect x="294" y="352" width="228" height="40" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1" opacity="1" />
+<rect x="530" y="352" width="190" height="40" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1" opacity="1" />
+<rect x="728" y="352" width="116" height="40" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1" opacity="1" />
+<rect x="852" y="352" width="120" height="40" rx="12" fill="url(#primaryButton)" stroke="#2563eb" stroke-width="1" opacity="1" />
+<text x="912" y="378" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="912" dy="0">모임 찾기</tspan></text>
+
+    <rect x="1048" y="116" width="270" height="220" rx="18" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" filter="url(#cardShadow)"/>
+    <text x="1066" y="144" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="16" font-weight="800" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1066" dy="0">우리 동네 현황</tspan></text>
+    <text x="1300" y="144" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="700" fill="#8b95a1" text-anchor="end" letter-spacing="0" opacity="1"><tspan x="1300" dy="0">경기 파주시 운정동</tspan></text>
+    <rect x="1066" y="174" width="110" height="78" rx="16" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+    <rect x="1190" y="174" width="110" height="78" rx="16" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+    <rect x="1066" y="262" width="110" height="58" rx="16" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+    <rect x="1190" y="262" width="110" height="58" rx="16" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+    <text x="1084" y="208" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1084" dy="0">모집중 모임</tspan></text>
+    <text x="1084" y="236" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20" font-weight="800" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1084" dy="0">24개</tspan></text>
+    <text x="1208" y="208" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1208" dy="0">참여 예정 인원</tspan></text>
+    <text x="1208" y="236" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20" font-weight="800" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1208" dy="0">128명</tspan></text>
+    <text x="1084" y="292" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1084" dy="0">오늘 진행 모임</tspan></text>
+    <text x="1084" y="313" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1084" dy="0">5개</tspan></text>
+    <text x="1208" y="292" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1208" dy="0">신규 댓글</tspan></text>
+    <text x="1208" y="313" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1208" dy="0">43개</tspan></text>
+  
+<rect x="1336" y="116" width="240" height="268" rx="18" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" filter="url(#cardShadow)"/>
+
+    <line x1="1354" y1="132" x2="1354" y2="156" stroke="#2563eb" stroke-width="4"/>
+    <text x="1370" y="150" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1370" dy="0">실시간 인기모임</tspan></text>
+    
+  
+<text x="1360" y="192" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">1</tspan></text>
+<text x="1552" y="192" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="end" letter-spacing="0" opacity="1"><tspan x="1552" dy="0">야당역 5km 러닝 크루</tspan></text>
+<text x="1360" y="216" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#8b95a1" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">18</tspan></text>
+<line x1="1360" y1="230" x2="1552" y2="230" stroke="#f1f3f5" stroke-width="1"/>
+<text x="1360" y="262" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">2</tspan></text>
+<text x="1552" y="262" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="end" letter-spacing="0" opacity="1"><tspan x="1552" dy="0">운정 풋살장 저녁 경기</tspan></text>
+<text x="1360" y="286" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#8b95a1" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">14</tspan></text>
+<line x1="1360" y1="300" x2="1552" y2="300" stroke="#f1f3f5" stroke-width="1"/>
+<text x="1360" y="332" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">3</tspan></text>
+<text x="1552" y="332" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="end" letter-spacing="0" opacity="1"><tspan x="1552" dy="0">헬린이 루틴 공유</tspan></text>
+<text x="1360" y="356" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#8b95a1" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">10</tspan></text>
+<rect x="1336" y="402" width="240" height="210" rx="18" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" filter="url(#cardShadow)"/>
+
+    <line x1="1354" y1="418" x2="1354" y2="442" stroke="#2563eb" stroke-width="4"/>
+    <text x="1370" y="436" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1370" dy="0">이번 주 일정</tspan></text>
+    
+  
+<text x="1360" y="478" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">오늘 20:00</tspan></text>
+<text x="1552" y="478" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="end" letter-spacing="0" opacity="1"><tspan x="1552" dy="0">야당역 러닝 모임</tspan></text>
+<line x1="1360" y1="516" x2="1552" y2="516" stroke="#f1f3f5" stroke-width="1"/>
+<text x="1360" y="534" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">내일 07:00</tspan></text>
+<text x="1552" y="534" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="end" letter-spacing="0" opacity="1"><tspan x="1552" dy="0">운정 헬스 모임</tspan></text>
+<line x1="1360" y1="572" x2="1552" y2="572" stroke="#f1f3f5" stroke-width="1"/>
+<text x="1360" y="590" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">토 18:00</tspan></text>
+<text x="1552" y="590" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="end" letter-spacing="0" opacity="1"><tspan x="1552" dy="0">배드민턴 정기 모임</tspan></text>
+<line x1="1360" y1="628" x2="1552" y2="628" stroke="#f1f3f5" stroke-width="1"/>
+<text x="1360" y="646" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">일 18:00</tspan></text>
+<text x="1552" y="646" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="end" letter-spacing="0" opacity="1"><tspan x="1552" dy="0">풋살 매치</tspan></text>
+<rect x="1336" y="630" width="240" height="160" rx="18" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" filter="url(#cardShadow)"/>
+
+    <line x1="1354" y1="646" x2="1354" y2="670" stroke="#2563eb" stroke-width="4"/>
+    <text x="1370" y="664" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1370" dy="0">최근 활동</tspan></text>
+    
+  
+<text x="1360" y="706" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">러너지니님</tspan></text>
+<text x="1552" y="706" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="end" letter-spacing="0" opacity="1"><tspan x="1552" dy="0">5분 전</tspan></text>
+<text x="1360" y="730" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#8b95a1" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">댓글을 남겼어요.</tspan></text>
+<line x1="1360" y1="744" x2="1552" y2="744" stroke="#f1f3f5" stroke-width="1"/>
+<text x="1360" y="776" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">헬린이탈출님</tspan></text>
+<text x="1552" y="776" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="end" letter-spacing="0" opacity="1"><tspan x="1552" dy="0">15분 전</tspan></text>
+<text x="1360" y="800" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#8b95a1" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="1360" dy="0">모임을 생성했어요.</tspan></text>
+<rect x="232" y="432" width="800" height="88" rx="18" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" filter="url(#cardShadow)"/>
+<rect x="248" y="446" width="70" height="60" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<rect x="266" y="456" width="34" height="34" rx="17" fill="#2563eb" stroke="#2563eb" stroke-width="1" opacity="1" />
+<text x="283" y="478" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="283" dy="0">•</tspan></text>
+<text x="283" y="492" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#111827" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="283" dy="0">전체</tspan></text>
+<rect x="326" y="446" width="70" height="60" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<rect x="344" y="456" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="361" y="478" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="361" dy="0">•</tspan></text>
+<text x="361" y="492" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#111827" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="361" dy="0">러닝</tspan></text>
+<rect x="404" y="446" width="70" height="60" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<rect x="422" y="456" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="439" y="478" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="439" dy="0">•</tspan></text>
+<text x="439" y="492" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#111827" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="439" dy="0">헬스</tspan></text>
+<rect x="482" y="446" width="70" height="60" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<rect x="500" y="456" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="517" y="478" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="517" dy="0">•</tspan></text>
+<text x="517" y="492" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#111827" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="517" dy="0">풋살</tspan></text>
+<rect x="560" y="446" width="70" height="60" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<rect x="578" y="456" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="595" y="478" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="595" dy="0">•</tspan></text>
+<text x="595" y="492" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#111827" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="595" dy="0">배드민턴</tspan></text>
+<rect x="638" y="446" width="70" height="60" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<rect x="656" y="456" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="673" y="478" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="673" dy="0">•</tspan></text>
+<text x="673" y="492" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#111827" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="673" dy="0">농구</tspan></text>
+<rect x="716" y="446" width="70" height="60" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<rect x="734" y="456" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="751" y="478" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="751" dy="0">•</tspan></text>
+<text x="751" y="492" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#111827" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="751" dy="0">등산</tspan></text>
+<rect x="794" y="446" width="70" height="60" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<rect x="812" y="456" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="829" y="478" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="829" dy="0">•</tspan></text>
+<text x="829" y="492" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#111827" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="829" dy="0">라이딩</tspan></text>
+<rect x="872" y="446" width="70" height="60" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<rect x="890" y="456" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="907" y="478" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="907" dy="0">•</tspan></text>
+<text x="907" y="492" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#111827" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="907" dy="0">요가</tspan></text>
+<rect x="950" y="446" width="70" height="60" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<rect x="968" y="456" width="34" height="34" rx="17" fill="#f3f4f6" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="985" y="478" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="800" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="985" dy="0">•</tspan></text>
+<text x="985" y="492" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#111827" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="985" dy="0">테니스</tspan></text>
+<text x="232" y="560" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="26" font-weight="800" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="232" dy="0">오늘의 추천 모임</tspan></text>
+<rect x="232" y="586" width="54" height="34" rx="999" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" opacity="1" />
+<text x="259" y="608" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="259" dy="0">전체</tspan></text>
+<rect x="306" y="586" width="60" height="34" rx="999" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<text x="336" y="608" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="336" dy="0">모집중</tspan></text>
+<rect x="380" y="586" width="74" height="34" rx="999" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<text x="417" y="608" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="417" dy="0">마감임박</tspan></text>
+<rect x="454" y="586" width="88" height="34" rx="999" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<text x="498" y="608" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="498" dy="0">초보 환영</tspan></text>
+<rect x="528" y="586" width="88" height="34" rx="999" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+<text x="572" y="608" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="572" dy="0">정기 모임</tspan></text>
+
+    <rect x="232" y="636" width="1040" height="174" rx="18" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" filter="url(#cardShadow)"/>
+    <rect x="252" y="656" width="180" height="126" rx="16" fill="#eef2f7" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+    <rect x="452" y="656" width="56" height="28" rx="999" fill="#eff6ff" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="480" y="675" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#2563eb" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="480" dy="0">러닝</tspan></text>
+    <rect x="518" y="656" width="56" height="28" rx="999" fill="#ecfdf3" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="546" y="675" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#15803d" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="546" dy="0">모집중</tspan></text>
+    <text x="452" y="706" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="22" font-weight="800" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="452" dy="0">야당역 5km 러닝 크루 모집</tspan></text>
+    <text x="452" y="738" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="452" dy="0">퇴근 후 가볍게 뛰는 5km 러닝 모임입니다. 초보자도 맞출 수 있는 페이스로 진행합니다.</tspan></text>
+    <text x="452" y="770" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#8b95a1" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="452" dy="0">야당역 2번 출구   ·   오늘 20:00   ·   6 / 10명</tspan></text>
+    <text x="452" y="796" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#8b95a1" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="452" dy="0">러너민수   ·   매너점수 4.8</tspan></text>
+    <rect x="1168" y="754" width="84" height="40" rx="12" fill="url(#primaryButton)" stroke="#2563eb" stroke-width="1" opacity="1" />
+<text x="1210" y="780" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="1210" dy="0">참가 신청</tspan></text>
+    <rect x="1030" y="754" width="40" height="40" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+    <rect x="1076" y="754" width="40" height="40" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+    <rect x="1122" y="754" width="40" height="40" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+  
+
+    <rect x="232" y="826" width="1040" height="174" rx="18" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" filter="url(#cardShadow)"/>
+    <rect x="252" y="846" width="180" height="126" rx="16" fill="#eef2f7" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+    <rect x="452" y="846" width="56" height="28" rx="999" fill="#eff6ff" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="480" y="865" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#2563eb" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="480" dy="0">풋살</tspan></text>
+    <rect x="518" y="846" width="56" height="28" rx="999" fill="#ecfdf3" stroke="transparent" stroke-width="1" opacity="1" />
+<text x="546" y="865" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#15803d" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="546" dy="0">모집중</tspan></text>
+    <text x="452" y="896" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="22" font-weight="800" fill="#111827" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="452" dy="0">운정 풋살장 토요일 저녁 경기</tspan></text>
+    <text x="452" y="928" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="452" dy="0">친목 위주 풋살 경기입니다. 실력보다 매너를 중요하게 보고 팀은 현장에서 나눕니다.</tspan></text>
+    <text x="452" y="960" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#8b95a1" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="452" dy="0">운정 스포츠파크   ·   오늘 18:30   ·   8 / 10명</tspan></text>
+    <text x="452" y="986" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#8b95a1" text-anchor="start" letter-spacing="0" opacity="1"><tspan x="452" dy="0">풋살지훈   ·   매너점수 4.8</tspan></text>
+    <rect x="1168" y="944" width="84" height="40" rx="12" fill="url(#primaryButton)" stroke="#2563eb" stroke-width="1" opacity="1" />
+<text x="1210" y="970" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0" opacity="1"><tspan x="1210" dy="0">참가 신청</tspan></text>
+    <rect x="1030" y="944" width="40" height="40" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+    <rect x="1076" y="944" width="40" height="40" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+    <rect x="1122" y="944" width="40" height="40" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" opacity="1" />
+  
+</svg>

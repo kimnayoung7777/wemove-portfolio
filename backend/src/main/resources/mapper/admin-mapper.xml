@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="admin">
+
+    <select id="selectSummary" resultType="kr.co.iei.admin.model.vo.AdminSummary">
+        SELECT
+            (SELECT COUNT(*) FROM users WHERE role != 'ADMIN') AS total_members,
+            (SELECT COUNT(*) FROM meetings WHERE deletedAt IS NULL) AS total_meetings,
+            (SELECT COUNT(*) FROM reports WHERE status = 'PENDING') AS pending_reports,
+            (SELECT COUNT(*) FROM sports) AS total_sports
+    </select>
+
+    <select id="selectMembers" resultType="kr.co.iei.admin.model.vo.AdminMemberResponse">
+        SELECT
+            u.userId,
+            u.loginId,
+            u.nickname,
+            u.profileImage,
+            CASE
+                WHEN r.regionId IS NULL THEN NULL
+                ELSE CONCAT(r.sido, ' ', r.sigungu, ' ', r.dong)
+            END AS regionName,
+            u.role,
+            u.status,
+            u.suspendedUntil
+        FROM users u
+        LEFT JOIN regions r ON u.regionId = r.regionId
+        ORDER BY u.userId DESC
+    </select>
+
+    <select id="selectRegions" resultType="kr.co.iei.admin.model.vo.AdminRegionResponse">
+        SELECT
+            regionId,
+            sido,
+            sigungu,
+            dong
+        FROM regions
+        ORDER BY sido ASC, sigungu ASC, dong ASC
+    </select>
+
+    <select id="selectMeetings" resultType="kr.co.iei.admin.model.vo.AdminMeetingResponse">
+        SELECT
+            m.meetingId,
+            m.title,
+            s.name AS sportName,
+            s.category AS sportCategory,
+            CONCAT(r.sido, ' ', r.sigungu, ' ', r.dong) AS regionName,
+            (
+                SELECT COUNT(*)
+                FROM meetingParticipants mp
+                WHERE mp.meetingId = m.meetingId
+                  AND mp.status = 'APPROVED'
+            ) + CASE
+                WHEN EXISTS (
+                    SELECT 1
+                    FROM meetingParticipants hostMp
+                    WHERE hostMp.meetingId = m.meetingId
+                      AND hostMp.userId = m.hostUserId
+                      AND hostMp.status = 'APPROVED'
+                ) THEN 0 ELSE 1
+            END AS approvedCount,
+            m.maxMembers,
+            m.status,
+            u.nickname AS hostNickname,
+            m.meetingDate,
+            m.startTime,
+            m.createdAt
+        FROM meetings m
+        JOIN users u ON m.hostUserId = u.userId
+        JOIN sports s ON m.sportId = s.sportId
+        JOIN regions r ON m.regionId = r.regionId
+        WHERE m.deletedAt IS NULL
+        ORDER BY m.meetingId DESC
+    </select>
+
+    <select id="selectReportTargetUserId" resultType="java.lang.Integer">
+        SELECT targetUserId
+        FROM reports
+        WHERE reportId = #{reportId}
+    </select>
+
+    <select id="selectReportReporterId" resultType="java.lang.Integer">
+        SELECT reporterId
+        FROM reports
+        WHERE reportId = #{reportId}
+    </select>
+
+    <select id="selectReports" resultType="kr.co.iei.admin.model.vo.AdminReportResponse">
+        SELECT
+            r.reportId,
+            r.reason,
+            r.content AS content,
+            r.content AS reportContent,
+            r.content AS detail,
+            r.status,
+            r.createdAt,
+            r.targetUserId,
+            u.nickname AS targetName
+        FROM reports r
+        LEFT JOIN users u ON r.targetUserId = u.userId
+        ORDER BY r.reportId DESC
+    </select>
+
+    <select id="selectHostedMeetingCancelNotificationTargets" resultType="map">
+        SELECT
+            m.meetingId AS meetingId,
+            m.title AS meetingTitle,
+            mp.userId AS userId
+        FROM meetings m
+        JOIN meetingParticipants mp
+          ON mp.meetingId = m.meetingId
+         AND mp.status = 'APPROVED'
+         AND mp.userId != m.hostUserId
+        WHERE m.hostUserId = #{userId}
+          AND m.deletedAt IS NULL
+          AND m.status NOT IN ('COMPLETED', 'CANCELLED')
+    </select>
+
+    <update id="updateReportStatusToProcessed">
+        UPDATE reports
+        SET
+            status = #{status},
+            processedAt = NOW()
+        WHERE reportId = #{reportId}
+    </update>
+
+    <update id="updateMemberStatus">
+        UPDATE users
+        SET
+            status = #{status},
+            suspendedUntil = CASE
+                WHEN #{status} = 'SUSPENDED' THEN DATE_ADD(NOW(), INTERVAL 24 HOUR)
+                ELSE NULL
+            END,
+            suspendReason = CASE
+                WHEN #{status} = 'SUSPENDED' THEN suspendReason
+                ELSE NULL
+            END,
+            updatedAt = NOW()
+        WHERE userId = #{userId}
+    </update>
+
+    <update id="updateMeetingStatus">
+        UPDATE meetings
+        SET
+            status = #{status},
+            updatedAt = NOW()
+        WHERE meetingId = #{meetingId}
+    </update>
+
+    <update id="suspendUser">
+        UPDATE users
+        SET
+            status = 'SUSPENDED',
+            suspendedUntil = DATE_ADD(NOW(), INTERVAL #{suspendDuration} HOUR),
+            suspendReason = #{suspendReason},
+            updatedAt = NOW()
+        WHERE userId = #{userId}
+    </update>
+
+    <update id="cancelMeetingsHostedByUser">
+        UPDATE meetings
+        SET
+            status = 'CANCELLED',
+            deletedAt = COALESCE(deletedAt, NOW()),
+            updatedAt = NOW()
+        WHERE hostUserId = #{userId}
+          AND deletedAt IS NULL
+          AND status NOT IN ('COMPLETED', 'CANCELLED')
+    </update>
+
+    <update id="cancelParticipationsByUser">
+        UPDATE meetingParticipants mp
+        JOIN meetings m ON m.meetingId = mp.meetingId
+        SET
+            mp.status = 'CANCELLED',
+            mp.cancelledAt = NOW()
+        WHERE mp.userId = #{userId}
+          AND mp.status IN ('PENDING', 'APPROVED')
+          AND m.deletedAt IS NULL
+          AND m.status NOT IN ('COMPLETED', 'CANCELLED')
+    </update>
+
+</mapper>

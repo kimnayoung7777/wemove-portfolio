@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932" fill="none">
+  <title>WeMove 모바일 후기</title>
+  <defs>
+    <linearGradient id="primaryButton" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="heroOverlay" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10213e"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="430" height="932" fill="#f6f7f8"/>
+  <rect x="16" y="16" width="398" height="74" rx="22" fill="#fff" stroke="#e5e7eb"/>
+<rect x="28" y="34" width="40" height="40" rx="20" fill="#2563eb" stroke="#2563eb"/>
+<text x="48" y="60" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#fff" text-anchor="middle"><tspan x="48" dy="0">W</tspan></text>
+<text x="80" y="60" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="800" fill="#111827" text-anchor="start"><tspan x="80" dy="0">WeMove</tspan></text>
+<rect x="28" y="102" width="386" height="48" rx="16" fill="#fff" stroke="#e5e7eb"/>
+<text x="56" y="132" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="56" dy="0">모임, 지역, 운동 종목을 검색해보세요</tspan></text>
+<rect x="290" y="34" width="58" height="34" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="319" y="56" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="middle"><tspan x="319" dy="0">로그인</tspan></text>
+<rect x="356" y="34" width="58" height="34" rx="14" fill="url(#primaryButton)" stroke="#2563eb"/>
+<text x="385" y="56" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="385" dy="0">가입</tspan></text>
+<text x="16" y="186" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="800" fill="#111827" text-anchor="start"><tspan x="16" dy="0">후기 작성</tspan></text>
+<rect x="16" y="214" width="398" height="282" rx="18" fill="#fff" stroke="#e5e7eb"/>
+
+<rect x="34" y="246" width="362" height="42" rx="14" fill="#fff" stroke="#e5e7eb"/>
+<text x="48" y="272" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="48" dy="0">모임 선택</tspan></text>
+<text x="34" y="324" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">별점 선택</tspan></text>
+<text x="34" y="360" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700" fill="#f59e0b" text-anchor="start"><tspan x="34" dy="0">★ ★ ★ ★ ☆</tspan></text>
+
+<rect x="34" y="390" width="362" height="76" rx="14" fill="#fff" stroke="#e5e7eb"/>
+<text x="48" y="433" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="48" dy="0">후기 작성</tspan></text>
+<rect x="294" y="516" width="102" height="40" rx="14" fill="url(#primaryButton)" stroke="#2563eb"/>
+<text x="345" y="541" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="345" dy="0">후기 등록</tspan></text>
+<rect x="16" y="574" width="398" height="320" rx="18" fill="#fff" stroke="#e5e7eb"/>
+<text x="34" y="610" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#111827" text-anchor="start"><tspan x="34" dy="0">후기 목록</tspan></text>
+<rect x="34" y="636" width="362" height="96" rx="16" fill="#f9fafb" stroke="#e5e7eb"/>
+<text x="50" y="664" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="15" font-weight="800" fill="#111827" text-anchor="start"><tspan x="50" dy="0">야당역 러닝 모임</tspan></text>
+<text x="50" y="690" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start"><tspan x="50" dy="0">러너지니 · ★★★★★</tspan></text>
+<text x="50" y="714" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="50" dy="0">같이 뛰는 분위기가 좋아서 부담 없었어요.</tspan></text>
+<rect x="34" y="754" width="362" height="96" rx="16" fill="#f9fafb" stroke="#e5e7eb"/>
+<text x="50" y="782" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="15" font-weight="800" fill="#111827" text-anchor="start"><tspan x="50" dy="0">운정 풋살장 경기</tspan></text>
+<text x="50" y="808" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start"><tspan x="50" dy="0">풋살지훈 · ★★★★☆</tspan></text>
+<text x="50" y="832" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="50" dy="0">매너를 중요하게 보는 분위기가 좋았습니다.</tspan></text>
+</svg>

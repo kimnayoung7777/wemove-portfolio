@@ -1,0 +1,1214 @@
+.dashboardActivityGlyph {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.dashboardActivityItem {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(37, 99, 235, 0.08);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow:
+    0 10px 22px rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+.dashboardActivityBody {
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.dashboardActivityBadge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: #edf3ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.dashboardActivityHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dashboardActivityList {
+  display: grid;
+  gap: 10px;
+}
+
+.dashboardActivityMeta {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.dashboardActivityTime {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #f8fbff;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.dashboardActivityTitle {
+  display: block;
+  color: #0f172a;
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.42;
+}
+
+.dashboardActivityToneHosted {
+  background: #ecfdf5;
+  color: #0f766e;
+}
+
+.dashboardActivityToneScheduled {
+  background: #eef4ff;
+  color: #1d4ed8;
+}
+
+.dashboardActivityToneWaiting {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.dashboardCompactBody {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+.dashboardCompactCard {
+  min-height: 112px;
+  padding: 12px 14px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.dashboardCompactList {
+  display: grid;
+  gap: 12px;
+}
+
+.dashboardMeetingBadges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dashboardMiniImage {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.dashboardPanel {
+  padding: 20px;
+  border-radius: 24px;
+}
+
+.dashboardPanelHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.dashboardScheduleItem {
+  background:
+    radial-gradient(circle at 92% 10%, rgba(96, 165, 250, 0.16), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f5f9ff 100%) !important;
+  border-color: rgba(37, 99, 235, 0.12) !important;
+  display: grid !important;
+  grid-template-columns: 84px 56px minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-height: 0 !important;
+  padding: 14px 16px !important;
+  border: 1px solid rgba(37, 99, 235, 0.08) !important;
+  border-radius: 20px !important;
+  box-shadow:
+    0 10px 22px rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
+}
+
+.dashboardScheduleItem:hover {
+  border-color: rgba(37, 99, 235, 0.18) !important;
+}
+
+.dashboardSectionCopy {
+  margin: 8px 0 0;
+  color: #6f849d;
+  line-height: 1.75;
+}
+
+.dashboardSectionHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.dashboardScheduleList {
+  display: grid;
+  gap: 10px !important;
+}
+
+.dashboardScheduleBody {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dashboardScheduleBadgeHosted,
+.dashboardScheduleBadgeApproved {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  width: fit-content;
+  min-width: max-content;
+  max-width: 100%;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 1;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.dashboardScheduleBadgeHosted {
+  background: rgba(37, 99, 235, 0.12);
+  color: #1d4ed8;
+}
+
+.dashboardScheduleBadgeApproved {
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+}
+
+.dashboardStatGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.dashboardStatusBadge {
+  background: #ecfbf3 !important;
+  color: #17a56e !important;
+}
+
+.badgeScheduled {
+  background: #e0f2fe !important;
+  color: #0369a1 !important;
+}
+
+/* Unified weekly schedule card used by Home, Find Meetings, and Activity. */
+.dashboardScheduleList {
+  display: grid !important;
+  gap: 10px !important;
+}
+
+.dashboardScheduleItem {
+  display: grid !important;
+  grid-template-columns: 84px 56px minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-height: 0 !important;
+  padding: 14px 16px !important;
+  border: 1px solid rgba(37, 99, 235, 0.08) !important;
+  border-radius: 20px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #fafcff 100%) !important;
+  box-shadow:
+    0 10px 22px rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
+}
+
+.dashboardScheduleItem > span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 30px !important;
+  padding: 0 10px !important;
+  border-radius: 999px !important;
+  background: #edf3ff !important;
+  color: #1d4ed8 !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  white-space: nowrap !important;
+}
+
+.dashboardScheduleItem > strong {
+  color: #111827 !important;
+  font-size: 0.98rem !important;
+  font-weight: 900 !important;
+  white-space: nowrap !important;
+}
+
+.dashboardScheduleBody {
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.dashboardScheduleBadgeHosted,
+.dashboardScheduleBadgeApproved {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  align-self: flex-start !important;
+  width: fit-content !important;
+  min-width: max-content !important;
+  max-width: 100% !important;
+  padding: 3px 9px !important;
+  border-radius: 999px !important;
+  font-size: 0.66rem !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+}
+
+.dashboardScheduleBadgeHosted {
+  background: rgba(37, 99, 235, 0.12) !important;
+  color: #1d4ed8 !important;
+}
+
+.dashboardScheduleBadgeApproved {
+  background: rgba(16, 185, 129, 0.12) !important;
+  color: #047857 !important;
+}
+
+.dashboardScheduleItem p {
+  min-width: 0 !important;
+  margin: 0 !important;
+  color: #475569 !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+@media (max-width: 720px) {
+  .dashboardScheduleItem {
+    grid-template-columns: 1fr !important;
+    align-items: start !important;
+    gap: 8px !important;
+  }
+
+  .dashboardScheduleItem > span,
+  .dashboardScheduleItem > strong {
+    justify-self: start !important;
+  }
+}
+
+.badgeOngoing {
+  background: #dbeafe !important;
+  color: #1d4ed8 !important;
+}
+
+.badgeWaiting {
+  background: #fef3c7 !important;
+  color: #b45309 !important;
+}
+
+.badgeCompleted {
+  background: #dcfce7 !important;
+  color: #15803d !important;
+}
+
+.badgeHosted {
+  background: #ede9fe !important;
+  color: #7c3aed !important;
+}
+
+.calendarPanel {
+  padding: 22px;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.035);
+}
+
+.calendarHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.calendarHead h2 {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.calendarMonthControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calendarMonthControls button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.calendarMonthControls strong {
+  color: #111827;
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.calendarLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 18px;
+}
+
+.calendarCard,
+.calendarAgenda {
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.calendarWeekRow {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.calendarWeekRow span {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.calendarCell,
+.calendarCellToday,
+.calendarCellActive,
+.calendarCellEmpty {
+  min-height: 66px;
+  border-radius: 16px;
+}
+
+.calendarCell,
+.calendarCellToday,
+.calendarCellActive {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 6px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.calendarCell strong,
+.calendarCellToday strong,
+.calendarCellActive strong {
+  color: #111827;
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.calendarCellToday {
+  border-color: #bfdbfe;
+  background: linear-gradient(180deg, #f8fbff 0%, #eff6ff 100%);
+}
+
+.calendarCellActive {
+  border-color: #2563eb;
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.08);
+}
+
+.calendarCellEmpty {
+  display: block;
+}
+
+.calendarDot,
+.calendarDotMuted {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+}
+
+.calendarDot {
+  background: #2563eb;
+}
+
+.calendarDotMuted {
+  background: #e5e7eb;
+}
+
+.calendarAgendaHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.calendarAgendaHead > div {
+  display: grid;
+  gap: 6px;
+}
+
+.calendarAgendaHead strong {
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.calendarAgendaHead span {
+  color: #64748b;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.calendarAgendaAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.calendarAgendaList {
+  display: grid;
+  gap: 10px;
+}
+
+.calendarAgendaItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: #ffffff;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  appearance: none;
+  font: inherit;
+  color: inherit;
+}
+
+.calendarAgendaTone,
+.hostedAgendaTone,
+.cardCountTone,
+.hostMeetingMetaTone {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.cardCountTone {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.calendarAgendaTone {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.hostedAgendaTone {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.hostMeetingMetaTone {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.toneScheduled {
+  border-color: #bfdbfe !important;
+  background: linear-gradient(180deg, #f8fbff 0%, #eff6ff 100%) !important;
+}
+
+.toneOngoing {
+  border-color: #93c5fd !important;
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%) !important;
+}
+
+.toneWaiting {
+  border-color: #fde68a !important;
+  background: linear-gradient(180deg, #fffdf7 0%, #fffbeb 100%) !important;
+}
+
+.toneCompleted {
+  border-color: #bbf7d0 !important;
+  background: linear-gradient(180deg, #f8fffb 0%, #ecfdf5 100%) !important;
+  opacity: 0.98;
+}
+
+.toneHostedRecruiting {
+  border-color: #ddd6fe !important;
+  background: linear-gradient(180deg, #fbfaff 0%, #f5f3ff 100%) !important;
+}
+
+.toneHostedClosed {
+  border-color: #fed7aa !important;
+  background: linear-gradient(180deg, #fffdf8 0%, #fff7ed 100%) !important;
+}
+
+.toneHostedOngoing {
+  border-color: #93c5fd !important;
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%) !important;
+}
+
+.toneHostedCompleted {
+  border-color: #bbf7d0 !important;
+  background: linear-gradient(180deg, #f8fffb 0%, #ecfdf5 100%) !important;
+}
+
+.toneHostedCancelled {
+  border-color: #fecaca !important;
+  background: linear-gradient(180deg, #fffafa 0%, #fef2f2 100%) !important;
+  opacity: 0.88;
+}
+
+.calendarAgendaItem span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.calendarAgendaItem strong {
+  display: block;
+  margin-top: 8px;
+  color: #111827;
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+.calendarAgendaItem p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.calendarAgendaItem b {
+  color: #2563eb;
+  font-size: 0.82rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.activityBuckets {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.activityBucketCard {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.035);
+}
+
+.activityBucketHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.activityBucketHead h2 {
+  margin: 0 0 6px;
+  color: #111827;
+  font-size: 1.06rem;
+  line-height: 1.25;
+}
+
+.activityBucketHead p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.activityBucketHead span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.8rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.activityBucketList {
+  display: grid;
+  gap: 10px;
+}
+
+.activityMeetingCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: #ffffff;
+  text-decoration: none;
+  transition:
+    transform 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.activityMeetingCard > div {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.activityMeetingCard .dashboardMeetingBadges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.activityMeetingCard .dashboardMeetingBadges > span {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  line-height: 1;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.activityMeetingCard .dashboardMeetingBadges > span:first-child {
+  color: #111827;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.activityMeetingCard .dashboardStatusBadge {
+  min-height: 22px;
+  padding: 0 7px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.activityMeetingCard:hover {
+  transform: translateY(-1px);
+  border-color: #bfdbfe;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.08);
+}
+
+.activityMeetingCard strong {
+  display: block;
+  margin-top: 8px;
+  color: #111827;
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+.activityMeetingCard p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.activityMeetingCard b {
+  flex: 0 0 auto;
+  color: #2563eb;
+  font-size: 0.82rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.hostMeetingList {
+  display: grid;
+  gap: 12px;
+}
+
+.hostMeetingCard {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.hostMeetingCard:hover {
+  transform: translateY(-1px);
+  border-color: #bfdbfe;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.08);
+}
+
+.hostMeetingHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.hostMeetingHeader > div {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.hostMeetingCard .dashboardMeetingBadges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.hostMeetingCard .dashboardMeetingBadges > span {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  line-height: 1;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.hostMeetingCard .dashboardMeetingBadges > span:first-child {
+  color: #111827;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.hostMeetingCard .dashboardStatusBadge {
+  min-height: 22px;
+  padding: 0 7px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.hostMeetingHeader strong {
+  display: block;
+  margin-top: 8px;
+  color: #111827;
+  font-size: 1rem;
+  line-height: 1.35;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.hostMeetingHeader p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.hostMeetingAction {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.8rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.hostMeetingMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.hostMeetingMeta span,
+.hostMeetingMeta b {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: #f8fbff;
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.hostMeetingMeta b {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.manageModalBody {
+  display: grid;
+  gap: 12px;
+}
+
+.manageModalMeta {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.manageModalMeta span {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.manageModalMeta strong {
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.manageModalMeta p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.manageModalLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 56%, #1d4ed8 100%);
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow:
+    0 6px 14px rgba(37, 99, 235, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.manageModalNotice {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* 2026-05-18 neutral activity page finish */
+.dashboardPanel,
+.dashboardCompactCard,
+.calendarPanel,
+.dashboardStatGrid article {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.035) !important;
+}
+
+.dashboardCompactCard,
+.dashboardActivityItem {
+  border-color: #eef0f3 !important;
+}
+
+.emptyStateCard {
+  padding: 26px;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.035);
+}
+
+.emptyStateCard h2 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.emptyStateCard p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.emptyStateAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin-top: 18px;
+  padding: 0 18px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 56%, #1d4ed8 100%);
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow:
+    0 6px 14px rgba(37, 99, 235, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.emptyMessage {
+  padding: 18px;
+  border: 1px dashed #dbe3ef;
+  border-radius: 18px;
+  background: #f8fbff;
+  color: #64748b;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .calendarLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .activityBuckets {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .calendarPanel {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .calendarHead {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .calendarMonthControls {
+    justify-content: space-between;
+  }
+
+  .calendarCard,
+  .calendarAgenda {
+    padding: 14px;
+  }
+
+  .calendarCell,
+  .calendarCellToday,
+  .calendarCellActive,
+  .calendarCellEmpty {
+    min-height: 58px;
+  }
+
+  .calendarAgendaAction {
+    width: 100%;
+  }
+
+  .activityBucketCard,
+  .hostMeetingCard {
+    padding: 14px;
+  }
+
+  .hostMeetingHeader {
+    flex-direction: column;
+  }
+
+  .hostMeetingAction {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .activityMeetingCard {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .activityMeetingCard b {
+    align-self: flex-end;
+  }
+}
+
+/* Activity recovery: restore summary buckets and compact meeting cards. */
+.dashboardStatGrid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.dashboardStatGrid article {
+  display: grid !important;
+  gap: 8px !important;
+  padding: 18px 18px !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.035) !important;
+}
+
+.dashboardStatGrid article span {
+  color: #64748b !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+}
+
+.dashboardStatGrid article strong {
+  color: #111827 !important;
+  font-size: 1.1rem !important;
+  font-weight: 900 !important;
+  line-height: 1.25 !important;
+}
+
+.dashboardCompactCard {
+  min-height: 112px !important;
+  padding: 14px 16px !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  gap: 16px !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 20px !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.035) !important;
+}
+
+.dashboardCompactBody {
+  min-width: 0;
+  display: grid !important;
+  grid-template-columns: 88px minmax(0, 1fr) !important;
+  gap: 14px !important;
+  align-items: center !important;
+}
+
+.dashboardMiniImage {
+  width: 88px !important;
+  height: 88px !important;
+  object-fit: cover !important;
+  border-radius: 14px !important;
+}
+
+.dashboardMeetingBadges {
+  display: flex !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+@media (max-width: 900px) {
+  .dashboardStatGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .dashboardStatGrid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dashboardCompactCard {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dashboardCompactBody {
+    grid-template-columns: 1fr !important;
+  }
+}

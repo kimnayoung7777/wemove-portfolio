@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="chat">
+
+    <select id="selectChatRooms" resultType="kr.co.iei.chat.model.vo.ChatRoomResponse">
+        SELECT
+            m.meetingId,
+            m.title,
+            m.content,
+            s.name AS sportName,
+            CONCAT(r.sido, ' ', r.sigungu, ' ', COALESCE(r.dong, '')) AS regionName,
+            m.placeName,
+            m.address,
+            m.meetingDate,
+            m.startTime,
+            m.status,
+            m.hostUserId,
+            u.nickname AS hostNickname,
+            lm.messageId AS lastMessageId,
+            lm.content AS lastMessage,
+            DATE_FORMAT(lm.createdAt, '%Y-%m-%d %H:%i:%s') AS lastMessageAt
+        FROM meetings m
+        JOIN users u ON m.hostUserId = u.userId
+        JOIN sports s ON m.sportId = s.sportId
+        JOIN regions r ON m.regionId = r.regionId
+        LEFT JOIN meetingChatMessages lm
+          ON lm.messageId = (
+            SELECT cm.messageId
+            FROM meetingChatMessages cm
+            WHERE cm.meetingId = m.meetingId
+            ORDER BY cm.createdAt DESC, cm.messageId DESC
+            LIMIT 1
+          )
+        WHERE m.deletedAt IS NULL
+          AND (
+            m.hostUserId = #{userId}
+            OR EXISTS (
+                SELECT 1
+                FROM meetingParticipants mp
+                WHERE mp.meetingId = m.meetingId
+                  AND mp.userId = #{userId}
+                  AND mp.status = 'APPROVED'
+                  AND mp.chatLeftAt IS NULL
+            )
+          )
+        ORDER BY COALESCE(lm.createdAt, m.meetingDate, m.createdAt) DESC, m.meetingId DESC
+    </select>
+
+    <select id="canAccessMeetingChat" resultType="int">
+        SELECT COUNT(*)
+        FROM meetings m
+        WHERE m.meetingId = #{meetingId}
+          AND m.deletedAt IS NULL
+          AND (
+            m.hostUserId = #{userId}
+            OR EXISTS (
+                SELECT 1
+                FROM meetingParticipants mp
+                WHERE mp.meetingId = m.meetingId
+                  AND mp.userId = #{userId}
+                  AND mp.status = 'APPROVED'
+                  AND mp.chatLeftAt IS NULL
+            )
+          )
+    </select>
+
+    <select id="isMeetingChatWritable" resultType="int">
+        SELECT COUNT(*)
+        FROM meetings
+        WHERE meetingId = #{meetingId}
+          AND deletedAt IS NULL
+          AND status != 'CANCELLED'
+          AND (
+              status != 'COMPLETED'
+              OR updatedAt &gt; DATE_SUB(NOW(), INTERVAL 7 DAY)
+          )
+    </select>
+
+    <select id="selectMessages" resultType="kr.co.iei.chat.model.vo.ChatMessageResponse">
+        SELECT
+            recent.messageId,
+            recent.meetingId,
+            recent.userId,
+            recent.nickname,
+            recent.profileImage,
+            recent.host,
+            recent.content,
+            recent.messageType,
+            recent.createdAt
+        FROM (
+            SELECT
+                cm.messageId,
+                cm.meetingId,
+                cm.userId,
+                u.nickname,
+                u.profileImage,
+                CASE WHEN cm.userId = m.hostUserId THEN TRUE ELSE FALSE END AS host,
+                cm.content,
+                cm.messageType,
+                cm.createdAt
+            FROM meetingChatMessages cm
+            JOIN users u ON cm.userId = u.userId
+            JOIN meetings m ON cm.meetingId = m.meetingId
+            LEFT JOIN meetingParticipants viewer
+              ON viewer.meetingId = cm.meetingId
+             AND viewer.userId = #{userId}
+            WHERE cm.meetingId = #{meetingId}
+              AND (
+                  viewer.chatLeftAt IS NULL
+                  OR cm.createdAt > viewer.chatLeftAt
+              )
+            ORDER BY cm.createdAt DESC, cm.messageId DESC
+            LIMIT #{limit}
+        ) recent
+        ORDER BY recent.createdAt ASC, recent.messageId ASC
+    </select>
+
+    <insert id="insertMessage" parameterType="kr.co.iei.chat.model.vo.ChatMessage" useGeneratedKeys="true" keyProperty="messageId">
+        INSERT INTO meetingChatMessages(
+            meetingId,
+            userId,
+            content,
+            messageType
+        )
+        VALUES(
+            #{meetingId},
+            #{userId},
+            #{content},
+            #{messageType}
+        )
+    </insert>
+
+    <select id="selectMessage" resultType="kr.co.iei.chat.model.vo.ChatMessageResponse">
+        SELECT
+            cm.messageId,
+            cm.meetingId,
+            cm.userId,
+            u.nickname,
+            u.profileImage,
+            CASE WHEN cm.userId = m.hostUserId THEN TRUE ELSE FALSE END AS host,
+            cm.content,
+            cm.messageType,
+            cm.createdAt
+        FROM meetingChatMessages cm
+        JOIN users u ON cm.userId = u.userId
+        JOIN meetings m ON cm.meetingId = m.meetingId
+        WHERE cm.messageId = #{messageId}
+    </select>
+
+    <select id="selectMeetingTitle" resultType="string">
+        SELECT title
+        FROM meetings
+        WHERE meetingId = #{meetingId}
+    </select>
+
+    <select id="selectNotificationTargetUserIds" resultType="long">
+        SELECT DISTINCT target.userId
+        FROM (
+            SELECT m.hostUserId AS userId
+            FROM meetings m
+            WHERE m.meetingId = #{meetingId}
+            UNION
+            SELECT mp.userId
+            FROM meetingParticipants mp
+            WHERE mp.meetingId = #{meetingId}
+              AND mp.status = 'APPROVED'
+              AND mp.chatLeftAt IS NULL
+        ) target
+        WHERE target.userId != #{senderUserId}
+    </select>
+
+    <update id="leaveRoom">
+        UPDATE meetingParticipants
+        SET chatLeftAt = NOW()
+        WHERE meetingId = #{meetingId}
+          AND userId = #{userId}
+          AND status = 'APPROVED'
+          AND chatLeftAt IS NULL
+    </update>
+
+</mapper>

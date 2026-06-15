@@ -1,0 +1,913 @@
+.floatingButton {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border: 0;
+  border-radius: 999px;
+  background: #2563eb;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.28);
+  cursor: pointer;
+}
+
+.floatingIcon,
+.floatingIcon svg {
+  display: block;
+  width: 26px;
+  height: 26px;
+}
+
+.floatingIcon svg {
+  fill: #fff;
+}
+
+.panel {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1250;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: min(860px, calc(100vw - 32px));
+  height: min(560px, calc(100vh - 48px));
+  min-width: 520px;
+  min-height: 360px;
+  max-width: min(860px, calc(100vw - 32px));
+  max-height: min(560px, calc(100vh - 48px));
+  overflow: hidden;
+  border: 1px solid #dbe3ef;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.2);
+}
+
+.panel,
+.panel * {
+  box-sizing: border-box;
+}
+
+.resizeLeft,
+.resizeTop,
+.resizeTopLeft {
+  position: absolute;
+  z-index: 2;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.resizeLeft {
+  top: 16px;
+  bottom: 16px;
+  left: -4px;
+  width: 10px;
+  cursor: ew-resize;
+}
+
+.resizeTop {
+  top: -4px;
+  right: 16px;
+  left: 16px;
+  height: 10px;
+  cursor: ns-resize;
+}
+
+.resizeTopLeft {
+  top: -6px;
+  left: -6px;
+  width: 20px;
+  height: 20px;
+  cursor: nwse-resize;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.panelHeader div {
+  display: grid;
+  gap: 3px;
+}
+
+.panelTitleLine {
+  display: inline-flex !important;
+  align-items: baseline;
+  gap: 8px !important;
+  min-width: 0;
+}
+
+.panelHeader strong {
+  color: #10233d;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.noticeCollectionButton {
+  width: auto !important;
+  height: auto !important;
+  min-width: 0;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #64748b !important;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.noticeCollectionButton:hover {
+  color: #2563eb !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+.panelHeader span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.panelHeader button {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.panelBody {
+  position: relative;
+  display: grid;
+  grid-template-columns: 280px 18px minmax(0, 1fr);
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.panelBodyCollapsed {
+  grid-template-columns: 0 18px minmax(0, 1fr);
+}
+
+.panelBodyAdmin {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.roomList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 12px;
+  border-right: 1px solid #e5e7eb;
+  background: #f8fafc;
+}
+.roomListHeader {
+  display: flex;
+  gap: 8px;
+  padding: 0 12px 8px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: flex;
+}
+.roomListHeader div {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.roomListHeader div:hover {
+  /*
+  background-color: #a1b1c1;
+  */
+}
+.roomListHeader div:first-child {
+  border-right: 1px solid #e2e8f0; /* 선 색상 */
+  margin-right: -4px; /* gap 때문에 생기는 간격 조정 (필요시) */
+}
+
+.panelBodyCollapsed .roomList {
+  overflow: hidden;
+  padding: 0;
+  border-right: 0;
+}
+
+.active {
+  color: #2563eb; /* 파란색으로 강조 */
+  font-weight: 900;
+  border-bottom: 2px solid #2563eb; /* 밑줄 추가 (선택사항) */
+}
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #64748b;
+  flex: 1;
+}
+.roomList .emptyState p {
+  /* .emptyState p 앞에 .roomList 를 붙여주세요! */
+  margin: 0; /* 이제 156px 마진이 0으로 덮어씌워집니다 */
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.roomList .emptyState small {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.stickerPanel {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 10px;
+  min-height: 0;
+}
+
+.stickerPanelHeader {
+  display: grid;
+  gap: 3px;
+  padding: 0 2px;
+}
+
+.stickerPanelHeader strong {
+  color: #10233d;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.stickerPanelHeader span {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.stickerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 92px;
+  gap: 8px;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.stickerItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  height: 92px;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+
+.stickerItem:hover:not(:disabled) {
+  border-color: #93c5fd;
+  background: #eff6ff;
+  transform: translateY(-1px);
+}
+
+.stickerItem:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.stickerItem img {
+  display: block;
+  max-width: 72px;
+  max-height: 72px;
+  object-fit: contain;
+}
+
+.roomToggle {
+  align-self: stretch;
+  width: 18px;
+  min-width: 18px;
+  border: 0;
+  border-right: 1px solid #e5e7eb;
+  border-left: 1px solid #e5e7eb;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.roomList p,
+.state {
+  margin: auto;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.room,
+.roomActive {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  min-height: 78px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.roomActive {
+  border-color: #93c5fd;
+  background: #eff6ff;
+}
+
+.room strong,
+.roomActive strong {
+  overflow: hidden;
+  color: #10233d;
+  font-size: 13px;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.room span,
+.roomActive span {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.room small,
+.roomActive small {
+  display: block;
+  overflow: hidden;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.roomContextMenu {
+  position: fixed;
+  z-index: 1500;
+  min-width: 128px;
+  overflow: hidden;
+  border: 1px solid #dbe5f2;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.18);
+}
+
+.roomContextMenu button {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  background: transparent;
+  color: #ef4444;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+}
+
+.roomContextMenu button:hover {
+  background: #fff1f2;
+}
+
+.chatArea {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.chatTitle {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.chatTitle strong {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  color: #10233d;
+  font-size: 15px;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chatTitleLink {
+  display: block;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  color: #10233d;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.chatTitleLink:hover {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.chatTitle span {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.messageList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 14px;
+  background: #f9fafb;
+}
+
+.adminNoticeGuide {
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  gap: 10px;
+  width: min(420px, 100%);
+  padding: 20px;
+  border: 1px solid #dbe7f6;
+  border-radius: 16px;
+  background: #fff;
+  color: #465b75;
+  text-align: center;
+}
+
+.adminNoticeGuide strong {
+  color: #10233d;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.adminNoticeGuide p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.noticeMessageCard {
+  display: grid;
+  gap: 8px;
+  max-width: min(520px, 92%);
+  padding: 12px 14px;
+  border: 1px solid #dbe7f6;
+  border-radius: 14px;
+  background: #fff;
+  color: #10233d;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+}
+
+.noticeMessageHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+
+.noticeMessageHead strong {
+  min-width: 0;
+  overflow: hidden;
+  color: #10233d;
+  font-size: 13px;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.noticeMessageHead time {
+  flex: 0 0 auto;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.noticeMessageCard p {
+  max-width: 100%;
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.roomList::-webkit-scrollbar,
+.messageList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.roomList::-webkit-scrollbar-thumb,
+.messageList::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #cbd5e1;
+}
+
+.messageGroup {
+  display: grid;
+  gap: 8px;
+}
+
+.messageDateDivider {
+  justify-self: center;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.systemMessage {
+  justify-self: center;
+  max-width: 82%;
+  margin: 0;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #edf4fb;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.messageRow,
+.messageMineRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+.messageMineRow {
+  justify-content: flex-end;
+}
+
+.messageAvatar {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(148, 163, 184, 0.36);
+  background: #fff;
+}
+
+.messageProfileButton {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.messageProfileButton:hover .messageAvatar {
+  border-color: rgba(37, 99, 235, 0.55);
+}
+
+.messageContent {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  max-width: 78%;
+}
+
+.messageMineRow .messageContent {
+  justify-items: end;
+}
+
+.messageNickname {
+  color: #10233d;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.messageNicknameButton {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #10233d;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.messageNicknameButton:hover {
+  color: #2563eb;
+}
+
+.messageNameLine {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+}
+
+.hostCrownBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  height: 18px;
+  padding: 0 6px;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: 999px;
+  background: #eaf2ff;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hostCrownBadge svg {
+  width: 11px;
+  height: 11px;
+  fill: currentColor;
+}
+
+.messageLine,
+.messageMineLine {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 6px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.messageMineLine {
+  justify-content: flex-end;
+}
+
+.messageBubble,
+.messageMineBubble {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.messageBubble {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+}
+
+.messageMineBubble {
+  background: #eaf3ff;
+  border: 1px solid #cfe1f7;
+}
+
+.messageStickerBubble,
+.messageMineStickerBubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 148px;
+  padding: 6px;
+  border-radius: 14px;
+}
+
+.messageStickerBubble {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+}
+
+.messageMineStickerBubble {
+  background: #eaf3ff;
+  border: 1px solid #cfe1f7;
+}
+
+.messageStickerBubble img,
+.messageMineStickerBubble img {
+  display: block;
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+}
+
+.messageTime {
+  flex: 0 0 auto;
+  color: #a8b3c3;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.error {
+  margin: 0;
+  padding: 8px 14px 0;
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.messageForm {
+  display: grid;
+  grid-template-columns: 42px 1fr 76px;
+  align-items: center;
+  gap: 8px;
+  height: 66px;
+  min-height: 66px;
+  padding: 10px 12px;
+  border-top: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.messageFormAdmin {
+  grid-template-columns: 1fr 76px;
+}
+
+.messageForm input {
+  min-width: 0;
+  height: 42px;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  padding: 0 12px;
+  color: #10233d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.messageForm button {
+  height: 42px;
+  border: 0;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.stickerToggleButton {
+  width: 42px;
+  min-width: 42px;
+  padding: 0;
+  border: 1px solid #dbe3ee !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  color: #10233d !important;
+  font-size: 19px !important;
+  line-height: 1;
+}
+
+.stickerToggleButton:hover:not(:disabled),
+.stickerToggleButtonActive {
+  border-color: #93c5fd !important;
+  background: #eff6ff !important;
+}
+
+.messageForm button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+@media (max-width: 720px) {
+  .floatingButton {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .panel {
+    right: 16px;
+    bottom: 16px;
+    height: min(560px, calc(100vh - 32px));
+    min-width: 320px;
+    min-height: 420px;
+    max-width: calc(100vw - 32px);
+    max-height: min(560px, calc(100vh - 32px));
+  }
+
+  .panelBody {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 18px minmax(0, 1fr);
+  }
+
+  .panelBodyCollapsed {
+    grid-template-rows: 0 18px minmax(0, 1fr);
+  }
+
+  .roomList {
+    max-height: 132px;
+    border-right: 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .panelBodyCollapsed .roomList {
+    max-height: 0;
+    border-bottom: 0;
+  }
+
+  .roomToggle {
+    width: 100%;
+    min-width: 0;
+    height: 18px;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid #e5e7eb;
+    line-height: 1;
+  }
+
+  .messageContent {
+    max-width: calc(100% - 48px);
+  }
+
+  .messageMineRow .messageContent {
+    max-width: 92%;
+  }
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sport">
+
+    <select id="selectSports" resultType="kr.co.iei.sport.model.vo.Sport">
+        SELECT *
+        FROM sports
+        ORDER BY sportId
+    </select>
+
+    <insert id="insertSport">
+        INSERT INTO sports(
+            name,
+            category,
+            isActive
+        )
+        VALUES(
+            #{name},
+            #{category},
+            COALESCE(#{isActive},true)
+        )
+    </insert>
+
+    <select id="countByName" parameterType="string" resultType="int">
+        SELECT COUNT(*)
+        FROM sports
+        WHERE LOWER(name) = LOWER(#{name})
+    </select>
+
+    <select id="countByNameExcludingId" resultType="int">
+        SELECT COUNT(*)
+        FROM sports
+        WHERE LOWER(name) = LOWER(#{name})
+          AND sportId != #{sportId}
+    </select>
+
+    <update id="updateSport">
+        UPDATE sports
+        SET
+            name=#{request.name},
+            category=#{request.category},
+            isActive=#{request.isActive}
+        WHERE sportId=#{sportId}
+    </update>
+
+    <delete id="deleteSport" parameterType="long">
+        DELETE FROM sports
+        WHERE sportId = #{sportId}
+    </delete>
+
+</mapper>

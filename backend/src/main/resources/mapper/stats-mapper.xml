@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="stats">
+
+    <select id="selectLoginPageStats" resultType="kr.co.iei.stats.model.vo.LoginPageStatsResponse">
+        SELECT
+            (SELECT COUNT(*) FROM users WHERE role != 'ADMIN') AS total_members,
+            (SELECT COUNT(*) FROM meetings WHERE deletedAt IS NULL) AS total_meetings,
+            (SELECT COUNT(*) FROM meetings WHERE deletedAt IS NULL AND status = 'COMPLETED') AS completed_meetings
+    </select>
+
+</mapper>

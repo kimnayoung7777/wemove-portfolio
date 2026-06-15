@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="participant">
+
+    <select id="exists" resultType="int">
+        SELECT COUNT(*)
+        FROM meetingParticipants
+        WHERE meetingId=#{meetingId}
+        AND userId=#{userId}
+    </select>
+
+    <select id="selectParticipantByMeetingIdAndUserId" resultType="kr.co.iei.participant.model.vo.MeetingParticipant">
+        SELECT
+            participantId,
+            meetingId,
+            userId,
+            status,
+            message
+        FROM meetingParticipants
+        WHERE meetingId=#{meetingId}
+        AND userId=#{userId}
+    </select>
+
+    <update id="updateParticipantForReapply">
+        UPDATE meetingParticipants
+        SET
+            status=#{status},
+            message=#{message},
+            appliedAt=NOW(),
+            approvedAt=NULL,
+            cancelledAt=NULL
+        WHERE participantId=#{participantId}
+    </update>
+
+    <insert id="insertParticipant" parameterType="kr.co.iei.participant.model.vo.MeetingParticipant" useGeneratedKeys="true" keyProperty="participantId">
+        INSERT INTO meetingParticipants(
+            meetingId,
+            userId,
+            status,
+            message
+        )
+        VALUES(
+            #{meetingId},
+            #{userId},
+            #{status},
+            #{message}
+        )
+    </insert>
+
+    <select id="selectParticipants" resultType="kr.co.iei.participant.model.vo.ParticipantResponse">
+        SELECT
+            mp.participantId,
+            mp.meetingId,
+            mp.userId,
+            u.nickname,
+            mp.status,
+            mp.message,
+            u.profileImage,
+            u.email,
+            u.gender,
+            u.birthYear,
+            u.createdAt,
+            CONCAT(r.sido, ' ', r.sigungu) AS regionName,
+            (SELECT GROUP_CONCAT(s.name ORDER BY s.sportId SEPARATOR ', ')
+             FROM userSports us
+             JOIN sports s ON us.sportId = s.sportId
+             WHERE us.userId = mp.userId) AS sports
+        FROM meetingParticipants mp
+        JOIN users u ON mp.userId=u.userId
+        LEFT JOIN regions r ON u.regionId=r.regionId
+        WHERE mp.meetingId=#{meetingId}
+        ORDER BY 
+            CASE WHEN mp.status = 'APPROVED' THEN 0 ELSE 1 END,
+            mp.approvedAt ASC,
+            mp.appliedAt DESC
+    </select>
+
+    <select id="selectParticipant" resultType="kr.co.iei.participant.model.vo.ParticipantResponse">
+        SELECT
+            mp.participantId,
+            mp.meetingId,
+            mp.userId,
+            u.nickname,
+            mp.status,
+            mp.message
+        FROM meetingParticipants mp
+        JOIN users u ON mp.userId=u.userId
+        WHERE mp.participantId=#{participantId}
+    </select>
+
+    <update id="updateStatus">
+        UPDATE meetingParticipants
+        SET
+            status=#{status},
+            approvedAt=CASE WHEN #{status}="APPROVED" THEN NOW() ELSE approvedAt END,
+            cancelledAt=CASE WHEN #{status}="CANCELLED" THEN NOW() ELSE cancelledAt END
+        WHERE participantId=#{participantId}
+    </update>
+
+    <select id="countApprovedByMeetingId" resultType="int">
+        SELECT COUNT(*) + CASE
+            WHEN EXISTS (
+                SELECT 1
+                FROM meetings m
+                JOIN meetingParticipants hostMp
+                  ON hostMp.meetingId = m.meetingId
+                 AND hostMp.userId = m.hostUserId
+                 AND hostMp.status = 'APPROVED'
+                WHERE m.meetingId = #{meetingId}
+            ) THEN 0 ELSE 1
+        END
+        FROM meetingParticipants
+        WHERE meetingId=#{meetingId}
+        AND status="APPROVED"
+    </select>
+
+    <select id="selectMeetingIdByParticipantId" resultType="long">
+        SELECT meetingId
+        FROM meetingParticipants
+        WHERE participantId=#{participantId}
+    </select>
+
+    <select id="selectApprovedUserIds" resultType="long">
+        SELECT mp.userId
+        FROM meetingParticipants mp
+        WHERE mp.meetingId=#{meetingId}
+          AND mp.status='APPROVED'
+          AND (
+              #{excludedUserId} IS NULL
+              OR mp.userId != #{excludedUserId}
+          )
+    </select>
+
+</mapper>

@@ -1,0 +1,3348 @@
+/* Inlined from composed CSS modules to keep this page self-contained. */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 11px;
+  border-radius: 999px;
+  background: rgba(219, 233, 255, 0.88);
+  color: var(--color-primary-strong);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.kicker,
+.sectionKicker,
+.searchCard span,
+.heroVisualCopy span,
+.highlightBand span,
+.sectionHead a,
+.categoryGrid span,
+.cover span,
+.badge,
+.sidebar h3,
+.rightbar h3,
+.notice a,
+.tabButton,
+.pageTabs button,
+.dateBox span,
+.detailSummary span,
+.sideInfo span,
+.primaryButton,
+.secondaryButton,
+.formCard label span,
+.choiceGroup > span,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard th,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.reviewScore,
+.ratingButton,
+.dashboardCreateButton,
+.dashboardProfile,
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardSidebarHead button,
+.dashboardSidebarHead span,
+.dashboardPanelHead a,
+.dashboardInviteCard button,
+.dashboardHeroFilters select,
+.dashboardHeroButton,
+.dashboardSummaryGrid span,
+.dashboardCategoryItem,
+.dashboardPills button,
+.dashboardMeetingBadges span,
+.dashboardSectionHead > a,
+.dashboardScheduleItem span,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a,
+.dashboardLoginButton,
+.dashboardSignupButton {
+  font-weight: var(--weight-button);
+}
+
+.badge,
+.dashboardMeetingBadges span,
+.reviewScore,
+.kicker,
+.sectionKicker {
+  font-size: var(--font-micro);
+  letter-spacing: 0.01em;
+}
+
+.badge,
+.dashboardMeetingBadges span,
+.reviewScore {
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.badge,
+.dashboardMeetingBadges span,
+.reviewScore,
+.kicker,
+.sectionKicker {
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  background: linear-gradient(135deg, #eff6ff, #f8fbff);
+  color: #1747b8;
+}
+
+/* Mobile finder visual polish */
+@media (max-width: 720px) {
+  .dashboardPage {
+    padding-top: 10px;
+  }
+
+  .dashboardHeader {
+    padding: 14px;
+    gap: 11px;
+    border-radius: 24px;
+  }
+
+  .dashboardLogo {
+    justify-self: start;
+  }
+
+  .dashboardLogo span {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    font-size: 17px;
+  }
+
+  .dashboardLogo strong {
+    font-size: 24px;
+  }
+
+  .dashboardSearch {
+    order: 2;
+    height: 46px;
+    padding: 0 14px;
+    border-radius: 16px;
+    background: #f8fbff;
+  }
+
+  .dashboardActions {
+    order: 3;
+  }
+
+  .dashboardLoginButton,
+  .dashboardSignupButton {
+    height: 44px;
+    border-radius: 15px;
+    font-size: 0.86rem;
+  }
+
+  .dashboardSidebar {
+    position: sticky;
+    top: 8px;
+    z-index: 20;
+    padding: 8px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(18px) saturate(140%);
+  }
+
+  .dashboardInterestCard {
+    display: none;
+  }
+
+  .dashboardNav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .dashboardNavItem,
+  .dashboardNavItemActive {
+    min-height: 54px;
+    padding: 7px 6px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 4px;
+    border-radius: 16px;
+    font-size: 0.72rem;
+    text-align: center;
+    line-height: 1.15;
+  }
+
+  .dashboardNavIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dashboardPageIntro {
+    display: none;
+  }
+
+  .notice {
+    margin-top: 2px;
+    border-radius: 28px;
+    background:
+      radial-gradient(
+        circle at 88% 12%,
+        rgba(147, 197, 253, 0.36),
+        transparent 30%
+      ),
+      linear-gradient(145deg, #08214a, #1747b8 58%, #3b82f6);
+    box-shadow: 0 24px 58px rgba(37, 99, 235, 0.2);
+  }
+
+  .notice h1 {
+    margin-bottom: 9px;
+    max-width: 11.5ch;
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.07em;
+  }
+
+  .notice p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .notice a {
+    height: 48px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1747b8;
+    box-shadow: 0 14px 28px rgba(3, 12, 31, 0.16);
+  }
+
+  .filterPanel {
+    margin-top: 0;
+    padding: 12px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.88);
+  }
+
+  .tabs {
+    margin-bottom: 12px;
+    padding: 2px 1px 4px;
+    gap: 7px;
+  }
+
+  .tabButton,
+  .pageTabs button {
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 999px;
+    background: #fff;
+  }
+
+  .tabButtonActive {
+    background: #2563eb;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.2);
+  }
+
+  .filterRow {
+    gap: 9px;
+  }
+
+  .filterRow select,
+  .filterRow input {
+    height: 46px;
+    border-radius: 15px;
+    background: #fbfdff;
+  }
+
+  .listHead {
+    margin: 4px 2px 12px;
+    padding: 0 2px;
+  }
+
+  .listHead h2 {
+    font-size: 1.35rem;
+    letter-spacing: -0.045em;
+  }
+
+  .listHead span {
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 999px;
+    background: #eaf2ff;
+    color: #1747b8;
+    font-size: 0.78rem;
+  }
+
+  .meetingList {
+    gap: 12px;
+  }
+
+  .listCard {
+    padding: 12px;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 16px 42px rgba(18, 32, 59, 0.08);
+  }
+
+  .listCardImage {
+    height: 176px;
+    border-radius: 22px;
+  }
+
+  .listTags {
+    margin-top: 2px;
+  }
+
+  .badge,
+  .dashboardMeetingBadges span {
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+  }
+
+  .listCard h3 {
+    margin: 10px 0 6px;
+    font-size: 1.35rem;
+    line-height: 1.22;
+    letter-spacing: -0.045em;
+  }
+
+  .listCard p {
+    font-size: 0.9rem;
+    line-height: 1.62;
+  }
+
+  .listMeta {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 11px;
+    color: #61758d;
+  }
+
+  .listMeta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .host {
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+
+  .dateBox {
+    padding: 13px 14px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #f2f7ff, #eaf2ff);
+  }
+
+  .dateBox strong {
+    font-size: 1.25rem;
+  }
+
+  .listCard aside button {
+    height: 48px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+  }
+}
+
+.badge,
+.dashboardMeetingBadges span,
+.reviewScore {
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  background: linear-gradient(135deg, #eaf2ff, #f5fbff) !important;
+  color: #1747b8 !important;
+}
+
+.dashboardMeetingBadges span:first-child,
+.listTags .badge:first-child {
+  background: linear-gradient(135deg, #1d4ed8, #38bdf8) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+.badge,
+.dashboardMeetingBadges span,
+.reviewScore {
+  border-color: rgba(37, 99, 235, 0.1) !important;
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+}
+
+.badge,
+.dashboardMeetingBadges span,
+.reviewScore {
+  background: #f3f4f6 !important;
+  color: #374151 !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.avatar,
+.host i,
+.profileAvatar,
+.commentAvatar {
+  border-radius: 50%;
+  background: linear-gradient(145deg, #dbe8ff, #ddf4ff);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.commentAvatar {
+  width: 40px;
+  height: 40px;
+}
+
+.dashboardSummaryGrid i,
+.dashboardCategoryItem i,
+.dashboardRankItem b,
+.dashboardActivityItem i,
+.profileAvatar,
+.commentAvatar,
+.avatar,
+.host i {
+  color: #fff !important;
+  background: linear-gradient(135deg, #1d4ed8, #2f7cff 56%, #38bdf8) !important;
+  box-shadow:
+    0 10px 22px rgba(37, 99, 235, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.dashboardCategoryItem i,
+.dashboardSummaryGrid i,
+.dashboardRankItem b,
+.dashboardActivityItem i,
+.dashboardInterestList i,
+.profileAvatar,
+.commentAvatar,
+.avatar,
+.host i {
+  background: #f3f4f6 !important;
+  background-image: none !important;
+  color: #4b5563 !important;
+  box-shadow: none !important;
+}
+
+.filterRow select,
+.filterRow input,
+.commentForm textarea,
+.formCard input,
+.formCard select,
+.formCard textarea {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--color-text);
+  outline: 0;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.filterRow select:focus,
+.filterRow input:focus,
+.commentForm textarea:focus,
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus {
+  border-color: rgba(23, 105, 255, 0.28);
+  box-shadow: 0 0 0 4px rgba(23, 105, 255, 0.1);
+  background: #fff;
+}
+
+.commentForm {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.commentForm textarea {
+  min-height: 128px;
+  padding: 16px;
+  border-radius: 16px;
+  resize: vertical;
+}
+
+.filterRow select,
+.filterRow input,
+.commentForm textarea,
+.formCard input,
+.formCard select,
+.formCard textarea {
+  background: linear-gradient(180deg, #ffffff, #f7fbff) !important;
+  border-color: rgba(37, 99, 235, 0.12) !important;
+}
+
+.filterRow select,
+.filterRow input,
+.commentForm textarea,
+.formCard input,
+.formCard select,
+.formCard textarea,
+.reviewTextarea {
+  min-height: 48px;
+  border-color: rgba(15, 23, 42, 0.09) !important;
+  border-radius: 14px;
+  background: #fff !important;
+  color: #10233f;
+}
+
+.filterRow select:focus,
+.filterRow input:focus,
+.commentForm textarea:focus,
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus,
+.reviewTextarea:focus {
+  border-color: rgba(37, 99, 235, 0.36) !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.09) !important;
+}
+
+.filterRow select,
+.filterRow input,
+.commentForm textarea,
+.formCard input,
+.formCard select,
+.formCard textarea,
+.reviewTextarea {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  color: #111827 !important;
+  box-shadow: none !important;
+}
+
+.filterRow select:focus,
+.filterRow input:focus,
+.commentForm textarea:focus,
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus,
+.reviewTextarea:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+}
+
+.commentItem {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 18px;
+  background: #fcfdff;
+}
+
+.commentItem p {
+  margin: 0;
+  color: var(--color-text-soft);
+  line-height: 1.7;
+}
+
+@media (max-width: 720px) {
+  .page,
+  .finderLayout {
+    width: min(100%, calc(100% - 24px));
+  }
+  .page {
+    gap: 40px;
+  }
+  .pageTitle h1,
+  .sectionHead h2,
+  .how h2 {
+    font-size: 30px;
+  }
+  .hero {
+    min-height: auto;
+    padding-top: 8px;
+    gap: 28px;
+  }
+  .hero h1 {
+    font-size: 46px;
+  }
+  .searchCard,
+  .cardGrid,
+  .categoryGrid,
+  .filterRow,
+  .listCard,
+  .formCard,
+  .myList article,
+  .statGrid,
+  .rightbar,
+  .formHintGrid,
+  .subGrid,
+  .heroMiniGrid,
+  .detailSummary {
+    grid-template-columns: 1fr;
+  }
+  .sectionHead,
+  .pageTitle,
+  .profileCard,
+  .tableHead,
+  .notice {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .detailSummary,
+  .commentItem {
+    grid-template-columns: 1fr;
+  }
+  .searchCard {
+    padding: 10px;
+    border-radius: 22px;
+  }
+  .searchCard label {
+    min-height: 56px;
+  }
+  .primaryLink {
+    min-height: 54px;
+  }
+  .listCard aside,
+  .myList aside {
+    border-left: 0;
+    border-top: 1px solid rgba(148, 163, 184, 0.16);
+    padding-left: 0;
+    padding-top: 14px;
+  }
+  .listCard aside {
+    gap: 12px;
+  }
+  .tableCard {
+    overflow-x: auto;
+  }
+  .tableCard table {
+    min-width: 760px;
+  }
+  .notice {
+    padding: 24px;
+  }
+  .notice h1,
+  .detailCover h1 {
+    font-size: 32px;
+  }
+  .detailCover,
+  .detailSection,
+  .detailPanel,
+  .softPanel,
+  .formCard,
+  .formIntro {
+    padding: 22px;
+  }
+  .how {
+    padding: 28px;
+  }
+}
+
+.pageTitle p,
+.heroCopy > p:not(.kicker),
+.sectionHead p,
+.how p,
+.notice p,
+.detailBody p,
+.commentItem p,
+.dashboardPageIntro p,
+.dashboardSectionCopy,
+.dashboardHeroContent p,
+.dashboardMeetingBody p {
+  font-size: var(--font-body-lg);
+  letter-spacing: var(--tracking-body);
+}
+
+.dashboardSummaryGrid article,
+.formHintGrid article,
+.detailChecklist li,
+.commentItem {
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.82),
+    rgba(236, 246, 255, 0.72)
+  ) !important;
+}
+
+.dashboardCategoryItem,
+.dashboardSummaryGrid article,
+.dashboardScheduleItem,
+.dashboardRankItem,
+.dashboardActivityItem,
+.detailSummary article,
+.detailChecklist li,
+.hostCard,
+.sideInfo p,
+.commentItem,
+.tableCard th,
+.tableCard tr:hover td {
+  background: #f9fafb !important;
+  background-image: none !important;
+  border-color: #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.commentItem {
+  margin-bottom: 15px;
+}
+
+.commentList {
+  display: grid;
+  gap: 14px;
+}
+
+.commentMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.commentMeta span {
+  color: #7890ac;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.metrics,
+.meetingCard footer,
+.listHead span,
+.listMeta,
+.host,
+.detailChecklist li,
+.commentMeta span,
+.tableCard td,
+.dashboardInterestList span,
+.dashboardMeetingMeta,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardRankItem strong,
+.dashboardScheduleItem strong,
+.dashboardStatGrid span {
+  font-weight: var(--weight-body-strong);
+}
+
+.detailBadges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.detailBody {
+  display: grid;
+  gap: 18px;
+}
+
+.detailBody p {
+  margin: 0;
+  color: var(--color-text-soft);
+  line-height: 1.82;
+}
+
+.dashboardMeetingBody p,
+.listCard p,
+.myList p,
+.detailBody p,
+.detailCover p,
+.pageTitle p,
+.formIntro p,
+.profileCard p,
+.dashboardCategoryItem span,
+.dashboardRankItem small,
+.dashboardActivityItem small,
+.dashboardNavItem .dashboardNavIcon {
+  color: #4b5563 !important;
+}
+
+.detailChecklist {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.detailChecklist li {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #f6faff;
+  color: #34516f;
+  font-weight: 700;
+}
+
+.detailSummary article,
+.detailChecklist li,
+.sideInfo p,
+.hostCard,
+.dashboardScheduleItem,
+.dashboardRankItem,
+.dashboardActivityItem {
+  border-color: rgba(15, 23, 42, 0.055) !important;
+  background: rgba(248, 251, 255, 0.78) !important;
+}
+
+.detailCover {
+  padding: 30px 30px 24px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+  background: linear-gradient(160deg, #fbfdff, #f0f6ff 70%, #e7f1ff);
+}
+
+.detailCover h1 {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: 42px;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+.detailCover p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--color-text-soft);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.pageTitle h1,
+.hero h1,
+.heroVisualCopy strong,
+.highlightBand strong,
+.sectionHead h2,
+.how h2,
+.meetingCard h3,
+.listCard h3,
+.myList h3,
+.notice h1,
+.listHead h2,
+.dateBox strong,
+.detailCover h1,
+.detailPanel h3,
+.profileCard h2,
+.statGrid strong,
+.tableHead h2,
+.formIntro h2,
+.softPanel h2,
+.dashboardLogo strong,
+.dashboardInviteCard strong,
+.dashboardHeroContent h1,
+.dashboardSectionHead h2,
+.dashboardMeetingBody h3,
+.dashboardPanelHead h3,
+.dashboardPageIntro h1,
+.dashboardStatGrid strong {
+  font-weight: var(--weight-display);
+}
+
+.detailCover h1 {
+  font-size: var(--font-detail-title);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+  max-width: 13ch;
+}
+
+.pageTitle p,
+.listHead span,
+.detailCover p,
+.dashboardPageIntro p,
+.dashboardSectionCopy,
+.dashboardHeroContent p {
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+@media (max-width: 720px) {
+  .reviewPreviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardHeroContent h1 {
+    font-size: clamp(2.5rem, 9vw, 3.5rem);
+    max-width: 12ch;
+  }
+
+  .dashboardSectionHead h2 {
+    font-size: clamp(1.7rem, 6vw, 2.15rem);
+  }
+
+  .dashboardPageIntro h1,
+  .detailCover h1,
+  .notice h1,
+  .pageTitle h1 {
+    font-size: clamp(1.9rem, 7vw, 2.45rem);
+  }
+
+  .dashboardMeetingBody h3,
+  .listCard h3,
+  .dashboardCompactBody h3 {
+    font-size: 1.45rem;
+  }
+}
+
+.pageTitle h1,
+.notice h1,
+.detailCover h1,
+.dashboardPageIntro h1 {
+  font-size: var(--font-page-title);
+  letter-spacing: var(--tracking-tight);
+}
+
+.notice p,
+.dashboardPageIntro p,
+.dashboardSectionCopy,
+.dashboardMeetingBody p,
+.listCard p,
+.detailCover p,
+.softPanel p,
+.formIntro p {
+  color: #667085;
+}
+
+.pageTitle h1,
+.dashboardPageIntro h1,
+.dashboardHeroContent h1,
+.dashboardSectionHead h2,
+.notice h1,
+.detailCover h1,
+.listCard h3,
+.dashboardMeetingBody h3,
+.softPanel h2,
+.formIntro h2,
+.detailPanel h3 {
+  letter-spacing: 0;
+}
+
+.dashboardSectionHead h2,
+.dashboardPageIntro h1,
+.pageTitle h1,
+.notice h1,
+.detailCover h1 {
+  letter-spacing: -0.045em;
+}
+
+.detailCover {
+  border-radius: 26px 26px 0 0;
+  background:
+    radial-gradient(
+      circle at 94% 14%,
+      rgba(37, 99, 235, 0.12),
+      transparent 26%
+    ),
+    linear-gradient(160deg, #ffffff, #f4f8ff 72%, #eaf2ff);
+}
+
+.detailCover,
+.formIntro,
+.dateBox,
+.hostCard {
+  background:
+    radial-gradient(
+      circle at 92% 12%,
+      rgba(88, 167, 255, 0.16),
+      transparent 26%
+    ),
+    linear-gradient(145deg, #f8fbff, #edf6ff 72%, #e3efff) !important;
+}
+
+.dashboardMeetingBody h3,
+.listCard h3,
+.myList h3,
+.detailCover h1,
+.softPanel h2,
+.dashboardPanelHead h3 {
+  color: #102a4c;
+}
+
+.formIntro,
+.detailCover {
+  color: #102a4c;
+  border-bottom-color: rgba(37, 99, 235, 0.12) !important;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(59, 130, 246, 0.2), transparent 34%),
+    linear-gradient(135deg, #eaf2ff, #ffffff 56%, #e6f5ff) !important;
+}
+
+.pageTitle h1,
+.detailCover h1,
+.formIntro h2,
+.softPanel h2,
+.tableHead h2,
+.profileCard h2 {
+  color: #10233f;
+}
+
+.pageTitle p,
+.detailCover p,
+.formIntro p,
+.softPanel p,
+.profileCard p,
+.reviewMeta p,
+.participantMeta p {
+  color: #6f8298;
+}
+
+.detailCover,
+.formIntro {
+  background:
+    radial-gradient(
+      circle at 90% 12%,
+      rgba(96, 165, 250, 0.1),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #ffffff, #f8fbff 70%, #f1f7ff) !important;
+}
+
+.dashboardMeetingBody h3,
+.listCard h3,
+.myList h3,
+.detailCover h1,
+.pageTitle h1,
+.dashboardPanelHead h3,
+.sectionHead h2,
+.listHead h2,
+.tableHead h2 {
+  color: #111827 !important;
+}
+
+.meetingCard,
+.listCard,
+.detailHero,
+.detailSection,
+.detailPanel,
+.sidebar,
+.rightbar section,
+.filterPanel,
+.myList article,
+.formCard {
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-sm);
+}
+
+.detailHero,
+.detailSection,
+.detailPanel {
+  border-radius: 26px;
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardInterestCard,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardCompactCard,
+.filterPanel,
+.tabsPanel,
+.listCard,
+.profileCard,
+.notice,
+.detailHero,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formIntro,
+.formCard,
+.participantCard,
+.reviewCard,
+.statGrid article,
+.tableCard {
+  border-color: rgba(15, 23, 42, 0.08);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 8px 22px rgba(15, 23, 42, 0.04);
+  backdrop-filter: none;
+}
+
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardInterestCard,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardCompactCard,
+.filterPanel,
+.tabsPanel,
+.listCard,
+.profileCard,
+.detailHero,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formIntro,
+.formCard,
+.participantCard,
+.reviewCard,
+.statGrid article,
+.tableCard,
+.rightbar section,
+.sidebar {
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px) saturate(130%);
+  box-shadow:
+    0 18px 46px rgba(18, 32, 59, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 720px) {
+  .dashboardPage {
+    width: min(100%, calc(100% - 20px));
+    padding: 12px 0 28px;
+  }
+
+  .dashboardHeader,
+  .dashboardHeroCard,
+  .dashboardSidebar,
+  .dashboardPanel,
+  .dashboardInterestCard,
+  .dashboardSummaryCard,
+  .dashboardCategoryStrip,
+  .dashboardMeetingCard,
+  .dashboardCompactCard,
+  .filterPanel,
+  .tabsPanel,
+  .listCard,
+  .profileCard,
+  .detailHero,
+  .detailSection,
+  .detailPanel,
+  .softPanel,
+  .formIntro,
+  .formCard {
+    border-radius: 22px;
+  }
+
+  .dashboardHeroCard {
+    padding: 24px;
+  }
+}
+
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.filterPanel,
+.listCard,
+.detailHero,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formCard,
+.profileCard,
+.tabsPanel,
+.tableCard,
+.statGrid article,
+.myList article,
+.reviewCard,
+.participantCard {
+  border-color: rgba(45, 111, 255, 0.13) !important;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.94),
+    rgba(244, 249, 255, 0.86) 54%,
+    rgba(235, 244, 255, 0.72)
+  ) !important;
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+.filterPanel,
+.listCard,
+.detailHero,
+.detailSection,
+.detailPanel,
+.formCard,
+.formIntro,
+.softPanel,
+.participantCard,
+.reviewCard,
+.reviewPreviewCard,
+.profileCard,
+.tabsPanel,
+.tableCard,
+.statGrid article,
+.myList article {
+  border-color: rgba(15, 23, 42, 0.06) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardInterestCard,
+.filterPanel,
+.listCard,
+.detailHero,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formCard,
+.profileCard,
+.tabsPanel,
+.tableCard,
+.statGrid article,
+.myList article,
+.reviewCard,
+.participantCard,
+.pageTitle {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 18px !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.035) !important;
+  backdrop-filter: none !important;
+}
+
+.detailLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 22px;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .how,
+  .finderLayout,
+  .detailLayout {
+    grid-template-columns: 1fr;
+  }
+  .highlightBand {
+    grid-template-columns: 1fr;
+  }
+  .sidebar,
+  .rightbar,
+  .detailSidebar {
+    position: static;
+  }
+  .rightbar {
+    grid-template-columns: 1fr 1fr;
+  }
+  .categoryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cardGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .filterRow,
+  .detailSummary,
+  .formHintGrid,
+  .subGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero h1 {
+    font-size: 62px;
+  }
+}
+
+.detailMain {
+  display: grid;
+  gap: 18px;
+}
+
+.detailPanel {
+  padding: 22px;
+}
+
+.detailPanel h3 {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: 18px;
+}
+
+.detailSection .sectionHead h2,
+.detailPanel h3,
+.softPanel h2,
+.tableHead h2,
+.formIntro h2 {
+  font-size: var(--font-detail-section);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+.detailPanel h3,
+.softPanel h2,
+.tableHead h2,
+.dashboardPanelHead h3 {
+  font-size: var(--font-panel-title);
+  letter-spacing: var(--tracking-title);
+}
+
+/* Stronger visual identity: colored surfaces, rails, and richer component accents. */
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardMeetingCard,
+.filterPanel,
+.listCard,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formCard,
+.profileCard,
+.tabsPanel,
+.tableCard,
+.statGrid article,
+.myList article,
+.reviewCard,
+.participantCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboardPanel::after,
+.dashboardSummaryCard::after,
+.dashboardMeetingCard::after,
+.filterPanel::after,
+.listCard::after,
+.detailSection::after,
+.detailPanel::after,
+.softPanel::after,
+.formCard::after,
+.profileCard::after,
+.tabsPanel::after,
+.tableCard::after,
+.statGrid article::after,
+.myList article::after,
+.reviewCard::after,
+.participantCard::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.78),
+    rgba(56, 189, 248, 0.72)
+  );
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.dashboardPanel::before,
+.dashboardSummaryCard::before,
+.dashboardMeetingCard::before,
+.filterPanel::before,
+.listCard::before,
+.detailSection::before,
+.detailPanel::before,
+.softPanel::before,
+.formCard::before,
+.profileCard::before,
+.tabsPanel::before,
+.tableCard::before,
+.statGrid article::before,
+.myList article::before,
+.reviewCard::before,
+.participantCard::before {
+  content: "";
+  position: absolute;
+  right: -58px;
+  top: -70px;
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.11),
+    rgba(59, 130, 246, 0) 68%
+  );
+  pointer-events: none;
+}
+
+.listCard::after,
+.detailSection::after,
+.detailPanel::after,
+.softPanel::after,
+.formCard::after,
+.profileCard::after,
+.tableCard::after,
+.statGrid article::after,
+.myList article::after,
+.reviewCard::after,
+.participantCard::after {
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.45),
+    rgba(96, 165, 250, 0.4)
+  );
+}
+
+.listCard::before,
+.detailSection::before,
+.detailPanel::before,
+.softPanel::before,
+.formCard::before,
+.profileCard::before,
+.tableCard::before,
+.statGrid article::before,
+.myList article::before,
+.reviewCard::before,
+.participantCard::before {
+  opacity: 0.42;
+}
+
+@media (max-width: 720px) {
+  .pageTitle,
+  .formCard,
+  .detailSection,
+  .detailPanel,
+  .softPanel {
+    border-radius: 22px;
+  }
+
+  .notice {
+    min-height: unset;
+  }
+}
+
+.dashboardPanel::before,
+.dashboardPanel::after,
+.dashboardSummaryCard::before,
+.dashboardSummaryCard::after,
+.dashboardMeetingCard::before,
+.dashboardMeetingCard::after,
+.filterPanel::before,
+.filterPanel::after,
+.listCard::before,
+.listCard::after,
+.detailSection::before,
+.detailSection::after,
+.detailPanel::before,
+.detailPanel::after,
+.softPanel::before,
+.softPanel::after,
+.formCard::before,
+.formCard::after,
+.profileCard::before,
+.profileCard::after,
+.tabsPanel::before,
+.tabsPanel::after,
+.tableCard::before,
+.tableCard::after,
+.statGrid article::before,
+.statGrid article::after,
+.myList article::before,
+.myList article::after,
+.reviewCard::before,
+.reviewCard::after,
+.participantCard::before,
+.participantCard::after {
+  display: none !important;
+  content: none !important;
+}
+
+.detailSection {
+  padding: 26px;
+}
+
+.dashboardPanel:nth-of-type(2n),
+.softPanel:nth-of-type(2n),
+.detailSection:nth-of-type(2n) {
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.94),
+    rgba(239, 247, 255, 0.86) 48%,
+    rgba(230, 241, 255, 0.78)
+  ) !important;
+}
+
+.detailSidebar {
+  position: sticky;
+  top: 98px;
+}
+
+.detailSummary {
+  padding: 20px 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.detailSummary article {
+  padding: 14px 0;
+}
+
+.detailSummary span,
+.sideInfo span {
+  display: block;
+  margin-bottom: 7px;
+  color: #7890ac;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.detailSummary strong {
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.pageTitle,
+.pageTitle > div,
+.formIntro,
+.formHintGrid article,
+.detailSummary article,
+.participantCard,
+.participantMeta,
+.reviewCard,
+.reviewMeta,
+.hostCard,
+.hostCard > div,
+.sideInfo p,
+.uploadBlock,
+.reviewPreviewCard,
+.reviewPreviewMeta,
+.dashboardCompactCard,
+.dashboardCompactBody,
+.dashboardCompactBody > div,
+.listCard,
+.listCardBody,
+.listCardContent,
+.dashboardSummaryGrid article > div {
+  min-width: 0;
+}
+
+.pageTitle p,
+.formIntro p,
+.formHintGrid strong,
+.detailSummary strong,
+.participantMeta strong,
+.participantMeta p,
+.reviewMeta strong,
+.reviewMeta p,
+.hostCard p,
+.sideInfo b,
+.uploadHint,
+.reviewTextarea,
+.dashboardCompactBody h3,
+.dashboardCompactBody p,
+.dashboardCompactBody small,
+.listCard h3,
+.listCard p,
+.listMeta span,
+.host span,
+.dashboardSummaryGrid span {
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+}
+
+.kicker,
+.sectionKicker,
+.searchCard span,
+.heroVisualCopy span,
+.highlightBand span,
+.sidebar h3,
+.rightbar h3,
+.dateBox span,
+.detailSummary span,
+.sideInfo span,
+.formCard label span,
+.choiceGroup > span,
+.tableCard th,
+.reviewScore,
+.dashboardSidebarHead button,
+.dashboardSidebarHead span,
+.dashboardPanelHead a,
+.dashboardSummaryGrid span,
+.dashboardMeetingBadges span,
+.dashboardStatGrid span {
+  font-size: var(--font-meta);
+  letter-spacing: 0.02em;
+}
+
+.detailSummary article,
+.sideInfo p,
+.dashboardSimpleList p,
+.dashboardRankItem,
+.dashboardActivityItem {
+  border-radius: 16px;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 14px;
+  background: #fff;
+  color: #59708f;
+  padding: 11px 15px;
+  font-weight: 900;
+}
+
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--color-primary), #2b8cff);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(23, 105, 255, 0.18);
+}
+
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .page {
+    width: min(100%, calc(100% - 18px));
+  }
+  .hero h1 {
+    font-size: 38px;
+  }
+  .metrics {
+    gap: 14px;
+  }
+  .categoryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .filterPanel {
+    padding: 14px;
+  }
+  .notice h1 {
+    font-size: 28px;
+  }
+  .formActions {
+    justify-content: stretch;
+  }
+  .formActions a,
+  .formActions button,
+  .participantActions button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.sectionHead a,
+.dashboardSectionHead > a,
+.dashboardPanelHead a,
+.dashboardQuickLinks a,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardProfile,
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.listCard aside button,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.ratingButton {
+  height: var(--control-height-md);
+  padding: var(--control-padding-md);
+  border-radius: var(--control-radius-md);
+  font-size: 0.86rem;
+  letter-spacing: 0;
+}
+
+.sectionHead a,
+.tabButton,
+.pageTabs button,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.ratingButton,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a,
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardHeroButton {
+  height: var(--control-height-md);
+  padding: var(--control-padding-md);
+  letter-spacing: var(--tracking-body);
+}
+
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a,
+.tabButton,
+.pageTabs button,
+.dashboardPills button,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.participantActions button,
+.myList aside a,
+.listCard aside button,
+.ratingButton,
+.ratingStar,
+.ratingStarActive {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.dashboardSignupButton,
+.dashboardHeroButton,
+.dashboardMeetingActions a,
+.primaryButton,
+.formActions button,
+.profileCard button,
+.participantActions button:last-child,
+.listCard aside button,
+.notice a {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #fff;
+  box-shadow: none;
+}
+
+.dashboardLoginButton,
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.myList aside a,
+.tableHead button,
+.tableCard td button {
+  border-color: rgba(18, 32, 59, 0.12);
+  background: #fff;
+  color: #344054;
+}
+
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardHeroButton,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.listCard aside button,
+.ratingButton {
+  border-radius: 14px;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.dashboardSignupButton,
+.dashboardHeroButton,
+.dashboardMeetingActions a,
+.primaryButton,
+.formActions button,
+.profileCard button,
+.participantActions button:last-child,
+.listCard aside button,
+.notice a {
+  border-color: transparent;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb 52%, #3b82f6);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.22);
+}
+
+.dashboardSignupButton:hover,
+.dashboardHeroButton:hover,
+.dashboardMeetingActions a:hover,
+.primaryButton:hover,
+.formActions button:hover,
+.listCard aside button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 36px rgba(37, 99, 235, 0.28);
+}
+
+.dashboardLoginButton,
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.myList aside a,
+.tableHead button,
+.tableCard td button {
+  border-color: rgba(18, 32, 59, 0.1);
+  background: rgba(255, 255, 255, 0.86);
+  color: #334155;
+}
+
+.dashboardCategoryItem,
+.tabButton,
+.pageTabs button,
+.dashboardPills button,
+.dashboardFilterButton,
+.dashboardQuickLinks a,
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child {
+  background: linear-gradient(180deg, #ffffff, #f2f7ff) !important;
+  border-color: rgba(37, 99, 235, 0.12) !important;
+  color: #385a84 !important;
+}
+
+.dashboardCategoryItem:hover,
+.tabButton:hover,
+.pageTabs button:hover,
+.dashboardFilterButton:hover,
+.dashboardQuickLinks a:hover,
+.secondaryButton:hover,
+.formActions a:hover {
+  border-color: rgba(37, 99, 235, 0.24) !important;
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.1) !important;
+  color: #1747b8 !important;
+}
+
+.primaryButton,
+.dashboardHeroButton,
+.dashboardMeetingActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child,
+.myList aside a {
+  background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.18) !important;
+}
+
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.tableCard td button {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  background: #fff !important;
+  color: #49627f !important;
+  box-shadow: none !important;
+}
+
+.dashboardHeroButton,
+.primaryButton,
+.dashboardMeetingActions a,
+.dashboardMeetingActions button:last-child,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child,
+.myList aside a,
+.tabButtonActive,
+.pageTabs button:first-child,
+.dashboardPills button:first-child {
+  background: #2563eb !important;
+  background-image: none !important;
+  color: #fff !important;
+  border-color: #2563eb !important;
+  box-shadow: none !important;
+}
+
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.tableCard td button,
+.tabButton,
+.pageTabs button,
+.dashboardFilterButton,
+.dashboardQuickLinks a {
+  background: #ffffff !important;
+  background-image: none !important;
+  color: #374151 !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+/* 2026-05-18 primary button gradient polish */
+.dashboardHeroButton,
+.primaryButton,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child,
+.myList aside a,
+.tabButtonActive,
+.pageTabs button:first-child,
+.dashboardPills button:first-child,
+.dashboardSignupButton {
+  background: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #2563eb 56%,
+    #1d4ed8 100%
+  ) !important;
+  background-image: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #2563eb 56%,
+    #1d4ed8 100%
+  ) !important;
+  border-color: #2563eb !important;
+  color: #fff !important;
+  box-shadow:
+    0 6px 14px rgba(37, 99, 235, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+.dashboardHeroButton:hover,
+.primaryButton:hover,
+.formActions button:hover,
+.profileCard button:hover,
+.tableHead button:hover,
+.participantActions button:last-child:hover,
+.myList aside a:hover,
+.tabButtonActive:hover,
+.pageTabs button:first-child:hover,
+.dashboardPills button:first-child:hover,
+.dashboardSignupButton:hover {
+  background: linear-gradient(
+    180deg,
+    #4b8eff 0%,
+    #2d6df1 56%,
+    #1d4ed8 100%
+  ) !important;
+  border-color: #1d4ed8 !important;
+  box-shadow:
+    0 8px 18px rgba(37, 99, 235, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.hostCard {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 18px;
+  background: #f8fbff;
+}
+
+.hostCard p {
+  margin: 4px 0 0;
+  color: #647c98;
+  font-size: 13px;
+}
+
+.page {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  gap: 56px;
+  color: var(--color-text);
+}
+
+.page a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page button,
+.page input,
+.page select,
+.page textarea {
+  font: inherit;
+}
+
+.page button {
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .page {
+    width: min(1360px, calc(100% - 72px));
+    gap: 44px;
+  }
+
+  .dashboardPage {
+    width: min(100%, calc(100% - 72px));
+    padding: 18px 0 26px;
+  }
+
+  .dashboardShell {
+    grid-template-columns: 208px minmax(0, 1fr) 284px;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .dashboardHeader {
+    padding: 13px 16px;
+    border-radius: 20px;
+  }
+
+  .dashboardHeroCard,
+  .notice,
+  .dashboardPanel,
+  .dashboardSummaryCard,
+  .dashboardMeetingCard,
+  .listCard,
+  .profileCard,
+  .filterPanel,
+  .tabsPanel {
+    border-radius: 20px;
+  }
+
+  .dashboardHeroCard {
+    min-height: 242px;
+    padding: 26px;
+  }
+
+  .dashboardHeroFilters {
+    margin-top: 20px;
+    padding: 7px;
+  }
+
+  .dashboardSummaryCard,
+  .dashboardPanel,
+  .filterPanel,
+  .tabsPanel,
+  .profileCard {
+    padding: 15px;
+  }
+
+  .dashboardMeetingCard,
+  .listCard {
+    padding: 13px;
+  }
+
+  .dashboardCategoryStrip {
+    padding: 10px 12px;
+    gap: 4px;
+  }
+
+  .dashboardCategoryItem {
+    min-height: 72px;
+    padding: 8px 4px 6px;
+  }
+
+  .dashboardMeetingImage {
+    height: 122px;
+  }
+
+  .listCardImage {
+    width: 116px;
+    height: 116px;
+  }
+}
+
+/* Production-style brand pass */
+.dashboardPage,
+.page {
+  color: #172033;
+}
+
+/* Premium brand polish */
+.dashboardPage,
+.page {
+  color: #111827;
+}
+
+/* Mobile meeting finder hardening */
+@media (max-width: 720px) {
+  .dashboardPage,
+  .page,
+  .finderLayout {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .dashboardShell,
+  .dashboardMain,
+  .meetingList,
+  .filterPanel,
+  .tabsPanel,
+  .notice,
+  .listHead,
+  .listCard,
+  .listCardBody,
+  .listCardContent,
+  .listCard aside,
+  .dashboardHeader,
+  .dashboardSearch,
+  .dashboardActions {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .dashboardShell,
+  .filterRow,
+  .listCard,
+  .listCardBody,
+  .listCard aside {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .dashboardAside {
+    display: none;
+  }
+
+  .dashboardHeader {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px;
+  }
+
+  .dashboardActions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .dashboardLoginButton,
+  .dashboardSignupButton {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .notice {
+    padding: 24px 20px;
+    gap: 18px;
+  }
+
+  .notice a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .filterPanel {
+    padding: 14px;
+    overflow: hidden;
+  }
+
+  .tabs {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filterRow select,
+  .filterRow input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .listHead {
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .listCard {
+    padding: 14px;
+    overflow: hidden;
+  }
+
+  .listCardBody {
+    gap: 14px;
+  }
+
+  .listCardImage {
+    width: 100%;
+    height: 188px;
+  }
+
+  .listMeta {
+    gap: 8px;
+  }
+
+  .listMeta span,
+  .host span {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .listCard aside {
+    border-left: 0;
+    border-top: 1px solid rgba(148, 163, 184, 0.16);
+    padding-left: 0;
+    padding-top: 14px;
+    gap: 12px;
+  }
+
+  .dateBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .listCard aside button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .dashboardPage,
+  .page,
+  .finderLayout {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .dashboardActions {
+    grid-template-columns: 1fr;
+  }
+
+  .notice h1 {
+    font-size: clamp(1.75rem, 8vw, 2.15rem);
+  }
+}
+
+/* Cross-page polish: align non-home pages with the finalized HomePage design system. */
+.page {
+  gap: 28px;
+}
+
+/* Absolute final neutral homepage background pass. Keep blue only on action controls. */
+.dashboardPage,
+.page {
+  background: #f7f7f8 !important;
+  background-image: none !important;
+}
+
+/* White background + subtle blue card surfaces. */
+.dashboardPage,
+.page {
+  background: #fff !important;
+  background-image: none !important;
+}
+
+/* Balance pass: keep page neutral, give cards a little more blue surface depth. */
+.dashboardPage,
+.page {
+  background: #f7f8fa !important;
+  background-image: none !important;
+}
+
+/* Final card contrast pass */
+.dashboardPage,
+.page {
+  background: #f5f6f8 !important;
+  background-image: none !important;
+}
+
+/* 2026-05-18 final neutral service override */
+.dashboardPage,
+.page {
+  background: #f6f7f8 !important;
+  background-image: none !important;
+}
+
+.primaryButton,
+.secondaryButton {
+  height: 46px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.primaryButton {
+  border: 0;
+  background: linear-gradient(135deg, var(--color-primary), #2b8cff);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(23, 105, 255, 0.22);
+}
+
+.profileAvatar {
+  width: 62px;
+  height: 62px;
+}
+
+.profileAvatar {
+  background: linear-gradient(145deg, #dfe9ff, #eef5ff);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.secondaryButton {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: #fff;
+  color: #45607d;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sectionHead h2,
+.how h2 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: -0.04em;
+}
+
+.sectionHead p,
+.how p {
+  margin: 0;
+  color: var(--color-text-soft);
+  line-height: 1.75;
+}
+
+.sectionHead a {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 11px 16px;
+  color: #54718f;
+  font-weight: 900;
+  transition: all 0.18s ease;
+}
+
+.sectionHead a:hover {
+  border-color: rgba(23, 105, 255, 0.18);
+  color: var(--color-primary-strong);
+  transform: translateY(-1px);
+}
+
+.sectionHead h2,
+.how h2,
+.dashboardSectionHead h2 {
+  font-size: var(--font-section-title);
+  letter-spacing: var(--tracking-tight);
+}
+
+.dashboardPanelHead,
+.sectionHead,
+.listHead,
+.tableHead {
+  position: relative;
+}
+
+.dashboardPanelHead::before,
+.sectionHead::before,
+.listHead::before,
+.tableHead::before {
+  content: "";
+  width: 7px;
+  min-width: 7px;
+  height: 26px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #2563eb, #58a7ff);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+}
+
+.dashboardPanelHead::before,
+.sectionHead::before,
+.listHead::before {
+  display: inline-block;
+}
+
+.sectionHead {
+  align-items: center;
+}
+
+.dashboardPanelHead::before,
+.sectionHead::before,
+.listHead::before,
+.tableHead::before {
+  width: 4px !important;
+  min-width: 4px !important;
+  height: 20px !important;
+  background: #2563eb !important;
+  box-shadow: none !important;
+}
+
+.sideInfo {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.sideInfo p {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+  color: #334c6a;
+}
+
+.sideInfo p:last-child {
+  border-bottom: 0;
+}
+
+.stickyActions {
+  display: grid;
+  gap: 10px;
+}
+
+.success {
+  background: rgba(221, 248, 238, 0.95);
+  color: var(--color-success);
+}
+
+.success {
+  border-color: rgba(18, 128, 92, 0.16);
+  background: #ecfdf3;
+  color: #12805c;
+}
+
+.success,
+.dashboardStatusBadge {
+  border-color: rgba(18, 128, 92, 0.16);
+  background: linear-gradient(135deg, #ecfdf3, #f7fffb);
+  color: #12805c;
+}
+
+.success,
+.dashboardStatusBadge {
+  border-color: rgba(18, 128, 92, 0.14) !important;
+  background: linear-gradient(135deg, #ddf8ee, #f2fffb) !important;
+  color: #0f766e !important;
+}
+
+.success,
+.dashboardStatusBadge {
+  border-color: rgba(16, 185, 129, 0.12) !important;
+  background: #ecfdf3 !important;
+  color: #0f8a62 !important;
+}
+
+.success,
+.dashboardStatusBadge {
+  background: #ecfdf3 !important;
+  color: #15803d !important;
+  border: 1px solid rgba(21, 128, 61, 0.12) !important;
+}
+
+.warning {
+  background: rgba(255, 241, 224, 0.95);
+  color: var(--color-warning);
+}
+
+.warning {
+  border-color: rgba(183, 110, 0, 0.18);
+  background: #fffaeb;
+  color: #b76e00;
+}
+
+.warning {
+  border-color: rgba(183, 110, 0, 0.18);
+  background: linear-gradient(135deg, #fffaeb, #fffdf7);
+  color: #b76e00;
+}
+
+.warning {
+  border-color: rgba(183, 110, 0, 0.14) !important;
+  background: linear-gradient(135deg, #fff4e6, #fffaf1) !important;
+  color: #b76e00 !important;
+}
+
+.warning,
+.PENDING,
+.CLOSED {
+  border-color: rgba(245, 158, 11, 0.14) !important;
+  background: #fff7ed !important;
+  color: #b76e00 !important;
+}
+
+.warning,
+.PENDING,
+.CLOSED {
+  background: #fff7ed !important;
+  color: #b45309 !important;
+  border: 1px solid rgba(180, 83, 9, 0.12) !important;
+}
+
+/* Auto-split from MeetingDetailPage.jsx. Page/component styles compose shared WeMove design rules. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.detailCover {
+
+  margin-bottom: 28px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hostCard {
+
+  padding: 12px 0 12px 10px;
+  gap: 8px;
+}
+
+.hostCard > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.hostCard .hostSportsText {
+  margin: 0;
+  color: #4b5563;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: -0.05em;
+}
+
+.hostCard .hostJoinDateText {
+  margin: 0;
+  color: #647c98;
+  font-size: 13px;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.profileAvatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.profileAvatarFallback {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #dbe8ff, #ddf4ff);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dashboardHostIcon {
+  width: 24px;
+  height: 24px;
+  color: #2268ef;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modalMeetingCard {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid rgba(151, 170, 194, 0.2);
+  border-radius: 22px;
+  background: #fff;
+  padding: 12px;
+}
+
+.modalMeetingCard img {
+  width: 96px;
+  height: 86px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.modalMeetingCard div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.modalMeetingCard span {
+  color: #2268ef;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.modalMeetingCard strong {
+  color: #10233d;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.modalMeetingCard p {
+  margin: 0;
+  color: #647c98;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.modalInfoList {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+}
+
+.modalInfoList div {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 12px;
+  border-radius: 16px;
+  background: #f3f7fd;
+  padding: 12px 14px;
+}
+
+.modalInfoList dt,
+.modalInfoList dd {
+  margin: 0;
+}
+
+.modalInfoList dt {
+  color: #1e293b !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+
+.modalInfoList dd {
+  color: #475569 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.modalNotice {
+  border: 1px solid rgba(239, 68, 68, 0.12);
+  border-radius: 20px;
+  background: #fff7f5;
+  padding: 16px;
+}
+
+.modalNotice strong {
+  color: #132844;
+  font-weight: 900;
+}
+
+.modalNotice p {
+  margin: 6px 0 0;
+  color: #71839b;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.chatBox {
+  display: grid;
+  gap: 12px;
+}
+
+.chatList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: min(46vh, 420px);
+  overflow-y: auto;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: #f9fafb;
+}
+
+.chatList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chatList::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #cbd5e1;
+}
+
+.chatMessage,
+.chatMessageMine {
+  max-width: 78%;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.chatMessageMine {
+  align-self: flex-end;
+  border-color: rgba(37, 99, 235, 0.18);
+  background: #eff6ff;
+}
+
+.chatMessage div,
+.chatMessageMine div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.chatMessage strong,
+.chatMessageMine strong {
+  color: #10233d;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.chatMessage span,
+.chatMessageMine span {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.chatMessage p,
+.chatMessageMine p {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.chatState {
+  margin: auto;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.chatError {
+  margin: 0;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.chatForm {
+  display: grid;
+  grid-template-columns: 1fr 84px;
+  gap: 8px;
+}
+
+.chatForm input {
+  min-width: 0;
+  height: 44px;
+  border: 1px solid #dbe3ee;
+  border-radius: 14px;
+  padding: 0 14px;
+  color: #10233d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.chatForm input:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+
+.chatForm button {
+  height: 44px;
+  border: 0;
+  border-radius: 14px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.chatForm button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+@media (max-width: 720px) {
+  .modalMeetingCard {
+    grid-template-columns: 82px 1fr;
+  }
+
+  .modalMeetingCard img {
+    width: 82px;
+    height: 78px;
+  }
+
+  .chatMessage,
+  .chatMessageMine {
+    max-width: 92%;
+  }
+}
+
+/* Home-aligned detail polish */
+.detailHero,
+.detailSection,
+.detailPanel {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-color: rgba(15, 23, 42, 0.06) !important;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.045) !important;
+}
+
+.detailHeroImageWrap {
+  overflow: hidden;
+  border-radius: 24px 24px 0 0;
+  background: #f8fbff;
+}
+
+.detailHeroImage {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+}
+
+.detailSummary article,
+.detailChecklist li,
+.hostCard {
+  border-radius: 16px;
+  background: #f8fbff !important;
+}
+
+.commentItem,
+.commentForm textarea {
+  background: #fff !important;
+  border-color: rgba(15, 23, 42, 0.06) !important;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+}
+
+.secondaryButton {
+  background: #fff !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  color: #49627f !important;
+}
+
+/* 2026-05-18 neutral detail page finish */
+.detailHero,
+.detailSection,
+.detailPanel {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.035) !important;
+}
+
+.detailCover,
+.detailSummary article,
+.detailChecklist li,
+.hostCard,
+.modalInfoList div {
+  background: #f9fafb !important;
+  border-color: #eef0f3 !important;
+}
+
+.commentItem,
+.commentForm textarea,
+.modalMeetingCard,
+.modalNotice {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.primaryButton {
+  background: #2563eb !important;
+  box-shadow: none !important;
+}
+
+.secondaryButton {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  color: #374151 !important;
+}
+
+/* 2026-05-18 unify page-specific primary buttons */
+.primaryButton {
+  background: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #2563eb 56%,
+    #1d4ed8 100%
+  ) !important;
+  background-image: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #2563eb 56%,
+    #1d4ed8 100%
+  ) !important;
+  color: #fff !important;
+  border-color: #2563eb !important;
+  box-shadow:
+    0 6px 14px rgba(37, 99, 235, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+.dangerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 46px !important;
+  padding: 0 18px !important;
+  border-radius: 14px;
+  font-weight: 900;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: linear-gradient(135deg, #ef4444, #f97316) !important;
+  background-image: linear-gradient(135deg, #ef4444, #f97316) !important;
+  border: 0 !important;
+  box-shadow: 0 16px 32px rgba(239, 68, 68, 0.2) !important;
+  color: #fff !important;
+}
+
+.dangerButton:hover {
+  background: linear-gradient(135deg, #dc2626, #ea580c) !important;
+  background-image: linear-gradient(135deg, #dc2626, #ea580c) !important;
+  box-shadow: 0 18px 36px rgba(239, 68, 68, 0.3) !important;
+  transform: translateY(-1px);
+}
+
+.detailCover h1 {
+  width: 100% !important;
+  max-width: none !important;
+  word-break: break-all !important; /* 띄어쓰기 없는 긴 텍스트가 박스를 뚫고 나가지 않게 강제 줄바꿈 */
+  overflow-wrap: break-word !important;
+}
+
+.detailSummary article {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.sideInfo p {
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+
+.sectionHead {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  padding-bottom: 14px !important;
+  margin-bottom: 24px !important;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16) !important;
+}
+
+.sectionHead > div {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  margin-left: 12px !important;
+}
+
+.sectionHead h2 {
+  margin: 0 !important;
+  font-family: var(--font-display) !important;
+  font-size: 24px !important;
+  line-height: 1.1 !important;
+}
+
+.sectionHead p {
+  margin: 0 !important;
+  color: var(--color-text-soft) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+}
+
+.profileAvatar {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 1px solid rgba(148, 163, 184, 0.18) !important;
+  flex-shrink: 0 !important;
+}
+
+.hostCard strong {
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  color: #1f2937 !important;
+}
+
+.detailDivider {
+  height: 1px;
+  background: rgba(148, 163, 184, 0.16);
+  margin: 0 !important;
+}
+
+.detailChecklist li {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  padding: 16px 20px !important;
+}
+
+.checkLabel {
+  font-weight: 800 !important;
+  color: #1e293b !important;
+  font-size: 15px !important;
+  min-width: 80px !important;
+  display: inline-block !important;
+}
+
+.checkValue {
+  font-weight: 500 !important;
+  color: #475569 !important;
+  font-size: 15px !important;
+}
+
+.primaryButton:disabled,
+.primaryButton:disabled:hover,
+.primaryButton:disabled:active {
+  background: #e2e8f0 !important;
+  background-image: none !important;
+  color: #64748b !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+.detailCover .detailSubtitle {
+  width: 100%;
+  max-width: none;
+  margin: 8px 0 0;
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  word-break: break-all; /* 띄어쓰기 없는 긴 텍스트 강제 줄바꿈 */
+  overflow-wrap: break-word;
+}
+
+/* ==========================================
+   👥 Accordion Member List & Avatars Group Styles
+   ========================================== */
+
+.participantToggle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 18px !important;
+  background: #f9fafb !important;
+  border-top: 1px solid #e5e7eb !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  user-select: none !important;
+}
+
+.participantToggle:hover {
+  background: #f1f5f9 !important;
+}
+
+.participantLabelGroup {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+}
+
+.participantLabelTitle {
+  font-weight: 800 !important;
+  color: #1e293b !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+}
+
+.participantLabelSub {
+  font-size: 11px !important;
+  color: #64748b !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+}
+
+.participantActionGroup {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+/* 아바타 그룹 겹침 */
+.avatarGroup {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row-reverse !important; /* z-index 레이어링 순서를 맞춰주기 위한 트릭 */
+}
+
+.miniAvatar {
+  width: 26px !important;
+  height: 26px !important;
+  aspect-ratio: 1 / 1 !important;
+  flex-shrink: 0 !important;
+  border-radius: 50% !important;
+  border: 1.5px solid #ffffff !important;
+  margin-left: -8px !important;
+  object-fit: cover !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+  background: #ffffff !important;
+}
+
+.miniAvatar:last-child {
+  margin-left: 0 !important;
+}
+
+.participantCountText {
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  font-size: 15px !important;
+}
+
+.chevronIcon {
+  width: 14px !important;
+  height: 14px !important;
+  color: #94a3b8 !important;
+  transition: transform 0.25s ease !important;
+}
+
+.chevronIcon.open {
+  transform: rotate(180deg) !important;
+  color: #2563eb !important;
+}
+
+.accordionPanel {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.accordionPanel.open {
+  max-height: 262px !important; /* 5명 분량 */
+}
+
+.accordionList {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  padding: 12px 18px !important;
+  max-height: 228px !important; /* 4명까지 스크롤 없음, 5명째는 단 1픽셀도 삐져나오지 않고 완전 은닉 */
+  overflow-y: auto !important;
+  position: relative !important;
+}
+
+/* 커스텀 스크롤바 디자인 */
+.accordionList::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.accordionList::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.accordionList::-webkit-scrollbar-thumb {
+  border-radius: 999px !important;
+  background: #cbd5e1 !important;
+}
+
+.accordionList::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8 !important;
+}
+
+/* 개별 참가자 리스트 줄 아이템 */
+.accordionItem {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 8px 10px !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  transition: background 0.2s ease !important;
+  user-select: none !important;
+}
+
+.accordionItem:hover {
+  background: #f8fafc !important;
+}
+
+.accordionUserWrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.accordionAvatar {
+  width: 32px !important;
+  height: 32px !important;
+  aspect-ratio: 1 / 1 !important;
+  flex-shrink: 0 !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 1px solid rgba(148, 163, 184, 0.16) !important;
+  background: #ffffff !important;
+}
+
+.accordionNickname {
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: #1e293b !important;
+}
+
+.accordionHostBadge {
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  color: #2268ef !important;
+  background: #eff6ff !important;
+  border: 1px solid rgba(34, 104, 239, 0.16) !important;
+  padding: 2px 6px !important;
+  border-radius: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+}
+
+.accordionHostCrown {
+  width: 10px !important;
+  height: 10px !important;
+  fill: currentColor !important;
+}
+
+/* 페이드 아웃 그라데이션 디테일 효과 */
+.fadeEffect {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 24px !important;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.95), transparent) !important;
+  pointer-events: none !important;
+}
+
+/* ==========================================
+   👤 기본 프로필 이미지 전용 스케일 다운 및 Contain 튜닝
+   ========================================== */
+.profileAvatar[src*="default-user"],
+.accordionAvatar[src*="default-user"],
+.miniAvatar[src*="default-user"] {
+  object-fit: contain !important;
+  padding: 2px !important; /* 패딩을 6px에서 2px로 미세 하향하여 캐릭터 크기 밸런싱 */
+  background: #f1f5f9 !important; /* 캐릭터가 돋보이도록 은은하고 깔끔한 백그라운드 색 매핑 */
+}
+.shareButton {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(37, 99, 235, 0.18) !important;
+  background: #ffffff !important;
+  color: #2563eb !important;
+  font-size: 0.94rem !important;
+  font-weight: 900 !important;
+  box-shadow: none !important;
+}
+
+.shareButton:hover {
+  background: #eff6ff !important;
+}
+
+.shareButtonIcon {
+  width: 18px !important;
+  height: 18px !important;
+  flex: 0 0 auto !important;
+}

@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1800" viewBox="0 0 2400 1800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fbff"/>
+      <stop offset="100%" stop-color="#eaf3ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      .title { font-family: "Malgun Gothic", "Pretendard", Arial, sans-serif; font-size: 52px; font-weight: 900; fill: #10233f; }
+      .subtitle { font-family: "Malgun Gothic", "Pretendard", Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #64748b; }
+      .step { font-family: "Malgun Gothic", "Pretendard", Arial, sans-serif; font-size: 26px; font-weight: 900; fill: #ffffff; }
+      .file { font-family: "Malgun Gothic", "Pretendard", Arial, sans-serif; font-size: 22px; font-weight: 900; fill: #bfdbfe; }
+      .desc { font-family: "Malgun Gothic", "Pretendard", Arial, sans-serif; font-size: 18px; font-weight: 800; fill: #334155; }
+      .code { font-family: "Cascadia Mono", "Consolas", monospace; font-size: 18px; fill: #d1d5db; }
+      .codeS { font-family: "Cascadia Mono", "Consolas", monospace; font-size: 16.5px; fill: #d1d5db; }
+      .line { fill: #64748b; }
+      .kw { fill: #fbbf24; }
+      .str { fill: #86efac; }
+      .hot { fill: #fca5a5; }
+      .blue { fill: #93c5fd; }
+    </style>
+  </defs>
+
+  <rect width="2400" height="1800" fill="url(#bg)"/>
+  <rect x="58" y="48" width="2284" height="1704" rx="36" fill="#ffffff" filter="url(#shadow)"/>
+
+  <text x="104" y="122" class="title">Redis 기반 중복 로그인 처리 전체 흐름 코드</text>
+  <text x="104" y="164" class="subtitle">현재 로그인된 사용자가 있으면 안내 모달을 띄우고, 강제 로그인 시 Redis 세션을 갱신하여 기존 사용자를 자동 로그아웃 처리합니다.</text>
+
+  <rect x="104" y="210" width="520" height="56" rx="18" fill="#2563eb"/>
+  <text x="132" y="247" class="step">1. 프론트: 중복 로그인 안내</text>
+
+  <rect x="104" y="292" width="1068" height="470" rx="24" fill="#0b1120"/>
+  <text x="132" y="336" class="file">LoginPage.jsx - 중복 로그인 모달</text>
+  <text x="132" y="380" class="code"><tspan class="line">01</tspan>  &lt;AppModal</text>
+  <text x="132" y="410" class="code"><tspan class="line">02</tspan>      open={duplicatePromptOpen}</text>
+  <text x="132" y="440" class="code"><tspan class="line">03</tspan>      title=<tspan class="str">"현재 로그인된 사용자가 있습니다"</tspan></text>
+  <text x="132" y="470" class="code"><tspan class="line">04</tspan>      description=<tspan class="str">"강제로 로그인하면 기존에 로그인되어 있던 사용자는 자동으로 로그아웃됩니다.</tspan></text>
+  <text x="132" y="500" class="code"><tspan class="line">05</tspan>                   <tspan class="str">계속 로그인하시겠습니까?"</tspan></text>
+  <text x="132" y="530" class="code"><tspan class="line">06</tspan>      confirmText=<tspan class="str">"강제 로그인"</tspan></text>
+  <text x="132" y="560" class="code"><tspan class="line">07</tspan>      cancelText=<tspan class="str">"취소"</tspan></text>
+  <text x="132" y="590" class="code"><tspan class="line">08</tspan>      onConfirm={confirmDuplicateLogin}</text>
+  <text x="132" y="620" class="code"><tspan class="line">09</tspan>      onClose={() =&gt; setDuplicatePromptOpen(false)}</text>
+  <text x="132" y="650" class="code"><tspan class="line">10</tspan>  /&gt;</text>
+
+  <rect x="1204" y="292" width="1092" height="470" rx="24" fill="#0b1120"/>
+  <text x="1232" y="336" class="file">LoginPage.jsx - 강제 로그인 요청</text>
+  <text x="1232" y="380" class="code"><tspan class="line">01</tspan>  <tspan class="kw">const</tspan> requestLogin = async ({ forceLogin = false } = {}) =&gt; {</text>
+  <text x="1232" y="410" class="code"><tspan class="line">02</tspan>    <tspan class="kw">const</tspan> loginId = form.loginId.trim();</text>
+  <text x="1232" y="440" class="code"><tspan class="line">03</tspan>    <tspan class="kw">const</tspan> password = form.password;</text>
+  <text x="1232" y="470" class="code"><tspan class="line">04</tspan>    <tspan class="kw">const</tspan> { data } = await login({ loginId, password, autoLogin, forceLogin });</text>
+  <text x="1232" y="500" class="code"><tspan class="line">05</tspan>    finishLogin(loginId, data?.accessToken);</text>
+  <text x="1232" y="530" class="code"><tspan class="line">06</tspan>  };</text>
+  <text x="1232" y="580" class="code"><tspan class="line">07</tspan>  <tspan class="kw">const</tspan> confirmDuplicateLogin = async () =&gt; {</text>
+  <text x="1232" y="610" class="code"><tspan class="line">08</tspan>    setIsSubmitting(true);</text>
+  <text x="1232" y="640" class="code"><tspan class="line">09</tspan>    setErrorMessage(<tspan class="str">""</tspan>);</text>
+  <text x="1232" y="670" class="code"><tspan class="line">10</tspan>    <tspan class="kw">try</tspan> { await requestLogin({ forceLogin: true }); }</text>
+  <text x="1232" y="700" class="code"><tspan class="line">11</tspan>    <tspan class="kw">finally</tspan> { setDuplicatePromptOpen(false); setIsSubmitting(false); }</text>
+  <text x="1232" y="730" class="code"><tspan class="line">12</tspan>  };</text>
+
+  <rect x="104" y="812" width="520" height="56" rx="18" fill="#f97316"/>
+  <text x="132" y="849" class="step">2. 백엔드: 중복 로그인 감지</text>
+
+  <rect x="104" y="894" width="1068" height="420" rx="24" fill="#0b1120"/>
+  <text x="132" y="938" class="file">AuthController.java - 중복 로그인 409 응답</text>
+  <text x="132" y="982" class="code"><tspan class="line">01</tspan>  @PostMapping(<tspan class="str">"/login"</tspan>)</text>
+  <text x="132" y="1012" class="code"><tspan class="line">02</tspan>  <tspan class="kw">public</tspan> ResponseEntity&lt;?&gt; login(</text>
+  <text x="132" y="1042" class="code"><tspan class="line">03</tspan>      @RequestBody LoginRequest request, HttpServletResponse response) {</text>
+  <text x="132" y="1072" class="code"><tspan class="line">04</tspan>    <tspan class="kw">try</tspan> {</text>
+  <text x="132" y="1102" class="code"><tspan class="line">05</tspan>      AuthLoginResult result = authService.login(request);</text>
+  <text x="132" y="1132" class="code"><tspan class="line">06</tspan>      <tspan class="kw">return</tspan> ResponseEntity.ok(<tspan class="kw">new</tspan> AccessTokenResponse(result.getAccessToken()));</text>
+  <text x="132" y="1162" class="code"><tspan class="line">07</tspan>    } <tspan class="kw">catch</tspan> (DuplicateLoginException exception) {</text>
+  <text x="132" y="1192" class="code"><tspan class="line">08</tspan>      <tspan class="kw">return</tspan> ResponseEntity.status(HttpStatus.CONFLICT)</text>
+  <text x="132" y="1222" class="code"><tspan class="line">09</tspan>          .body(Map.of(<tspan class="str">"code"</tspan>, <tspan class="str">"DUPLICATE_LOGIN_REQUIRED"</tspan>,</text>
+  <text x="132" y="1252" class="code"><tspan class="line">10</tspan>              <tspan class="str">"message"</tspan>, <tspan class="str">"이미 로그인 중인 사용자가 있습니다. 계속 로그인하시겠습니까?"</tspan>));</text>
+  <text x="132" y="1282" class="code"><tspan class="line">11</tspan>    }</text>
+
+  <rect x="1204" y="894" width="1092" height="420" rx="24" fill="#0b1120"/>
+  <text x="1232" y="938" class="file">AuthServiceImpl.java - Redis 기존 세션 확인</text>
+  <text x="1232" y="982" class="codeS"><tspan class="line">01</tspan>  boolean forceLogin = Boolean.TRUE.equals(req.getForceLogin());</text>
+  <text x="1232" y="1010" class="codeS"><tspan class="line">02</tspan>  long effectiveRefreshSeconds =</text>
+  <text x="1232" y="1038" class="codeS"><tspan class="line">03</tspan>      autoLogin ? autoLoginRefreshTokenSeconds : refreshTokenSeconds;</text>
+  <text x="1232" y="1082" class="codeS"><tspan class="line">04</tspan>  String savedRefreshToken = stringRedisTemplate.opsForValue().get(refreshKey(member.getUserId()));</text>
+  <text x="1232" y="1110" class="codeS"><tspan class="line">05</tspan>  String savedSessionId = stringRedisTemplate.opsForValue().get(sessionKey(member.getUserId()));</text>
+  <text x="1232" y="1154" class="codeS"><tspan class="line">06</tspan>  <tspan class="kw">if</tspan> (hasText(savedRefreshToken) &amp;&amp; hasText(savedSessionId) &amp;&amp; !forceLogin) {</text>
+  <text x="1232" y="1182" class="codeS"><tspan class="line">07</tspan>    <tspan class="kw">throw new</tspan> DuplicateLoginException(<tspan class="hot">"An existing login session was found."</tspan>);</text>
+  <text x="1232" y="1210" class="codeS"><tspan class="line">08</tspan>  }</text>
+  <text x="1232" y="1264" class="desc">Redis에 기존 refresh/session 값이 있고 forceLogin이 false면 중복 로그인으로 판단합니다.</text>
+
+  <rect x="104" y="1364" width="520" height="56" rx="18" fill="#16a34a"/>
+  <text x="132" y="1401" class="step">3. 강제 로그인: Redis 세션 갱신</text>
+
+  <rect x="104" y="1446" width="1068" height="220" rx="24" fill="#0b1120"/>
+  <text x="132" y="1490" class="file">AuthServiceImpl.java - 새 sessionId / token 저장</text>
+  <text x="132" y="1534" class="codeS"><tspan class="line">01</tspan>  String sessionId = UUID.randomUUID().toString();</text>
+  <text x="132" y="1562" class="codeS"><tspan class="line">02</tspan>  String accessToken = jwtTokenProvider.createAccessToken(user, sessionId);</text>
+  <text x="132" y="1590" class="codeS"><tspan class="line">03</tspan>  String refreshToken = jwtTokenProvider.createRefreshToken(member.getUserId(), sessionId, effectiveRefreshSeconds);</text>
+  <text x="132" y="1626" class="codeS"><tspan class="line">04</tspan>  Duration ttl = Duration.ofSeconds(effectiveRefreshSeconds);</text>
+  <text x="132" y="1654" class="codeS"><tspan class="line">05</tspan>  stringRedisTemplate.opsForValue().set(refreshKey(member.getUserId()), refreshToken, ttl);</text>
+
+  <rect x="1204" y="1446" width="1092" height="220" rx="24" fill="#0b1120"/>
+  <text x="1232" y="1490" class="file">4. 기존 사용자: session-status 검사 후 자동 로그아웃</text>
+  <text x="1232" y="1534" class="codeS"><tspan class="line">01</tspan>  <tspan class="kw">if</tspan> (!authService.isCurrentSession(accessToken)) {</text>
+  <text x="1232" y="1562" class="codeS"><tspan class="line">02</tspan>    <tspan class="kw">return</tspan> ResponseEntity.status(HttpStatus.CONFLICT)</text>
+  <text x="1232" y="1590" class="codeS"><tspan class="line">03</tspan>        .body(Map.of(<tspan class="str">"code"</tspan>, <tspan class="str">"DUPLICATE_LOGIN_LOGOUT"</tspan>,</text>
+  <text x="1232" y="1618" class="codeS"><tspan class="line">04</tspan>            <tspan class="str">"message"</tspan>, DUPLICATE_LOGOUT_MESSAGE));</text>
+  <text x="1232" y="1646" class="codeS"><tspan class="line">05</tspan>  }</text>
+
+  <text x="104" y="1722" class="subtitle">요약: 기존 세션 발견 → 409 중복 로그인 안내 → 강제 로그인 선택 → Redis 세션 갱신 → 기존 브라우저는 세션 불일치로 자동 로그아웃</text>
+</svg>

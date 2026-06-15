@@ -1,0 +1,187 @@
+.previewBar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 12px;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  border: 1px solid #dbe7f6;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+}
+
+.previewBar span {
+  color: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+.previewBar strong {
+  min-width: 0;
+  color: #10233f;
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.textButton {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  align-self: center;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #2563eb;
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.browser {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.column {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.columnHead {
+  margin-bottom: 12px;
+  color: #4b5563;
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.list {
+  display: grid;
+  gap: 8px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.item {
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid #dbe3ef;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #44566c;
+  text-align: left;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.item:hover,
+.sportCard:hover {
+  border-color: #93c5fd;
+  background: #f8fbff;
+}
+
+.itemCurrent,
+.sportCardCurrent {
+  border-color: #2563eb;
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+  color: #1d4ed8;
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.08);
+}
+
+.emptyState {
+  min-height: 120px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  border: 1px dashed #dbe3ef;
+  border-radius: 14px;
+  background: #f8fbff;
+  color: #7b8ba0;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.searchField {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.searchField span {
+  color: #4b5563;
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.searchField input {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 14px;
+  border: 1px solid #dbe3ef;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.searchField input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  outline: none;
+}
+
+.sportList {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.sportCard {
+  display: grid;
+  gap: 5px;
+  min-height: 64px;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #111827;
+  text-align: left;
+}
+
+.sportCard strong {
+  font-size: 0.98rem;
+}
+
+.sportCard span {
+  color: #6b7280;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .browser {
+    grid-template-columns: minmax(220px, 1fr);
+  }
+
+  .previewBar {
+    grid-template-columns: 1fr;
+  }
+
+  .textButton {
+    grid-row: auto;
+    grid-column: auto;
+    justify-self: start;
+  }
+
+  .list {
+    max-height: 220px;
+  }
+}

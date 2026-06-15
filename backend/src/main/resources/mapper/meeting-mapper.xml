@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="meeting">
+
+    <select id="selectMainMeetingList" parameterType="map" resultType="kr.co.iei.meeting.model.vo.MeetingListResponse">
+        SELECT
+        m.meetingId, m.title, m.placeName, m.meetingDate, m.startTime, m.endTime,
+        m.maxMembers, m.status, m.thumbnailImage, m.content,
+        s.name as sportName,
+        CONCAT(r.sido, " ", r.sigungu, " ", COALESCE(r.dong, "")) as regionName,
+        (SELECT nickname FROM users WHERE userId = m.hostUserId) as meetingHostName,
+        (SELECT COUNT(*) FROM meetingParticipants mp WHERE mp.meetingId = m.meetingId AND mp.status="APPROVED") as approvedCount,
+        (SELECT COUNT(*) FROM comments c WHERE c.meetingId = m.meetingId AND c.isDeleted = 0) as commentCount,
+        CASE WHEN m.status = 'RECRUITING' THEN '모집중'
+        ELSE m.status
+        END as statusText
+        FROM meetings m
+        JOIN sports s ON m.sportId = s.sportId
+        JOIN regions r ON m.regionId = r.regionId
+        WHERE m.deletedAt IS NULL
+        AND m.status = 'RECRUITING'
+        <if test="category != null and category != '전체' and category != ''">
+            AND s.category = #{category}
+        </if>
+        ORDER BY m.createdAt DESC
+        LIMIT #{limit} OFFSET #{offset}
+    </select>
+
+    <select id="selectMainMeetingListByIds" resultType="kr.co.iei.meeting.model.vo.MeetingListResponse">
+        SELECT
+            m.meetingId, m.title, m.placeName, m.meetingDate, m.startTime, m.endTime,
+            m.maxMembers, m.status, m.thumbnailImage,
+            s.name as sportName,
+            CONCAT(r.sido, " ", r.sigungu, " ", COALESCE(r.dong, "")) as regionName,
+            (SELECT nickname FROM users WHERE userId = m.hostUserId) as meetingHostName,
+            (SELECT COUNT(*) FROM meetingParticipants mp WHERE mp.meetingId = m.meetingId AND mp.status="APPROVED") as approvedCount
+        FROM meetings m
+                 JOIN sports s ON m.sportId = s.sportId
+                 JOIN regions r ON m.regionId = r.regionId
+        WHERE m.deletedAt IS NULL
+          AND m.status = 'RECRUITING'
+          AND m.meetingId IN
+        <foreach item="meetingId" collection="list" open="(" separator="," close=")">
+            #{meetingId}
+        </foreach>
+        ORDER BY m.createdAt DESC
+    </select>
+
+
+
+    <select id="selectMeetingList" resultType="kr.co.iei.meeting.model.vo.MeetingListResponse">
+        SELECT
+            m.meetingId as meetingId,
+            m.title,
+            m.placeName as placeName,
+            m.meetingDate as meetingDate,
+            m.startTime as startTime,
+            m.endTime as endTime,
+            m.maxMembers as maxMembers,
+            m.status,
+            m.content,
+            m.address,
+            m.thumbnailImage as thumbnailImage,
+            s.name sportName,
+            CONCAT(r.sido," ",r.sigungu," ",COALESCE(r.dong,"")) regionName,
+            (
+                SELECT nickname
+                FROM users
+                where userId = m.hostUserId
+            ) meetingHostName,
+            (
+                SELECT profileImage
+                FROM users
+                where userId = m.hostUserId
+            ) hostProfileImage,
+            (
+                SELECT mp.status
+                FROM meetingParticipants mp
+                WHERE mp.meetingId = m.meetingId
+                  AND mp.userId = #{loginUserId}
+                LIMIT 1
+            ) AS myParticipantStatus,
+            (
+                SELECT COUNT(*)
+                FROM meetingParticipants mp
+                WHERE mp.meetingId = m.meetingId
+                  AND mp.status="APPROVED"
+            ) + CASE
+                WHEN EXISTS (
+                    SELECT 1
+                    FROM meetingParticipants hostMp
+                    WHERE hostMp.meetingId = m.meetingId
+                      AND hostMp.userId = m.hostUserId
+                      AND hostMp.status = "APPROVED"
+                ) THEN 0 ELSE 1
+            END AS approvedCount
+        FROM meetings m
+        JOIN sports s ON m.sportId = s.sportId
+        JOIN regions r ON m.regionId = r.regionId
+        WHERE m.deletedAt IS NULL
+        <choose>
+            <when test="sportId != null">
+                AND m.sportId = #{sportId}
+            </when>
+            <when test='sportName != null and sportName != "" and sportName != "전체"'>
+                AND s.name = #{sportName}
+            </when>
+        </choose>
+        <if test='meetingDate != null and meetingDate != ""'>
+            AND m.meetingDate = #{meetingDate}
+        </if>
+        <choose>
+            <when test="regionId != null">
+                AND m.regionId = #{regionId}
+            </when>
+            <when test='dong != null and dong != ""'>
+                AND r.sido = #{sido}
+                AND r.sigungu = #{sigungu}
+                AND r.dong = #{dong}
+            </when>
+            <when test='sigungu != null and sigungu != ""'>
+                AND r.sido = #{sido}
+                AND r.sigungu = #{sigungu}
+            </when>
+            <when test='sido != null and sido != ""'>
+                AND r.sido = #{sido}
+            </when>
+            <when test="baseRegionId != null">
+                AND r.sido = (SELECT br.sido FROM regions br WHERE br.regionId = #{baseRegionId})
+                AND r.sigungu = (SELECT br.sigungu FROM regions br WHERE br.regionId = #{baseRegionId})
+            </when>
+        </choose>
+        <if test='status != null and status != ""'>
+            AND m.status = #{status}
+        </if>
+        <if test='keyword != null and keyword != ""'>
+            AND (
+            m.title LIKE CONCAT('%', #{keyword}, '%')
+            OR m.content LIKE CONCAT('%', #{keyword}, '%')
+            OR m.placeName LIKE CONCAT('%', #{keyword}, '%')
+            OR m.address LIKE CONCAT('%', #{keyword}, '%')
+
+            OR s.name LIKE CONCAT('%', #{keyword}, '%')
+
+            OR r.sido LIKE CONCAT('%', #{keyword}, '%')
+            OR r.sigungu LIKE CONCAT('%', #{keyword}, '%')
+            OR r.dong LIKE CONCAT('%', #{keyword}, '%')
+            )
+        </if>
+        ORDER BY
+        CASE WHEN #{baseRegionId} IS NOT NULL AND m.regionId = #{baseRegionId} THEN 0 ELSE 1 END,
+        CASE m.status
+        WHEN 'RECRUITING' THEN 0
+        WHEN 'CLOSED' THEN 1
+        WHEN 'ONGOING' THEN 2
+        WHEN 'COMPLETED' THEN 3
+        WHEN 'CANCELLED' THEN 4
+        ELSE 5
+        END,
+        m.meetingDate ASC,
+        m.startTime ASC,
+        m.createdAt DESC
+        LIMIT #{size} OFFSET #{offset}
+    </select>
+
+    <select id="selectMeetingCount" resultType="int">
+        SELECT COUNT(*)
+        FROM meetings m
+        JOIN sports s ON m.sportId = s.sportId
+        JOIN regions r ON m.regionId = r.regionId
+        WHERE m.deletedAt IS NULL
+        <choose>
+            <when test="sportId != null">
+                AND m.sportId = #{sportId}
+            </when>
+            <when test='sportName != null and sportName != "" and sportName != "전체"'>
+                AND s.name = #{sportName}
+            </when>
+        </choose>
+        <if test='meetingDate != null and meetingDate != ""'>
+            AND m.meetingDate = #{meetingDate}
+        </if>
+        <choose>
+            <when test="regionId != null">
+                AND m.regionId = #{regionId}
+            </when>
+            <when test='dong != null and dong != ""'>
+                AND r.sido = #{sido}
+                AND r.sigungu = #{sigungu}
+                AND r.dong = #{dong}
+            </when>
+            <when test='sigungu != null and sigungu != ""'>
+                AND r.sido = #{sido}
+                AND r.sigungu = #{sigungu}
+            </when>
+            <when test='sido != null and sido != ""'>
+                AND r.sido = #{sido}
+            </when>
+            <when test="baseRegionId != null">
+                AND r.sido = (SELECT br.sido FROM regions br WHERE br.regionId = #{baseRegionId})
+                AND r.sigungu = (SELECT br.sigungu FROM regions br WHERE br.regionId = #{baseRegionId})
+            </when>
+        </choose>
+        <if test='status != null and status != ""'>
+            AND m.status = #{status}
+        </if>
+        <if test='keyword != null and keyword != ""'>
+            AND (
+            m.title LIKE CONCAT('%', #{keyword}, '%')
+            OR m.content LIKE CONCAT('%', #{keyword}, '%')
+            OR m.placeName LIKE CONCAT('%', #{keyword}, '%')
+            OR m.address LIKE CONCAT('%', #{keyword}, '%')
+
+            OR s.name LIKE CONCAT('%', #{keyword}, '%')
+
+            OR r.sido LIKE CONCAT('%', #{keyword}, '%')
+            OR r.sigungu LIKE CONCAT('%', #{keyword}, '%')
+            OR r.dong LIKE CONCAT('%', #{keyword}, '%')
+            )
+        </if>
+    </select>
+
+    <select id="selectTopRegions" resultType="map">
+        SELECT TRIM(CONCAT(r.sido, ' ', r.sigungu, ' ', COALESCE(r.dong, ''))) AS name,
+               r.sido                                                          AS sido,
+               r.sigungu                                                       AS sigungu,
+               r.dong                                                          AS dong,
+               COUNT(*) AS count
+        FROM meetings m
+            JOIN regions r
+        ON m.regionId = r.regionId
+        WHERE m.deletedAt IS NULL AND m.status = 'RECRUITING'
+        GROUP BY r.sido, r.sigungu, r.dong
+        ORDER BY COUNT(*) DESC, MAX(m.createdAt) DESC, r.sido ASC, r.sigungu ASC, r.dong ASC
+            LIMIT 4
+    </select>
+
+    <select id="selectMeetingDetail" resultType="kr.co.iei.meeting.model.vo.MeetingDetailResponse">
+        SELECT
+            m.meetingId as meetingId,
+            m.hostUserId as hostUserId,
+            u.nickname AS hostNickname,
+            u.nickname AS meetingHostName,
+            u.profileImage AS hostProfileImage,
+            u.createdAt AS hostCreatedAt,
+            SUBSTRING_INDEX(
+                (
+                    SELECT GROUP_CONCAT(s.name ORDER BY s.sportId ASC SEPARATOR ' · ')
+                    FROM userSports us
+                    JOIN sports s ON us.sportId = s.sportId
+                    WHERE us.userId = m.hostUserId
+                ),
+                ' · ',
+                2
+            ) AS hostSports,
+            m.title,
+            m.content,
+            m.supplies as supplies,
+            m.guideText as guideText,
+            m.meetingType as meetingType,
+            m.repeatType as repeatType,
+            m.thumbnailImage,
+            m.placeName as placeName,
+            m.address,
+            m.meetingDate as meetingDate,
+            m.startTime as startTime,
+            m.endTime as endTime,
+            m.maxMembers as maxMembers,
+            m.status,
+            s.name AS sportName,
+            CONCAT(r.sido, " ", r.sigungu, " ", COALESCE(r.dong, "")) AS regionName,
+            (
+                SELECT COUNT(*)
+                FROM meetingParticipants mp
+                WHERE mp.meetingId = m.meetingId
+                  AND mp.status = "APPROVED"
+            ) + CASE
+                WHEN EXISTS (
+                    SELECT 1
+                    FROM meetingParticipants hostMp
+                    WHERE hostMp.meetingId = m.meetingId
+                      AND hostMp.userId = m.hostUserId
+                      AND hostMp.status = "APPROVED"
+                ) THEN 0 ELSE 1
+            END AS approvedCount
+        FROM meetings m
+                 JOIN users u ON m.hostUserId = u.userId
+                 JOIN sports s ON m.sportId = s.sportId
+                 JOIN regions r ON m.regionId = r.regionId
+        WHERE m.meetingId = #{meetingId}
+          AND m.deletedAt IS NULL
+    </select>
+
+    <insert id="insertMeeting" parameterType="kr.co.iei.meeting.model.vo.Meeting" useGeneratedKeys="true"
+            keyProperty="meetingId">
+        INSERT INTO meetings(hostUserId,
+                             sportId,
+                             regionId,
+                             title,
+                             content,
+                             thumbnailImage,
+                             placeName,
+                             address,
+                             meetingDate,
+                             startTime,
+                             endTime,
+                             maxMembers,
+                             meetingType,
+                             repeatType,
+                             supplies,
+                             guideText,
+                             status)
+        VALUES (#{hostUserId},
+                #{sportId},
+                #{regionId},
+                #{title},
+                #{content},
+                #{thumbnailImage},
+                #{placeName},
+                #{address},
+                #{meetingDate},
+                #{startTime},
+                #{endTime},
+                #{maxMembers},
+                #{meetingType},
+                #{repeatType},
+                #{supplies},
+                #{guideText},
+                #{status})
+    </insert>
+
+    <update id="updateMeeting" parameterType="kr.co.iei.meeting.model.vo.MeetingUpdateRequest">
+        UPDATE meetings
+        SET
+            sportId = #{sportId},
+            regionId = #{regionId},
+            title = #{title},
+            content = #{content},
+            placeName = #{placeName},
+            address = #{address},
+            meetingDate = #{meetingDate},
+            startTime = #{startTime},
+            endTime = #{endTime},
+            maxMembers = #{maxMembers},
+            status = #{status},
+            supplies = #{supplies},
+            guideText = #{guideText},
+            thumbnailImage = #{thumbnailImage, jdbcType=VARCHAR},
+            updatedAt = NOW()
+        WHERE meetingId = #{meetingId}
+    </update>
+
+    <select id="lockUserSchedule" parameterType="long" resultType="long">
+        SELECT userId
+        FROM users
+        WHERE userId = #{userId}
+        FOR UPDATE
+    </select>
+
+    <select id="selectUserScheduleConflicts"
+            parameterType="map"
+            resultType="kr.co.iei.meeting.model.vo.MeetingDetailResponse">
+        SELECT DISTINCT
+            m.meetingId,
+            m.title,
+            m.meetingDate,
+            m.startTime,
+            m.endTime
+        FROM meetings m
+        LEFT JOIN meetingParticipants mp
+          ON mp.meetingId = m.meetingId
+         AND mp.userId = #{userId}
+         AND mp.status IN ('PENDING', 'APPROVED')
+        WHERE m.deletedAt IS NULL
+          AND m.status NOT IN ('COMPLETED', 'CANCELLED')
+          AND m.meetingDate BETWEEN DATE_SUB(DATE(#{startDateTime}), INTERVAL 1 DAY)
+                                AND DATE(#{endDateTime})
+          AND (
+              m.hostUserId = #{userId}
+              OR mp.participantId IS NOT NULL
+          )
+          <if test="excludedMeetingId != null">
+              AND m.meetingId != #{excludedMeetingId}
+          </if>
+          AND TIMESTAMP(m.meetingDate, m.startTime) &lt; #{endDateTime}
+          AND CASE
+                WHEN m.endTime IS NULL
+                  THEN DATE_ADD(TIMESTAMP(m.meetingDate, m.startTime), INTERVAL 2 HOUR)
+                WHEN m.endTime &lt;= m.startTime
+                  THEN TIMESTAMP(DATE_ADD(m.meetingDate, INTERVAL 1 DAY), m.endTime)
+                ELSE TIMESTAMP(m.meetingDate, m.endTime)
+              END &gt; #{startDateTime}
+        ORDER BY m.meetingDate ASC, m.startTime ASC
+    </select>
+
+    <update id="softDeleteMeeting">
+        UPDATE meetings
+        SET status = 'CANCELLED',
+            deletedAt = NOW()
+        WHERE meetingId = #{meetingId}
+    </update>
+
+    <update id="updateMeetingStatus">
+        UPDATE meetings
+        SET status = #{status}
+        WHERE meetingId = #{meetingId}
+    </update>
+
+    <update id="startDueMeetings">
+        UPDATE meetings
+        SET status = 'ONGOING',
+            updatedAt = NOW()
+        WHERE deletedAt IS NULL
+          AND status NOT IN ('ONGOING', 'COMPLETED', 'CANCELLED')
+          AND TIMESTAMP(meetingDate, startTime) &lt;= NOW()
+    </update>
+
+    <update id="completeOverdueOngoingMeetings">
+        UPDATE meetings
+        SET status = 'COMPLETED',
+            updatedAt = NOW()
+        WHERE deletedAt IS NULL
+          AND status = 'ONGOING'
+          AND CASE
+                WHEN endTime IS NULL
+                  THEN DATE_ADD(TIMESTAMP(meetingDate, startTime), INTERVAL 2 HOUR)
+                WHEN endTime &lt;= startTime
+                  THEN TIMESTAMP(DATE_ADD(meetingDate, INTERVAL 1 DAY), endTime)
+                ELSE TIMESTAMP(meetingDate, endTime)
+              END &lt;= NOW()
+    </update>
+
+    <select id="selectTodayReminderNotificationTargets" resultType="map">
+        SELECT DISTINCT
+            m.meetingId AS meetingId,
+            m.title AS meetingTitle,
+            target.userId AS userId
+        FROM meetings m
+        JOIN (
+            SELECT meetingId, userId
+            FROM meetingParticipants
+            WHERE status = 'APPROVED'
+            UNION
+            SELECT meetingId, hostUserId AS userId
+            FROM meetings
+        ) target ON target.meetingId = m.meetingId
+        WHERE m.deletedAt IS NULL
+          AND m.status NOT IN ('COMPLETED', 'CANCELLED')
+          AND m.meetingDate = CURDATE()
+    </select>
+
+    <select id="selectCompletedChatCloseTargets" resultType="map">
+        SELECT
+            m.meetingId AS meetingId,
+            m.hostUserId AS hostUserId
+        FROM meetings m
+        WHERE m.deletedAt IS NULL
+          AND m.status = 'COMPLETED'
+          AND m.updatedAt &lt;= DATE_SUB(NOW(), INTERVAL 7 DAY)
+          AND NOT EXISTS (
+              SELECT 1
+              FROM meetingChatMessages cm
+              WHERE cm.meetingId = m.meetingId
+                AND cm.messageType = 'SYSTEM'
+                AND cm.content = '모임 완료 후 7일이 지나 모임톡이 비활성화되었습니다.'
+          )
+    </select>
+
+    <select id="selectMaxMembers" resultType="int">
+        SELECT maxMembers
+        FROM meetings
+        WHERE meetingId = #{meetingId}
+    </select>
+
+    <select id="selectHostUserId" resultType="long">
+        SELECT hostUserId
+        FROM meetings
+        WHERE meetingId = #{meetingId}
+    </select>
+
+</mapper>
+

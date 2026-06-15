@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+
+    <select id="selectMemberById" resultType="kr.co.iei.member.model.vo.MemberResponse">
+        SELECT
+            userId,
+            loginId,
+            email,
+            nickname,
+            phone,
+            profileImage,
+            regionId,
+            role,
+            status
+        FROM users
+        WHERE userId=#{memberId}
+    </select>
+
+    <select id="selectMemberSports" resultType="kr.co.iei.sport.model.vo.Sport">
+        SELECT
+            s.sportId,
+            s.name,
+            s.category,
+            s.isActive
+        FROM userSports us
+        JOIN sports s ON us.`sportId` = s.sportId
+        WHERE us.`userId`=#{memberId}
+        ORDER BY s.sportId
+    </select>
+
+    <update id="updateMember">
+        UPDATE users
+        <set>
+            email=#{request.email},
+            nickname=#{request.nickname},
+            phone=#{request.phone},
+            regionId=#{request.regionId},
+            <if test="request.profileImage != null and request.profileImage != ''">
+                profileImage=#{request.profileImage},
+            </if>
+        </set>
+        WHERE userId=#{memberId}
+    </update>
+
+    <delete id="deleteMemberSports">
+        DELETE FROM userSports
+        WHERE `userId`=#{memberId}
+    </delete>
+
+    <insert id="insertMemberSport">
+        INSERT INTO userSports(
+            `userId`,
+            `sportId`
+        )
+        VALUES(
+            #{memberId},
+            #{sportId}
+        )
+    </insert>
+
+    <select id="countActiveHostedMeetings" resultType="int">
+        SELECT COUNT(*)
+        FROM meetings
+        WHERE hostUserId = #{memberId}
+          AND deletedAt IS NULL
+          AND status NOT IN ('COMPLETED', 'CANCELLED')
+    </select>
+
+    <select id="countActiveHostedMeetingsWithOtherParticipants" resultType="int">
+        SELECT COUNT(*)
+        FROM meetings m
+        WHERE m.hostUserId = #{memberId}
+          AND m.deletedAt IS NULL
+          AND m.status NOT IN ('COMPLETED', 'CANCELLED')
+          AND EXISTS (
+              SELECT 1
+              FROM meetingParticipants mp
+              WHERE mp.meetingId = m.meetingId
+                AND mp.userId != #{memberId}
+                AND mp.status = 'APPROVED'
+          )
+    </select>
+
+    <select id="selectActiveHostedMeetingsWithOtherParticipants"
+            resultType="kr.co.iei.member.model.vo.MemberActivityMeetingResponse">
+        SELECT
+            m.meetingId AS meetingId,
+            m.title,
+            m.placeName AS placeName,
+            m.meetingDate AS meetingDate,
+            m.startTime AS startTime,
+            m.endTime AS endTime,
+            m.status,
+            s.name AS sportName,
+            CONCAT(r.sido, ' ', r.sigungu, ' ', COALESCE(r.dong, '')) AS regionName
+        FROM meetings m
+        JOIN sports s ON m.sportId = s.sportId
+        JOIN regions r ON m.regionId = r.regionId
+        WHERE m.hostUserId = #{memberId}
+          AND m.deletedAt IS NULL
+          AND m.status NOT IN ('COMPLETED', 'CANCELLED')
+          AND EXISTS (
+              SELECT 1
+              FROM meetingParticipants mp
+              WHERE mp.meetingId = m.meetingId
+                AND mp.userId != #{memberId}
+                AND mp.status = 'APPROVED'
+          )
+        ORDER BY m.meetingDate ASC, m.startTime ASC, m.meetingId DESC
+    </select>
+
+    <select id="countActiveParticipatingMeetings" resultType="int">
+        SELECT COUNT(*)
+        FROM meetingParticipants mp
+        JOIN meetings m ON mp.meetingId = m.meetingId
+        WHERE mp.userId = #{memberId}
+          AND m.hostUserId != #{memberId}
+          AND mp.status IN ('APPROVED', 'PENDING')
+          AND m.deletedAt IS NULL
+          AND m.status NOT IN ('COMPLETED', 'CANCELLED')
+    </select>
+
+    <select id="selectActiveParticipatingMeetings"
+            resultType="kr.co.iei.member.model.vo.MemberActivityMeetingResponse">
+        SELECT
+            m.meetingId AS meetingId,
+            m.title,
+            m.placeName AS placeName,
+            m.meetingDate AS meetingDate,
+            m.startTime AS startTime,
+            m.endTime AS endTime,
+            m.status,
+            mp.status AS participationStatus,
+            s.name AS sportName,
+            CONCAT(r.sido, ' ', r.sigungu, ' ', COALESCE(r.dong, '')) AS regionName
+        FROM meetingParticipants mp
+        JOIN meetings m ON mp.meetingId = m.meetingId
+        JOIN sports s ON m.sportId = s.sportId
+        JOIN regions r ON m.regionId = r.regionId
+        WHERE mp.userId = #{memberId}
+          AND m.hostUserId != #{memberId}
+          AND mp.status IN ('APPROVED', 'PENDING')
+          AND m.deletedAt IS NULL
+          AND m.status NOT IN ('COMPLETED', 'CANCELLED')
+        ORDER BY m.meetingDate ASC, m.startTime ASC, m.meetingId DESC
+    </select>
+
+    <update id="cancelSoloHostedMeetingsForWithdrawal">
+        UPDATE meetings m
+        SET m.status = 'CANCELLED',
+            m.deletedAt = NOW(),
+            m.updatedAt = NOW()
+        WHERE m.hostUserId = #{memberId}
+          AND m.deletedAt IS NULL
+          AND m.status NOT IN ('COMPLETED', 'CANCELLED')
+          AND NOT EXISTS (
+              SELECT 1
+              FROM meetingParticipants mp
+              WHERE mp.meetingId = m.meetingId
+                AND mp.userId != #{memberId}
+                AND mp.status = 'APPROVED'
+          )
+    </update>
+
+    <update id="cancelParticipatingMeetingsForWithdrawal">
+        UPDATE meetingParticipants mp
+        JOIN meetings m ON mp.meetingId = m.meetingId
+        SET mp.status = 'CANCELLED',
+            mp.cancelledAt = NOW()
+        WHERE mp.userId = #{memberId}
+          AND m.hostUserId != #{memberId}
+          AND mp.status IN ('APPROVED', 'PENDING')
+          AND m.deletedAt IS NULL
+          AND m.status NOT IN ('COMPLETED', 'CANCELLED')
+    </update>
+
+    <select id="selectHostedActivityMeetings"
+            resultType="kr.co.iei.member.model.vo.MemberActivityMeetingResponse">
+        SELECT
+            m.meetingId AS meetingId,
+            m.title,
+            m.placeName AS placeName,
+            m.meetingDate AS meetingDate,
+            m.startTime AS startTime,
+            m.maxMembers AS maxMembers,
+            m.status,
+            m.thumbnailImage AS thumbnailImage,
+            m.createdAt AS createdAt,
+            s.name AS sportName,
+            u.nickname AS hostNickname,
+            CONCAT(r.sido, ' ', r.sigungu, ' ', COALESCE(r.dong, '')) AS regionName,
+            (
+                SELECT COUNT(*)
+                FROM meetingParticipants mp
+                WHERE mp.meetingId = m.meetingId
+                  AND mp.status = 'APPROVED'
+            ) + CASE
+                WHEN EXISTS (
+                    SELECT 1
+                    FROM meetingParticipants hostMp
+                    WHERE hostMp.meetingId = m.meetingId
+                      AND hostMp.userId = m.hostUserId
+                      AND hostMp.status = 'APPROVED'
+                ) THEN 0 ELSE 1
+            END AS approvedCount
+        FROM meetings m
+        JOIN sports s ON m.sportId = s.sportId
+        JOIN regions r ON m.regionId = r.regionId
+        JOIN users u ON m.hostUserId = u.userId
+        WHERE m.hostUserId = #{memberId}
+          AND m.deletedAt IS NULL
+        ORDER BY m.meetingDate DESC, m.startTime DESC, m.createdAt DESC
+    </select>
+
+    <select id="selectParticipantActivityMeetings"
+            resultType="kr.co.iei.member.model.vo.MemberActivityMeetingResponse">
+        SELECT
+            m.meetingId AS meetingId,
+            m.title,
+            m.placeName AS placeName,
+            m.meetingDate AS meetingDate,
+            m.startTime AS startTime,
+            m.maxMembers AS maxMembers,
+            m.status,
+            m.thumbnailImage AS thumbnailImage,
+            m.createdAt AS createdAt,
+            s.name AS sportName,
+            u.nickname AS hostNickname,
+            mp.status AS participationStatus,
+            CONCAT(r.sido, ' ', r.sigungu, ' ', COALESCE(r.dong, '')) AS regionName,
+            (
+                SELECT COUNT(*)
+                FROM meetingParticipants mp2
+                WHERE mp2.meetingId = m.meetingId
+                  AND mp2.status = 'APPROVED'
+            ) + CASE
+                WHEN EXISTS (
+                    SELECT 1
+                    FROM meetingParticipants hostMp
+                    WHERE hostMp.meetingId = m.meetingId
+                      AND hostMp.userId = m.hostUserId
+                      AND hostMp.status = 'APPROVED'
+                ) THEN 0 ELSE 1
+            END AS approvedCount
+        FROM meetingParticipants mp
+        JOIN meetings m ON mp.meetingId = m.meetingId
+        JOIN sports s ON m.sportId = s.sportId
+        JOIN regions r ON m.regionId = r.regionId
+        JOIN users u ON m.hostUserId = u.userId
+        WHERE mp.userId = #{memberId}
+          AND m.hostUserId != #{memberId}
+          AND m.deletedAt IS NULL
+        ORDER BY m.meetingDate DESC, m.startTime DESC, m.createdAt DESC
+    </select>
+
+</mapper>

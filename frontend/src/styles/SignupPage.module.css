@@ -1,0 +1,1456 @@
+/* Inlined from composed CSS modules to keep this page self-contained. */
+
+.backgroundLayer {
+  position: absolute;
+  inset: -10%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  animation: smoothZoom 25s infinite alternate
+    cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.backgroundOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(
+      circle at 16% 16%,
+      rgba(96, 165, 250, 0.16),
+      transparent 24%
+    ),
+    linear-gradient(
+      125deg,
+      rgba(7, 21, 47, 0.72),
+      rgba(18, 65, 130, 0.54),
+      rgba(8, 28, 66, 0.72)
+    );
+}
+
+/* ==============================================================
+   🌟 Ambient Floating Effects (Orbs)
+   ============================================================== */
+.ambientEffects {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ambientOrb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0;
+  animation:
+    floatOrb 15s infinite ease-in-out alternate,
+    fadeInOrb 2s forwards ease-out;
+}
+
+.orb1 {
+  top: -10%;
+  left: -5%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.25),
+    transparent 60%
+  );
+  animation-delay: 0s;
+}
+
+.orb2 {
+  bottom: -20%;
+  right: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(29, 78, 216, 0.3), transparent 65%);
+  animation-duration: 20s;
+  animation-delay: -5s;
+}
+
+.orb3 {
+  top: 30%;
+  left: 40%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(
+    circle,
+    rgba(96, 165, 250, 0.15),
+    transparent 70%
+  );
+  animation-duration: 18s;
+  animation-delay: -10s;
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  padding: 42px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #08172f;
+  background:
+    radial-gradient(
+      circle at 18% 18%,
+      rgba(92, 174, 255, 0.18),
+      transparent 20%
+    ),
+    linear-gradient(
+      125deg,
+      rgba(4, 10, 22, 0.88),
+      rgba(8, 38, 84, 0.62),
+      rgba(8, 28, 66, 0.84)
+    ),
+    var(--auth-bg-image) center/cover no-repeat;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page::before,
+.page::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(8px);
+}
+.page::before {
+  top: 10%;
+  right: 8%;
+  width: 220px;
+  height: 220px;
+  background: rgba(87, 164, 255, 0.18);
+}
+.page::after {
+  left: -40px;
+  bottom: 8%;
+  width: 280px;
+  height: 280px;
+  background: rgba(18, 105, 255, 0.12);
+}
+.layout {
+  position: relative;
+  z-index: 10;
+  width: min(1180px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 470px;
+  align-items: center;
+  gap: 72px;
+}
+.signupLayout {
+  width: min(1220px, 100%);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
+  gap: 56px;
+}
+.copy {
+  max-width: 640px;
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 40px rgba(7, 21, 47, 0.18);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 18px;
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+.copy h1 {
+  max-width: 640px;
+  margin: 0 0 20px;
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: 1.03;
+  letter-spacing: -0.05em;
+  text-shadow: 0 24px 52px rgba(0, 0, 0, 0.28);
+}
+.copy p {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 17px;
+  line-height: 1.9;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+}
+.metrics article {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+.metrics strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+.metrics span {
+  display: block;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.card {
+  width: 100%;
+  min-width: 0;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  border-radius: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.88),
+    rgba(255, 255, 255, 0.74)
+  );
+  backdrop-filter: blur(26px) saturate(130%);
+  box-shadow:
+    0 32px 90px rgba(3, 12, 31, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.68);
+  animation: authCardRise 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 32px 72px rgba(3, 12, 31, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+@keyframes authCardRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.signupCard {
+  padding: 30px 30px 28px;
+}
+.cardHead {
+  margin-bottom: 24px;
+}
+.cardKicker {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(230, 240, 255, 0.92);
+  color: #164ab7;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+.card h2 {
+  margin: 0 0 8px;
+  color: #10233f;
+  font-family: var(--font-display);
+  font-size: 31px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+.cardHead p {
+  margin: 0;
+  color: #4f6380;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.75;
+}
+.card label {
+  display: grid;
+  min-width: 0;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: #304761;
+  font-size: 13px;
+  font-weight: 900;
+}
+.card input,
+.card select {
+  width: 100%;
+  min-width: 0;
+  height: 54px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0 15px;
+  color: #10233f;
+  outline: 0;
+  font-weight: 800;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+.card input:focus,
+.card select:focus {
+  border-color: rgba(23, 105, 255, 0.28);
+  box-shadow: 0 0 0 4px rgba(23, 105, 255, 0.12);
+  background: #fff;
+}
+.card input:read-only {
+  background: #f3f4f6 !important;
+  border-color: #e5e7eb !important;
+  color: #64748b;
+  cursor: not-allowed;
+}
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 14px;
+}
+.fieldGrid > * {
+  min-width: 0;
+}
+.fullField {
+  grid-column: 1 / -1;
+}
+.fieldError,
+.fieldSuccess {
+  min-height: 16px;
+  display: block;
+  color: #dc2626;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fieldSuccess {
+  color: #16a34a;
+}
+.formError {
+  margin: 12px 0 0;
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+.interestSummary {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 15px;
+  border: 1px solid #dbe7f6;
+  border-radius: 16px;
+  background: #f8fbff;
+  color: #44566c;
+  font-size: 13px;
+  font-weight: 800;
+}
+.interestSummary strong {
+  color: #1d4ed8;
+}
+.interestGroupList {
+  display: grid;
+  gap: 14px;
+  max-height: min(42vh, 380px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 2px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.45) transparent;
+}
+.interestGroupList::-webkit-scrollbar {
+  width: 5px;
+}
+.interestGroupList::-webkit-scrollbar-track {
+  background: transparent;
+}
+.interestGroupList::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.45);
+}
+.interestGroup {
+  display: grid;
+  gap: 10px;
+}
+.interestGroup h3 {
+  margin: 0;
+  color: #10233f;
+  font-size: 14px;
+  font-weight: 900;
+}
+.interestChipGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.interestChip,
+.interestChipSelected {
+  min-height: 38px;
+  border: 1px solid #dbe3ef;
+  border-radius: 999px;
+  background: #fff;
+  padding: 0 13px;
+  color: #44566c;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.interestChipSelected {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.08);
+}
+.interestChip:disabled,
+.interestChipSelected:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.interestError {
+  margin: 0;
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 800;
+}
+.nicknameModalBody {
+  display: grid;
+  gap: 16px;
+}
+.nicknameSuggestionList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.nicknameSuggestion,
+.nicknameSuggestionSelected {
+  min-height: 38px;
+  border: 1px solid #dbe3ef;
+  border-radius: 999px;
+  background: #fff;
+  padding: 0 13px;
+  color: #44566c;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.nicknameSuggestionSelected {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+.nicknameModalField {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  color: #304761;
+  font-size: 13px;
+  font-weight: 900;
+}
+.nicknameModalInline {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 90px;
+  gap: 8px;
+}
+.nicknameModalInline input {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fff;
+  padding: 0 14px;
+  color: #10233f;
+  font-weight: 800;
+  outline: 0;
+}
+.nicknameModalInline input:read-only {
+  background: #f3f4f6;
+  border-color: #e5e7eb;
+  color: #64748b;
+  cursor: not-allowed;
+}
+.nicknameModalInline button {
+  height: 46px;
+  border: 0;
+  border-radius: 14px;
+  background: #10233f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.nicknameModalInline button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+.nicknameModalError,
+.nicknameModalSuccess {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+.nicknameModalError {
+  color: #dc2626;
+}
+.nicknameModalSuccess {
+  color: #16a34a;
+}
+.regionSelectButton {
+  width: 100%;
+  min-width: 0;
+  height: 54px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0 15px;
+  color: #10233f;
+  text-align: left;
+  outline: 0;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+.regionSelectButton:focus {
+  border-color: rgba(23, 105, 255, 0.28);
+  box-shadow: 0 0 0 4px rgba(23, 105, 255, 0.12);
+  background: #fff;
+}
+.regionSelectButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+.signupSection {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.12);
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 4px 0 20px;
+}
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  color: #4f6380;
+}
+.options input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+.choiceBlock {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  margin: 6px 0 18px;
+}
+.choiceBlock > span {
+  color: #304761;
+  font-size: 13px;
+  font-weight: 900;
+}
+.choiceList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.choiceChip {
+  min-width: 0;
+  min-height: 46px;
+  margin: 0 !important;
+  padding: 0 14px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  color: #304761;
+  transition: all 0.18s ease;
+}
+.choiceChip:hover {
+  border-color: rgba(23, 105, 255, 0.18);
+  background: #fff;
+  color: var(--color-primary-strong);
+}
+.choiceChip input {
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+.inlineField {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 82px;
+  gap: 8px;
+}
+.inlineField button {
+  height: 54px;
+  border: 0;
+  border-radius: 16px;
+  background: #10233f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.sportToggle {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 12px;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  color: #304761;
+}
+.sportToggle span {
+  color: #304761;
+  font-size: 13px;
+  font-weight: 900;
+}
+.sportToggle strong {
+  grid-column: 1;
+  min-width: 0;
+  color: #5c7089;
+  font-size: 13px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sportToggle i {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  height: 34px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #164ab7;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+}
+.choiceListCollapsed {
+  display: none;
+}
+.choiceListOpen {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  top: calc(100% - 4px);
+  z-index: 20;
+  display: block;
+  margin-top: 0;
+  padding: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 22px 54px rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(16px);
+}
+.submit {
+  width: 100%;
+  height: 56px;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--color-primary), #2b8cff);
+  color: #fff;
+  font-weight: 900;
+  box-shadow: 0 18px 34px rgba(23, 105, 255, 0.28);
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 38px rgba(23, 105, 255, 0.32);
+}
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  color: #4f6380;
+  font-size: 13px;
+  font-weight: 800;
+  flex-wrap: wrap;
+}
+
+.brand,
+.hero h1,
+.card h2,
+.metrics strong {
+  font-weight: var(--weight-display);
+}
+
+.cardHead p,
+.links {
+  font-weight: var(--weight-body-strong);
+}
+
+.card label,
+.choiceBlock > span {
+  font-weight: var(--weight-label);
+}
+
+.card input,
+.card select,
+.card textarea,
+.choiceBlock label {
+  font-weight: var(--weight-body);
+}
+
+.submitButton,
+.socialButton,
+.primaryAction,
+.links a {
+  font-weight: var(--weight-button);
+}
+
+.brand {
+  font-size: 1.35rem;
+  letter-spacing: var(--tracking-tight);
+}
+
+.copy h1 {
+  font-size: var(--font-hero);
+  letter-spacing: var(--tracking-tight);
+}
+
+.copy p,
+.cardHead p {
+  font-size: var(--font-body);
+  letter-spacing: var(--tracking-body);
+}
+
+.metrics strong {
+  font-size: 1.5rem;
+  letter-spacing: var(--tracking-title);
+}
+
+.card h2 {
+  font-size: var(--font-section-title);
+  letter-spacing: var(--tracking-tight);
+}
+
+.card label,
+.choiceBlock > span,
+.links {
+  font-size: var(--font-meta);
+  letter-spacing: var(--tracking-body);
+}
+
+.card input,
+.card select,
+.choiceChip,
+.submitButton,
+.socialButton {
+  letter-spacing: var(--tracking-body);
+}
+
+.card input,
+.card select {
+  height: 56px;
+  padding: 0 17px;
+}
+
+.submitButton,
+.socialButton {
+  height: 58px;
+  padding: 0 18px;
+  border-radius: 18px;
+}
+
+.choiceChip {
+  min-height: 48px;
+  padding: 0 16px;
+}
+.links a {
+  color: inherit;
+  text-decoration: none;
+}
+.links button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+@media (max-width: 980px) {
+  .layout,
+  .signupLayout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .copy h1 {
+    font-size: 48px;
+  }
+  .card,
+  .signupCard {
+    max-width: 640px;
+  }
+  .metrics {
+    max-width: 580px;
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    padding: 20px 16px;
+  }
+  .card,
+  .signupCard {
+    padding: 24px;
+    border-radius: 28px;
+  }
+  .fieldGrid,
+  .metrics,
+  .choiceList {
+    grid-template-columns: 1fr;
+  }
+  .fullField {
+    grid-column: auto;
+  }
+  .options {
+    flex-direction: column;
+  }
+  .copy h1 {
+    font-size: 38px;
+  }
+  .copy p {
+    font-size: 15px;
+  }
+  .signupSection {
+    padding: 16px;
+  }
+  .links {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    min-height: 100dvh;
+    padding: 18px 14px;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .layout,
+  .signupLayout {
+    width: min(100%, 380px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0 auto;
+  }
+
+  .copy {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-bottom: 0;
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    font-size: 21px;
+  }
+
+  .logo::before {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+  }
+
+  .eyebrow,
+  .copy h1,
+  .copy p,
+  .metrics {
+    display: none;
+  }
+
+  .card,
+  .signupCard {
+    width: 100%;
+    max-width: none;
+    padding: 18px;
+    border-radius: 26px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.94),
+      rgba(255, 255, 255, 0.84)
+    );
+    box-shadow:
+      0 24px 60px rgba(3, 12, 31, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .cardHead {
+    margin-bottom: 18px;
+  }
+
+  .card h2 {
+    font-size: clamp(1.45rem, 6.2vw, 1.9rem);
+    line-height: 1.14;
+  }
+
+  .cardHead p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .signupSection {
+    padding: 12px;
+    border-radius: 18px;
+    background: rgba(248, 251, 255, 0.7);
+  }
+
+  .card input,
+  .card select,
+  .regionSelectButton {
+    height: 46px;
+    border-radius: 14px;
+  }
+
+  .inlineField {
+    grid-template-columns: minmax(0, 1fr) 76px;
+    gap: 7px;
+  }
+
+  .inlineField button {
+    height: 46px;
+    border-radius: 14px;
+    font-size: 11px;
+  }
+
+  .choiceList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .choiceChip {
+    min-height: 42px;
+    padding: 0 12px;
+  }
+
+  .submit {
+    height: 52px;
+    border-radius: 15px;
+  }
+}
+
+/* Auth polish aligned with the finalized WeMove home tone. */
+.page {
+  background:
+    radial-gradient(
+      circle at 16% 16%,
+      rgba(96, 165, 250, 0.16),
+      transparent 24%
+    ),
+    linear-gradient(
+      125deg,
+      rgba(7, 21, 47, 0.72),
+      rgba(18, 65, 130, 0.54),
+      rgba(8, 28, 66, 0.72)
+    ),
+    var(--auth-bg-image) center/cover no-repeat !important;
+}
+
+.page::before {
+  background: rgba(96, 165, 250, 0.14);
+  filter: none;
+  opacity: 0.55;
+}
+
+.page::after {
+  background: rgba(37, 99, 235, 0.1);
+  filter: none;
+  opacity: 0.5;
+}
+
+.card,
+.signupCard {
+  border: 1px solid rgba(255, 255, 255, 0.62) !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  box-shadow:
+    0 24px 64px rgba(3, 12, 31, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(10px) saturate(118%) !important;
+}
+
+.signupSection,
+.choiceListOpen {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+}
+
+.card input,
+.card select {
+  border-color: rgba(15, 23, 42, 0.09) !important;
+  background: #fff !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.inlineField button,
+.submit {
+  background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.22) !important;
+}
+
+.choiceChip {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  background: #fff !important;
+}
+
+.choiceChip:hover {
+  border-color: rgba(37, 99, 235, 0.18) !important;
+  background: #eff6ff !important;
+}
+
+.metrics article {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Center the auth form card while keeping the brand copy as a quiet side accent. */
+.layout {
+  width: min(1180px, 100%) !important;
+  grid-template-columns: minmax(0, 520px) !important;
+  justify-content: center !important;
+  gap: 0 !important;
+}
+
+.signupLayout {
+  width: min(1220px, 100%) !important;
+  grid-template-columns: minmax(0, 620px) !important;
+}
+
+.copy {
+  position: absolute;
+  top: 50%;
+  left: max(32px, calc(50% - 738px));
+  width: min(390px, calc(50vw - 328px));
+  max-width: 390px;
+  display: grid;
+  align-content: start;
+  transform: translateY(-50%);
+}
+
+.logo {
+  margin-bottom: 22px !important;
+}
+
+.eyebrow {
+  margin-bottom: 16px !important;
+}
+
+.copy h1 {
+  font-size: clamp(2.5rem, 3.6vw, 3.35rem) !important;
+  line-height: 1.08 !important;
+  margin-bottom: 18px !important;
+}
+
+.copy p {
+  max-width: 380px;
+  font-size: 0.96rem !important;
+}
+
+.metrics {
+  grid-template-columns: 1fr !important;
+  max-width: 280px;
+  margin-top: 26px !important;
+  gap: 10px !important;
+}
+
+.metrics article {
+  padding: 15px 17px !important;
+  border-radius: 20px !important;
+}
+
+@media (max-width: 1120px) {
+  .layout,
+  .signupLayout {
+    width: min(620px, 100%) !important;
+  }
+
+  .copy {
+    display: none !important;
+  }
+}
+
+/* Brand block alignment for centered auth card. */
+.copy {
+  left: max(40px, calc(50% - 650px)) !important;
+  width: 300px !important;
+  max-width: 300px !important;
+  z-index: 0;
+}
+
+.card,
+.signupCard {
+  position: relative;
+  z-index: 2;
+}
+
+.copy h1 {
+  max-width: 300px !important;
+  font-size: clamp(2rem, 2.6vw, 2.72rem) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.045em !important;
+  word-break: keep-all;
+}
+
+.copy p {
+  max-width: 300px !important;
+}
+
+.metrics {
+  max-width: 250px !important;
+}
+
+@media (max-width: 1220px) {
+  .copy {
+    left: 32px !important;
+    width: 250px !important;
+    max-width: 250px !important;
+  }
+
+  .copy h1 {
+    max-width: 250px !important;
+    font-size: 1.98rem !important;
+  }
+
+  .copy p,
+  .metrics {
+    max-width: 240px !important;
+  }
+}
+
+@media (max-width: 1120px) {
+  .page {
+    align-items: flex-start !important;
+    padding: 92px 16px 24px !important;
+  }
+
+  .layout,
+  .signupLayout {
+    position: static !important;
+  }
+
+  .copy {
+    position: absolute !important;
+    top: 22px !important;
+    left: 22px !important;
+    width: auto !important;
+    max-width: none !important;
+    display: block !important;
+    transform: none !important;
+    z-index: 3;
+  }
+
+  .copy .logo {
+    margin: 0 !important;
+  }
+
+  .copy .eyebrow,
+  .copy h1,
+  .copy p,
+  .copy .metrics {
+    display: none !important;
+  }
+}
+
+/* 2026-05-18 neutral auth finish */
+.signupCard,
+.card,
+.metrics article {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06) !important;
+  backdrop-filter: none !important;
+}
+
+.input,
+.inputWithButton input,
+.form input,
+.form select,
+.form button {
+  box-shadow: none !important;
+}
+
+.form input,
+.form select,
+.input,
+.inputWithButton input {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.submitButton,
+.primaryButton,
+.verifyButton,
+.checkButton,
+.inputWithButton button {
+  background: #2563eb !important;
+  box-shadow: none !important;
+}
+
+/* 2026-05-18 auth primary button gradient */
+.submitButton,
+.primaryButton,
+.verifyButton,
+.checkButton,
+.inputWithButton button {
+  background: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #2563eb 56%,
+    #1d4ed8 100%
+  ) !important;
+  background-image: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #2563eb 56%,
+    #1d4ed8 100%
+  ) !important;
+  border-color: #2563eb !important;
+  color: #fff !important;
+  box-shadow:
+    0 6px 14px rgba(37, 99, 235, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+/* 2026-05-18 auth metric contrast recovery */
+.metrics article {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: none !important;
+}
+
+.metrics strong {
+  color: #ffffff !important;
+}
+
+.metrics span {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+/* Signup page final spacing pass */
+.copy {
+  left: max(32px, calc(50% - 740px)) !important;
+}
+
+.choiceBlock {
+  gap: 10px !important;
+  margin: 8px 0 18px !important;
+}
+
+.sportToggle {
+  padding: 2px 0 !important;
+}
+
+.sportToggle i {
+  min-width: 52px !important;
+  height: 30px !important;
+  background: #eef4ff !important;
+  color: #1d4ed8 !important;
+}
+
+.choiceListOpen {
+  position: static !important;
+  margin-top: 0 !important;
+  padding: 10px !important;
+  border-radius: 16px !important;
+  background: #f8fbff !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.choiceList {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+.choiceChip {
+  min-height: 40px !important;
+  justify-content: flex-start !important;
+  padding: 0 12px !important;
+  border-radius: 12px !important;
+  color: #31445f !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+}
+
+.choiceChip input {
+  flex: 0 0 15px !important;
+  width: 15px !important;
+  height: 15px !important;
+  min-width: 15px !important;
+  min-height: 15px !important;
+  padding: 0 !important;
+  border-radius: 4px !important;
+}
+
+@media (max-width: 1440px) and (min-width: 1121px) {
+  .copy {
+    left: 32px !important;
+    width: 240px !important;
+    max-width: 240px !important;
+  }
+
+  .copy h1 {
+    max-width: 240px !important;
+    font-size: 1.86rem !important;
+  }
+
+  .copy p,
+  .copy .metrics {
+    display: none !important;
+  }
+}
+
+/* Keep the signup card centered while the copy sits as a nearby side accent. */
+@media (min-width: 1121px) {
+  .layout,
+  .signupLayout {
+    width: min(620px, calc(100% - 64px)) !important;
+    grid-template-columns: minmax(0, 620px) !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0 !important;
+  }
+
+  .copy {
+    position: absolute !important;
+    top: 50% !important;
+    right: calc(100% + 28px) !important;
+    left: auto !important;
+    width: clamp(198px, calc((100vw - 620px) / 2 - 52px), 240px) !important;
+    max-width: 240px !important;
+    transform: translateY(-50%) !important;
+    z-index: 3 !important;
+  }
+
+  .copy h1 {
+    max-width: 100% !important;
+    font-size: clamp(1.86rem, 2.15vw, 2.3rem) !important;
+  }
+
+  .copy p {
+    display: block !important;
+    max-width: 100% !important;
+    font-size: 0.9rem !important;
+    line-height: 1.8 !important;
+  }
+
+  .metrics {
+    display: grid !important;
+    gap: 14px !important;
+    margin-top: 34px !important;
+    max-width: 100% !important;
+  }
+
+  .metrics article {
+    margin: 0 0 5px !important;
+  }
+}
+
+@media (min-width: 1441px) {
+  .copy p,
+  .copy .metrics {
+    display: block !important;
+  }
+}
+
+.card,
+.signupCard {
+  border-radius: 32px !important;
+}
+
+.signupSection {
+  border-radius: 24px !important;
+}
+
+.inlineField button,
+.submit {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.inlineField button:hover,
+.submit:hover {
+  transform: translateY(-1px);
+}

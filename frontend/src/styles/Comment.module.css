@@ -1,0 +1,922 @@
+/* Extracted from shared comment styles so Comment.jsx owns its own module. */
+
+.avatar,
+.host i,
+.profileAvatar,
+.commentAvatar {
+  border-radius: 50%;
+  background: linear-gradient(145deg, #dbe8ff, #ddf4ff);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.filterRow select,
+.filterRow input,
+.commentForm textarea,
+.formCard input,
+.formCard select,
+.formCard textarea {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--color-text);
+  outline: 0;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.filterRow select:focus,
+.filterRow input:focus,
+.commentForm textarea:focus,
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus {
+  border-color: rgba(23, 105, 255, 0.28);
+  box-shadow: 0 0 0 4px rgba(23, 105, 255, 0.1);
+  background: #fff;
+}
+
+.commentList {
+  display: grid;
+  gap: 14px;
+}
+
+.commentItem {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 18px;
+  background: #fcfdff;
+}
+
+.commentAvatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.defaultAvatar {
+  padding: 6px;
+  object-fit: contain;
+}
+
+.commentMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.commentMeta span {
+  color: #7890ac;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.commentItem p {
+  margin: 0;
+  color: var(--color-text-soft);
+  line-height: 1.7;
+}
+
+.commentForm {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.commentForm textarea {
+  min-height: 128px;
+  padding: 16px;
+  border-radius: 16px;
+  resize: vertical;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 14px;
+  background: #fff;
+  color: #59708f;
+  padding: 11px 15px;
+  font-weight: 900;
+}
+
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--color-primary), #2b8cff);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(23, 105, 255, 0.18);
+}
+
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .page,
+  .finderLayout {
+    width: min(100%, calc(100% - 24px));
+  }
+  .page {
+    gap: 40px;
+  }
+  .pageTitle h1,
+  .sectionHead h2,
+  .how h2 {
+    font-size: 30px;
+  }
+  .hero {
+    min-height: auto;
+    padding-top: 8px;
+    gap: 28px;
+  }
+  .hero h1 {
+    font-size: 46px;
+  }
+  .searchCard,
+  .cardGrid,
+  .categoryGrid,
+  .filterRow,
+  .listCard,
+  .formCard,
+  .myList article,
+  .statGrid,
+  .rightbar,
+  .formHintGrid,
+  .subGrid,
+  .heroMiniGrid,
+  .detailSummary {
+    grid-template-columns: 1fr;
+  }
+  .sectionHead,
+  .pageTitle,
+  .profileCard,
+  .tableHead,
+  .notice {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .detailSummary,
+  .commentItem {
+    grid-template-columns: 1fr;
+  }
+  .searchCard {
+    padding: 10px;
+    border-radius: 22px;
+  }
+  .searchCard label {
+    min-height: 56px;
+  }
+  .primaryLink {
+    min-height: 54px;
+  }
+  .listCard aside,
+  .myList aside {
+    border-left: 0;
+    border-top: 1px solid rgba(148, 163, 184, 0.16);
+    padding-left: 0;
+    padding-top: 14px;
+  }
+  .listCard aside {
+    gap: 12px;
+  }
+  .tableCard {
+    overflow-x: auto;
+  }
+  .tableCard table {
+    min-width: 760px;
+  }
+  .notice {
+    padding: 24px;
+  }
+  .notice h1,
+  .detailCover h1 {
+    font-size: 32px;
+  }
+  .detailCover,
+  .detailSection,
+  .detailPanel,
+  .softPanel,
+  .formCard,
+  .formIntro {
+    padding: 22px;
+  }
+  .how {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    width: min(100%, calc(100% - 18px));
+  }
+  .hero h1 {
+    font-size: 38px;
+  }
+  .metrics {
+    gap: 14px;
+  }
+  .categoryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .filterPanel {
+    padding: 14px;
+  }
+  .notice h1 {
+    font-size: 28px;
+  }
+  .formActions {
+    justify-content: stretch;
+  }
+  .formActions a,
+  .formActions button,
+  .participantActions button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.kicker,
+.sectionKicker,
+.searchCard span,
+.heroVisualCopy span,
+.highlightBand span,
+.sectionHead a,
+.categoryGrid span,
+.cover span,
+.badge,
+.sidebar h3,
+.rightbar h3,
+.notice a,
+.tabButton,
+.pageTabs button,
+.dateBox span,
+.detailSummary span,
+.sideInfo span,
+.primaryButton,
+.secondaryButton,
+.formCard label span,
+.choiceGroup > span,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard th,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.reviewScore,
+.ratingButton,
+.dashboardCreateButton,
+.dashboardProfile,
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardSidebarHead button,
+.dashboardSidebarHead span,
+.dashboardPanelHead a,
+.dashboardInviteCard button,
+.dashboardHeroFilters select,
+.dashboardHeroButton,
+.dashboardSummaryGrid span,
+.dashboardCategoryItem,
+.dashboardPills button,
+.dashboardMeetingBadges span,
+.dashboardSectionHead > a,
+.dashboardScheduleItem span,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a,
+.dashboardLoginButton,
+.dashboardSignupButton {
+  font-weight: var(--weight-button);
+}
+
+.sectionHead a,
+.dashboardSectionHead > a,
+.dashboardPanelHead a,
+.dashboardQuickLinks a,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardProfile,
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.listCard aside button,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.ratingButton {
+  height: var(--control-height-md);
+  padding: var(--control-padding-md);
+  border-radius: var(--control-radius-md);
+  font-size: 0.86rem;
+  letter-spacing: 0;
+}
+
+.metrics,
+.meetingCard footer,
+.listHead span,
+.listMeta,
+.host,
+.detailChecklist li,
+.commentMeta span,
+.tableCard td,
+.dashboardInterestList span,
+.dashboardMeetingMeta,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardRankItem strong,
+.dashboardScheduleItem strong,
+.dashboardStatGrid span {
+  font-weight: var(--weight-body-strong);
+}
+
+.pageTitle p,
+.heroCopy > p:not(.kicker),
+.sectionHead p,
+.how p,
+.notice p,
+.detailBody p,
+.commentItem p,
+.dashboardPageIntro p,
+.dashboardSectionCopy,
+.dashboardHeroContent p,
+.dashboardMeetingBody p {
+  font-size: var(--font-body-lg);
+  letter-spacing: var(--tracking-body);
+}
+
+.sectionHead a,
+.tabButton,
+.pageTabs button,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.ratingButton,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a,
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardHeroButton {
+  height: var(--control-height-md);
+  padding: var(--control-padding-md);
+  letter-spacing: var(--tracking-body);
+}
+
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a,
+.tabButton,
+.pageTabs button,
+.dashboardPills button,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.participantActions button,
+.myList aside a,
+.listCard aside button,
+.ratingButton,
+.ratingStar,
+.ratingStarActive {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.dashboardSignupButton,
+.dashboardHeroButton,
+.dashboardMeetingActions a,
+.primaryButton,
+.formActions button,
+.profileCard button,
+.participantActions button:last-child,
+.listCard aside button,
+.notice a {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #fff;
+  box-shadow: none;
+}
+
+.dashboardLoginButton,
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.myList aside a,
+.tableHead button,
+.tableCard td button {
+  border-color: rgba(18, 32, 59, 0.12);
+  background: #fff;
+  color: #344054;
+}
+
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardHeroButton,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.listCard aside button,
+.ratingButton {
+  border-radius: 14px;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.dashboardSignupButton,
+.dashboardHeroButton,
+.dashboardMeetingActions a,
+.primaryButton,
+.formActions button,
+.profileCard button,
+.participantActions button:last-child,
+.listCard aside button,
+.notice a {
+  border-color: transparent;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb 52%, #3b82f6);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.22);
+}
+
+.dashboardSignupButton:hover,
+.dashboardHeroButton:hover,
+.dashboardMeetingActions a:hover,
+.primaryButton:hover,
+.formActions button:hover,
+.listCard aside button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 36px rgba(37, 99, 235, 0.28);
+}
+
+.dashboardLoginButton,
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.myList aside a,
+.tableHead button,
+.tableCard td button {
+  border-color: rgba(18, 32, 59, 0.1);
+  background: rgba(255, 255, 255, 0.86);
+  color: #334155;
+}
+
+.dashboardCategoryItem,
+.tabButton,
+.pageTabs button,
+.dashboardPills button,
+.dashboardFilterButton,
+.dashboardQuickLinks a,
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child {
+  background: linear-gradient(180deg, #ffffff, #f2f7ff) !important;
+  border-color: rgba(37, 99, 235, 0.12) !important;
+  color: #385a84 !important;
+}
+
+.dashboardCategoryItem:hover,
+.tabButton:hover,
+.pageTabs button:hover,
+.dashboardFilterButton:hover,
+.dashboardQuickLinks a:hover,
+.secondaryButton:hover,
+.formActions a:hover {
+  border-color: rgba(37, 99, 235, 0.24) !important;
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.1) !important;
+  color: #1747b8 !important;
+}
+
+.filterRow select,
+.filterRow input,
+.commentForm textarea,
+.formCard input,
+.formCard select,
+.formCard textarea {
+  background: linear-gradient(180deg, #ffffff, #f7fbff) !important;
+  border-color: rgba(37, 99, 235, 0.12) !important;
+}
+
+.dashboardSummaryGrid article,
+.formHintGrid article,
+.detailChecklist li,
+.commentItem {
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.82),
+    rgba(236, 246, 255, 0.72)
+  ) !important;
+}
+
+.dashboardSummaryGrid i,
+.dashboardCategoryItem i,
+.dashboardRankItem b,
+.dashboardActivityItem i,
+.profileAvatar,
+.commentAvatar,
+.avatar,
+.host i {
+  color: #fff !important;
+  background: linear-gradient(135deg, #1d4ed8, #2f7cff 56%, #38bdf8) !important;
+  box-shadow:
+    0 10px 22px rgba(37, 99, 235, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.filterRow select,
+.filterRow input,
+.commentForm textarea,
+.formCard input,
+.formCard select,
+.formCard textarea,
+.reviewTextarea {
+  min-height: 48px;
+  border-color: rgba(15, 23, 42, 0.09) !important;
+  border-radius: 14px;
+  background: #fff !important;
+  color: #10233f;
+}
+
+.filterRow select:focus,
+.filterRow input:focus,
+.commentForm textarea:focus,
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus,
+.reviewTextarea:focus {
+  border-color: rgba(37, 99, 235, 0.36) !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.09) !important;
+}
+
+.primaryButton,
+.dashboardHeroButton,
+.dashboardMeetingActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child,
+.myList aside a {
+  background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.18) !important;
+}
+
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.tableCard td button {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  background: #fff !important;
+  color: #49627f !important;
+  box-shadow: none !important;
+}
+
+.dashboardCategoryItem,
+.dashboardSummaryGrid article,
+.dashboardScheduleItem,
+.dashboardRankItem,
+.dashboardActivityItem,
+.detailSummary article,
+.detailChecklist li,
+.hostCard,
+.sideInfo p,
+.commentItem,
+.tableCard th,
+.tableCard tr:hover td {
+  background: #f9fafb !important;
+  background-image: none !important;
+  border-color: #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.dashboardCategoryItem i,
+.dashboardSummaryGrid i,
+.dashboardRankItem b,
+.dashboardActivityItem i,
+.dashboardInterestList i,
+.profileAvatar,
+.commentAvatar,
+.avatar,
+.host i {
+  background: #f3f4f6 !important;
+  background-image: none !important;
+  color: #4b5563 !important;
+  box-shadow: none !important;
+}
+
+.dashboardHeroButton,
+.primaryButton,
+.dashboardMeetingActions a,
+.dashboardMeetingActions button:last-child,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child,
+.myList aside a,
+.tabButtonActive,
+.pageTabs button:first-child,
+.dashboardPills button:first-child {
+  background: #2563eb !important;
+  background-image: none !important;
+  color: #fff !important;
+  border-color: #2563eb !important;
+  box-shadow: none !important;
+}
+
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.tableCard td button,
+.tabButton,
+.pageTabs button,
+.dashboardFilterButton,
+.dashboardQuickLinks a {
+  background: #ffffff !important;
+  background-image: none !important;
+  color: #374151 !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.filterRow select,
+.filterRow input,
+.commentForm textarea,
+.formCard input,
+.formCard select,
+.formCard textarea,
+.reviewTextarea {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  color: #111827 !important;
+  box-shadow: none !important;
+}
+
+.filterRow select:focus,
+.filterRow input:focus,
+.commentForm textarea:focus,
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus,
+.reviewTextarea:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+}
+
+/* 2026-05-18 primary button gradient polish */
+.dashboardHeroButton,
+.primaryButton,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child,
+.myList aside a,
+.tabButtonActive,
+.pageTabs button:first-child,
+.dashboardPills button:first-child,
+.dashboardSignupButton {
+  background: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #2563eb 56%,
+    #1d4ed8 100%
+  ) !important;
+  background-image: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #2563eb 56%,
+    #1d4ed8 100%
+  ) !important;
+  border-color: #2563eb !important;
+  color: #fff !important;
+  box-shadow:
+    0 6px 14px rgba(37, 99, 235, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+.dashboardHeroButton:hover,
+.primaryButton:hover,
+.formActions button:hover,
+.profileCard button:hover,
+.tableHead button:hover,
+.participantActions button:last-child:hover,
+.myList aside a:hover,
+.tabButtonActive:hover,
+.pageTabs button:first-child:hover,
+.dashboardPills button:first-child:hover,
+.dashboardSignupButton:hover {
+  background: linear-gradient(
+    180deg,
+    #4b8eff 0%,
+    #2d6df1 56%,
+    #1d4ed8 100%
+  ) !important;
+  border-color: #1d4ed8 !important;
+  box-shadow:
+    0 8px 18px rgba(37, 99, 235, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+/*대댓글 추가영역*/
+.commentGroup {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.commentItem {
+  margin-bottom: 15px;
+}
+
+.replyIndentBox {
+  padding-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.actionWrap {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+  flex-direction: row;
+}
+
+.replyContentWrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.replyIndentBox {
+  padding-left: 50px;
+  margin-top: 10px;
+}
+
+.childCommentBox {
+  margin-bottom: 10px;
+  background-color: #f9fafb;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.iconBtn:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.iconBtnTrash:hover {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+.actionIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.replyCommentForm {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  height: 70px;
+  margin-top: 20px;
+  align-items: stretch;
+}
+
+.replyCommentForm textarea {
+  flex: 1;
+  min-height: 40px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: none;
+  box-sizing: border-box;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.replySubmitBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submitBtn {
+  height: 100%;
+  padding: 0 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap; /* 글자 줄바꿈 방지 */
+  transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+  background-color: #2563eb;
+}
+
+.charCount {
+  font-size: 12px;
+  color: #94a3b8; /* 약간 흐린 회색 */
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.loginMessage {
+  margin: 16px 0 0;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #f8fbff;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  color: #6b7f99;
+  font-size: 14px;
+  font-weight: 700;
+}
+

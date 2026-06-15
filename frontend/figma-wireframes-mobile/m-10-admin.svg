@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932" fill="none">
+  <title>WeMove 모바일 관리자</title>
+  <defs>
+    <linearGradient id="primaryButton" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="heroOverlay" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10213e"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="430" height="932" fill="#f6f7f8"/>
+  <rect x="16" y="16" width="398" height="74" rx="22" fill="#fff" stroke="#e5e7eb"/>
+<rect x="28" y="34" width="40" height="40" rx="20" fill="#2563eb" stroke="#2563eb"/>
+<text x="48" y="60" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#fff" text-anchor="middle"><tspan x="48" dy="0">W</tspan></text>
+<text x="80" y="60" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="800" fill="#111827" text-anchor="start"><tspan x="80" dy="0">WeMove</tspan></text>
+<rect x="28" y="102" width="386" height="48" rx="16" fill="#fff" stroke="#e5e7eb"/>
+<text x="56" y="132" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="500" fill="#8b95a1" text-anchor="start"><tspan x="56" dy="0">모임, 지역, 운동 종목을 검색해보세요</tspan></text>
+<rect x="290" y="34" width="58" height="34" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="319" y="56" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="middle"><tspan x="319" dy="0">로그인</tspan></text>
+<rect x="356" y="34" width="58" height="34" rx="14" fill="url(#primaryButton)" stroke="#2563eb"/>
+<text x="385" y="56" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="385" dy="0">가입</tspan></text>
+<text x="16" y="186" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="800" fill="#111827" text-anchor="start"><tspan x="16" dy="0">관리자 페이지</tspan></text>
+<rect x="16" y="214" width="192" height="82" rx="18" fill="#fff" stroke="#e5e7eb"/>
+<text x="34" y="244" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">회원 수</tspan></text>
+<text x="34" y="276" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="800" fill="#111827" text-anchor="start"><tspan x="34" dy="0">1,284</tspan></text>
+<rect x="222" y="214" width="192" height="82" rx="18" fill="#fff" stroke="#e5e7eb"/>
+<text x="240" y="244" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="240" dy="0">모임 수</tspan></text>
+<text x="240" y="276" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="800" fill="#111827" text-anchor="start"><tspan x="240" dy="0">246</tspan></text>
+<rect x="16" y="312" width="192" height="82" rx="18" fill="#fff" stroke="#e5e7eb"/>
+<text x="34" y="342" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="34" dy="0">신고 수</tspan></text>
+<text x="34" y="374" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="800" fill="#111827" text-anchor="start"><tspan x="34" dy="0">18</tspan></text>
+<rect x="222" y="312" width="192" height="82" rx="18" fill="#fff" stroke="#e5e7eb"/>
+<text x="240" y="342" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start"><tspan x="240" dy="0">종목 수</tspan></text>
+<text x="240" y="374" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="800" fill="#111827" text-anchor="start"><tspan x="240" dy="0">12</tspan></text>
+<rect x="16" y="418" width="78" height="32" rx="999" fill="#eff6ff" stroke="#bfdbfe"/>
+<text x="55" y="439" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#2563eb" text-anchor="middle"><tspan x="55" dy="0">회원 관리</tspan></text>
+<rect x="102" y="418" width="78" height="32" rx="999" fill="#fff" stroke="#e5e7eb"/>
+<text x="141" y="439" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#6b7280" text-anchor="middle"><tspan x="141" dy="0">모임 관리</tspan></text>
+<rect x="188" y="418" width="78" height="32" rx="999" fill="#fff" stroke="#e5e7eb"/>
+<text x="227" y="439" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="12" font-weight="700" fill="#6b7280" text-anchor="middle"><tspan x="227" dy="0">신고 관리</tspan></text>
+<rect x="16" y="462" width="398" height="410" rx="18" fill="#fff" stroke="#e5e7eb"/>
+<text x="34" y="498" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="800" fill="#111827" text-anchor="start"><tspan x="34" dy="0">회원 관리</tspan></text>
+<rect x="34" y="526" width="362" height="76" rx="16" fill="#f9fafb" stroke="#e5e7eb"/>
+<text x="50" y="554" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="start"><tspan x="50" dy="0">user01</tspan></text>
+<text x="50" y="578" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#6b7280" text-anchor="start"><tspan x="50" dy="0">러너민수</tspan></text>
+<rect x="322" y="548" width="58" height="30" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="351" y="568" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="middle"><tspan x="351" dy="0">상세</tspan></text>
+<rect x="34" y="622" width="362" height="76" rx="16" fill="#f9fafb" stroke="#e5e7eb"/>
+<text x="50" y="650" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="start"><tspan x="50" dy="0">runner23</tspan></text>
+<text x="50" y="674" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#6b7280" text-anchor="start"><tspan x="50" dy="0">헬린이탈출</tspan></text>
+<rect x="322" y="644" width="58" height="30" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="351" y="664" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="middle"><tspan x="351" dy="0">상세</tspan></text>
+<rect x="34" y="718" width="362" height="76" rx="16" fill="#f9fafb" stroke="#e5e7eb"/>
+<text x="50" y="746" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="start"><tspan x="50" dy="0">admin01</tspan></text>
+<text x="50" y="770" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="13" font-weight="500" fill="#6b7280" text-anchor="start"><tspan x="50" dy="0">관리자</tspan></text>
+<rect x="322" y="740" width="58" height="30" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="351" y="760" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="middle"><tspan x="351" dy="0">상세</tspan></text>
+</svg>

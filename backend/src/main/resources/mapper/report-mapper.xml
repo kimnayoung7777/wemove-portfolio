@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="report">
+
+    <insert id="insertReport" parameterType="kr.co.iei.report.model.vo.Report">
+        INSERT INTO reports(
+            reporterId,
+            targetUserId,
+            reason,
+            content
+        )
+        VALUES(
+            #{reporterId},
+            #{targetUserId},
+            #{reason},
+            #{content}
+        )
+    </insert>
+
+    <select id="countPendingDuplicateReport" resultType="int">
+        SELECT COUNT(*)
+        FROM reports
+        WHERE reporterId = #{reporterId}
+          AND targetUserId = #{targetUserId}
+          AND status = 'PENDING'
+    </select>
+
+    <select id="selectReports" resultType="kr.co.iei.report.model.vo.ReportResponse">
+        SELECT
+            reportId,
+            reporterId,
+            reason,
+            status,
+            createdAt
+        FROM reports
+        ORDER BY reportId DESC
+    </select>
+
+    <update id="updateReportStatus">
+        UPDATE reports
+        SET
+            status=#{status},
+            processedAt=NOW()
+        WHERE reportId=#{reportId}
+    </update>
+
+</mapper>

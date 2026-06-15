@@ -1,0 +1,2880 @@
+/* Inlined from composed CSS modules to keep this page self-contained. */
+
+.dashboardActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+@media (max-width: 720px) {
+  .dashboardPage {
+    width: min(100%, calc(100% - 18px));
+    padding-top: 14px;
+  }
+  .dashboardHeader {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    gap: 14px;
+    padding: 16px;
+  }
+  .dashboardActions {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .dashboardSearch {
+    order: 3;
+  }
+  .dashboardShell {
+    margin-top: 14px;
+  }
+  .dashboardSidebar {
+    padding: 14px;
+  }
+  .dashboardHeroCard {
+    padding: 24px;
+    min-height: 280px;
+  }
+  .dashboardHeroContent h1 {
+    font-size: 40px;
+  }
+  .dashboardHeroContent p {
+    font-size: 16px;
+  }
+  .dashboardHeroFilters,
+  .dashboardMeetingCard {
+    grid-template-columns: 1fr;
+  }
+  .dashboardCategoryStrip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 14px;
+  }
+  .dashboardSectionHead,
+  .dashboardMeetingFooter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dashboardMeetingActions {
+    width: 100%;
+  }
+  .dashboardMeetingActions button,
+  .dashboardMeetingActions a {
+    flex: 1;
+  }
+  .dashboardSummaryGrid {
+    grid-template-columns: 1fr;
+  }
+  .dashboardPanelHead h3 {
+    font-size: 22px;
+  }
+}
+
+.dashboardActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* Mobile meeting finder hardening */
+@media (max-width: 720px) {
+  .dashboardPage,
+  .page,
+  .finderLayout {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .dashboardShell,
+  .dashboardMain,
+  .meetingList,
+  .filterPanel,
+  .tabsPanel,
+  .notice,
+  .listHead,
+  .listCard,
+  .listCardBody,
+  .listCardContent,
+  .listCard aside,
+  .dashboardHeader,
+  .dashboardSearch,
+  .dashboardActions {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .dashboardShell,
+  .filterRow,
+  .listCard,
+  .listCardBody,
+  .listCard aside {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .dashboardAside {
+    display: none;
+  }
+
+  .dashboardHeader {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px;
+  }
+
+  .dashboardActions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .dashboardLoginButton,
+  .dashboardSignupButton {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .notice {
+    padding: 24px 20px;
+    gap: 18px;
+  }
+
+  .notice a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .filterPanel {
+    padding: 14px;
+    overflow: hidden;
+  }
+
+  .tabs {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filterRow select,
+  .filterRow input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .listHead {
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .listCard {
+    padding: 14px;
+    overflow: hidden;
+  }
+
+  .listCardBody {
+    gap: 14px;
+  }
+
+  .listCardImage {
+    width: 100%;
+    height: 188px;
+  }
+
+  .listMeta {
+    gap: 8px;
+  }
+
+  .listMeta span,
+  .host span {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .listCard aside {
+    border-left: 0;
+    border-top: 1px solid rgba(148, 163, 184, 0.16);
+    padding-left: 0;
+    padding-top: 14px;
+    gap: 12px;
+  }
+
+  .dateBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .listCard aside button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .dashboardPage,
+  .page,
+  .finderLayout {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .dashboardActions {
+    grid-template-columns: 1fr;
+  }
+
+  .notice h1 {
+    font-size: clamp(1.75rem, 8vw, 2.15rem);
+  }
+}
+
+/* Mobile finder visual polish */
+@media (max-width: 720px) {
+  .dashboardPage {
+    padding-top: 10px;
+  }
+
+  .dashboardHeader {
+    padding: 14px;
+    gap: 11px;
+    border-radius: 24px;
+  }
+
+  .dashboardLogo {
+    justify-self: start;
+  }
+
+  .dashboardLogo span {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    font-size: 17px;
+  }
+
+  .dashboardLogo strong {
+    font-size: 24px;
+  }
+
+  .dashboardSearch {
+    order: 2;
+    height: 46px;
+    padding: 0 14px;
+    border-radius: 16px;
+    background: #f8fbff;
+  }
+
+  .dashboardActions {
+    order: 3;
+  }
+
+  .dashboardLoginButton,
+  .dashboardSignupButton {
+    height: 44px;
+    border-radius: 15px;
+    font-size: 0.86rem;
+  }
+
+  .dashboardSidebar {
+    position: sticky;
+    top: 8px;
+    z-index: 20;
+    padding: 8px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(18px) saturate(140%);
+  }
+
+  .dashboardInterestCard {
+    display: none;
+  }
+
+  .dashboardNav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .dashboardNavItem,
+  .dashboardNavItemActive {
+    min-height: 54px;
+    padding: 7px 6px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 4px;
+    border-radius: 16px;
+    font-size: 0.72rem;
+    text-align: center;
+    line-height: 1.15;
+  }
+
+  .dashboardNavIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dashboardPageIntro {
+    display: none;
+  }
+
+  .notice {
+    margin-top: 2px;
+    border-radius: 28px;
+    background:
+      radial-gradient(
+        circle at 88% 12%,
+        rgba(147, 197, 253, 0.36),
+        transparent 30%
+      ),
+      linear-gradient(145deg, #08214a, #1747b8 58%, #3b82f6);
+    box-shadow: 0 24px 58px rgba(37, 99, 235, 0.2);
+  }
+
+  .notice h1 {
+    margin-bottom: 9px;
+    max-width: 11.5ch;
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.07em;
+  }
+
+  .notice p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .notice a {
+    height: 48px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1747b8;
+    box-shadow: 0 14px 28px rgba(3, 12, 31, 0.16);
+  }
+
+  .filterPanel {
+    margin-top: 0;
+    padding: 12px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.88);
+  }
+
+  .tabs {
+    margin-bottom: 12px;
+    padding: 2px 1px 4px;
+    gap: 7px;
+  }
+
+  .tabButton,
+  .pageTabs button {
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 999px;
+    background: #fff;
+  }
+
+  .tabButtonActive {
+    background: #2563eb;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.2);
+  }
+
+  .filterRow {
+    gap: 9px;
+  }
+
+  .filterRow select,
+  .filterRow input {
+    height: 46px;
+    border-radius: 15px;
+    background: #fbfdff;
+  }
+
+  .listHead {
+    margin: 4px 2px 12px;
+    padding: 0 2px;
+  }
+
+  .listHead h2 {
+    font-size: 1.35rem;
+    letter-spacing: -0.045em;
+  }
+
+  .listHead span {
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 999px;
+    background: #eaf2ff;
+    color: #1747b8;
+    font-size: 0.78rem;
+  }
+
+  .meetingList {
+    gap: 12px;
+  }
+
+  .listCard {
+    padding: 12px;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 16px 42px rgba(18, 32, 59, 0.08);
+  }
+
+  .listCardImage {
+    height: 176px;
+    border-radius: 22px;
+  }
+
+  .listTags {
+    margin-top: 2px;
+  }
+
+  .badge,
+  .dashboardMeetingBadges span {
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+  }
+
+  .listCard h3 {
+    margin: 10px 0 6px;
+    font-size: 1.35rem;
+    line-height: 1.22;
+    letter-spacing: -0.045em;
+  }
+
+  .listCard p {
+    font-size: 0.9rem;
+    line-height: 1.62;
+  }
+
+  .listMeta {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 11px;
+    color: #61758d;
+  }
+
+  .listMeta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .host {
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+
+  .dateBox {
+    padding: 13px 14px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #f2f7ff, #eaf2ff);
+  }
+
+  .dateBox strong {
+    font-size: 1.25rem;
+  }
+
+  .listCard aside button {
+    height: 48px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+  }
+}
+
+.dashboardSidebar,
+.dashboardAside {
+  position: sticky;
+}
+
+.dashboardAside {
+  display: grid;
+  gap: 14px;
+}
+
+@media (max-width: 1100px) {
+  .dashboardShell,
+  .dashboardHeroRow {
+    grid-template-columns: 1fr;
+  }
+  .dashboardSidebar,
+  .dashboardAside {
+    position: static;
+  }
+  .dashboardCategoryStrip {
+    grid-template-columns: repeat(5, minmax(76px, 1fr));
+  }
+}
+
+.dashboardSidebar,
+.dashboardAside {
+  top: 104px;
+}
+
+@media (max-width: 1080px) {
+  .dashboardPage {
+    width: min(100%, calc(100% - 28px));
+  }
+
+  .dashboardShell {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardSidebar,
+  .dashboardAside {
+    position: static;
+  }
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardHeroCard,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardPanel,
+.dashboardInviteCard,
+.dashboardInterestCard {
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.06);
+}
+
+.dashboardHeader {
+  display: grid;
+  grid-template-columns: auto minmax(340px, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 20px;
+  border-radius: 24px;
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardHeroCard,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardPanel,
+.dashboardInterestCard,
+.dashboardStatGrid article,
+.dashboardCompactCard,
+.profileCard,
+.tabsPanel,
+.filterPanel,
+.listCard,
+.notice {
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.05);
+}
+
+.dashboardHeader {
+  position: relative;
+  top: auto;
+  z-index: 20;
+  grid-template-columns: auto minmax(420px, 1fr) auto;
+  padding: 16px 18px 16px 20px;
+  border-radius: 22px;
+  backdrop-filter: blur(22px) saturate(150%);
+}
+
+.dashboardHostMeta strong,
+.dashboardHostMeta span,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardRankItem strong,
+.dashboardRankItem span,
+.dashboardScheduleItem span,
+.dashboardScheduleItem strong,
+.dashboardScheduleItem p,
+.dashboardActivityItem strong,
+.dashboardActivityItem p,
+.dashboardActivityItem > span,
+.dashboardSimpleList span,
+.dashboardSimpleList strong,
+.dashboardQuickLinks a,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardPanelHead a,
+.dashboardPanelHead h3,
+.dashboardPanel,
+.dashboardSidebar,
+.dashboardHeader,
+.notice,
+.filterPanel,
+.tabsPanel,
+.listCard,
+.profileCard {
+  font-family: var(--font-ui);
+}
+
+@media (max-width: 720px) {
+  .dashboardPage {
+    width: min(100%, calc(100% - 20px));
+    padding: 16px;
+  }
+  .dashboardHeader {
+    position: sticky;
+    top: 12px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 14px;
+  }
+  .dashboardShell {
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .dashboardHeroContent h1 {
+    font-size: 42px;
+  }
+  .dashboardPageIntro h1 {
+    font-size: 34px;
+  }
+  .dashboardSectionHead h2,
+  .dashboardMeetingBody h3 {
+    font-size: 28px;
+  }
+  .dashboardHeroFilters,
+  .dashboardMeetingCard,
+  .dashboardStatGrid {
+    grid-template-columns: 1fr;
+  }
+  .dashboardCategoryStrip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .page {
+    width: min(1360px, calc(100% - 72px));
+    gap: 44px;
+  }
+
+  .dashboardPage {
+    width: min(100%, calc(100% - 72px));
+    padding: 18px 0 26px;
+  }
+
+  .dashboardShell {
+    grid-template-columns: 208px minmax(0, 1fr) 284px;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .dashboardHeader {
+    padding: 13px 16px;
+    border-radius: 20px;
+  }
+
+  .dashboardHeroCard,
+  .notice,
+  .dashboardPanel,
+  .dashboardSummaryCard,
+  .dashboardMeetingCard,
+  .listCard,
+  .profileCard,
+  .filterPanel,
+  .tabsPanel {
+    border-radius: 20px;
+  }
+
+  .dashboardHeroCard {
+    min-height: 242px;
+    padding: 26px;
+  }
+
+  .dashboardHeroFilters {
+    margin-top: 20px;
+    padding: 7px;
+  }
+
+  .dashboardSummaryCard,
+  .dashboardPanel,
+  .filterPanel,
+  .tabsPanel,
+  .profileCard {
+    padding: 15px;
+  }
+
+  .dashboardMeetingCard,
+  .listCard {
+    padding: 13px;
+  }
+
+  .dashboardCategoryStrip {
+    padding: 10px 12px;
+    gap: 4px;
+  }
+
+  .dashboardCategoryItem {
+    min-height: 72px;
+    padding: 8px 4px 6px;
+  }
+
+  .dashboardMeetingImage {
+    height: 122px;
+  }
+
+  .listCardImage {
+    width: 116px;
+    height: 116px;
+  }
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardInterestCard,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardCompactCard,
+.filterPanel,
+.tabsPanel,
+.listCard,
+.profileCard,
+.notice,
+.detailHero,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formIntro,
+.formCard,
+.participantCard,
+.reviewCard,
+.statGrid article,
+.tableCard {
+  border-color: rgba(15, 23, 42, 0.08);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 8px 22px rgba(15, 23, 42, 0.04);
+  backdrop-filter: none;
+}
+
+.dashboardHeader {
+  background: #fff;
+  border-radius: 12px;
+}
+
+.dashboardHeader {
+  min-height: 74px;
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(22px) saturate(140%);
+  box-shadow:
+    0 18px 50px rgba(18, 32, 59, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+@media (max-width: 720px) {
+  .dashboardPage {
+    width: min(100%, calc(100% - 20px));
+    padding: 12px 0 28px;
+  }
+
+  .dashboardHeader,
+  .dashboardHeroCard,
+  .dashboardSidebar,
+  .dashboardPanel,
+  .dashboardInterestCard,
+  .dashboardSummaryCard,
+  .dashboardCategoryStrip,
+  .dashboardMeetingCard,
+  .dashboardCompactCard,
+  .filterPanel,
+  .tabsPanel,
+  .listCard,
+  .profileCard,
+  .detailHero,
+  .detailSection,
+  .detailPanel,
+  .softPanel,
+  .formIntro,
+  .formCard {
+    border-radius: 22px;
+  }
+
+  .dashboardHeroCard {
+    padding: 24px;
+  }
+}
+
+/* Fixed mobile account header */
+@media (max-width: 720px) {
+  .dashboardPage {
+    padding-top: 0 !important;
+  }
+
+  .dashboardHeader {
+    position: fixed !important;
+    top: 10px !important;
+    left: 10px !important;
+    right: 10px !important;
+    z-index: 60 !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    box-shadow:
+      0 18px 46px rgba(18, 32, 59, 0.16),
+      inset 0 1px 0 rgba(255, 255, 255, 0.94) !important;
+  }
+
+  .dashboardSidebar {
+    top: 0 !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .dashboardPage {
+    padding-top: 0 !important;
+  }
+
+  .dashboardHeader {
+    top: 8px !important;
+    left: 8px !important;
+    right: 8px !important;
+  }
+
+  .dashboardSidebar {
+    top: 0 !important;
+  }
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardInterestCard {
+  background: rgba(255, 255, 255, 0.96) !important;
+  background-image: none !important;
+  border-color: rgba(15, 23, 42, 0.06) !important;
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardInterestCard {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+  background-image: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f8fbff 100%
+  ) !important;
+  border-color: rgba(37, 99, 235, 0.08) !important;
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardInterestCard {
+  background: linear-gradient(180deg, #ffffff 0%, #f3f7ff 100%) !important;
+  background-image: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f3f7ff 100%
+  ) !important;
+  border-color: rgba(37, 99, 235, 0.105) !important;
+  box-shadow:
+    0 16px 40px rgba(15, 23, 42, 0.052),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardInterestCard {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid rgba(15, 23, 42, 0.07) !important;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.045) !important;
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardInterestCard,
+.filterPanel,
+.listCard,
+.detailHero,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formCard,
+.profileCard,
+.tabsPanel,
+.tableCard,
+.statGrid article,
+.myList article,
+.reviewCard,
+.participantCard,
+.pageTitle {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 18px !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.035) !important;
+  backdrop-filter: none !important;
+}
+
+.dashboardInterestCard,
+.dashboardInviteCard {
+  padding: 18px;
+  border-radius: 24px;
+}
+
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardInterestCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.profileCard,
+.tabsPanel,
+.filterPanel,
+.listCard,
+.notice {
+  border-radius: 22px;
+}
+
+.dashboardInterestCard {
+  padding: 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(247, 250, 255, 0.9)
+  );
+}
+
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardInterestCard,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardCompactCard,
+.filterPanel,
+.tabsPanel,
+.listCard,
+.profileCard,
+.detailHero,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formIntro,
+.formCard,
+.participantCard,
+.reviewCard,
+.statGrid article,
+.tableCard,
+.rightbar section,
+.sidebar {
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px) saturate(130%);
+  box-shadow:
+    0 18px 46px rgba(18, 32, 59, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.dashboardSearchIcon,
+.dashboardNavIcon,
+.dashboardInterestIcon,
+.dashboardInlineIcon,
+.dashboardStatIcon,
+.dashboardCategoryGlyph,
+.dashboardMetaIcon,
+.dashboardActionIcon,
+.dashboardHostIcon,
+.dashboardActivityGlyph {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.dashboardInterestIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.dashboardInterestList {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.dashboardInterestList span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #496079;
+  font-weight: 700;
+}
+
+.dashboardInterestList i {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f4f7fc;
+  color: var(--color-primary-strong);
+  font-style: normal;
+}
+
+.dashboardInterestList {
+  gap: 10px;
+}
+
+.dashboardInterestList span {
+  font-size: 14px;
+  color: #40556d;
+}
+
+.dashboardInterestList i {
+  width: 26px;
+  height: 26px;
+  background: #eef3fb;
+  color: #5379bd;
+}
+
+.metrics,
+.meetingCard footer,
+.listHead span,
+.listMeta,
+.host,
+.detailChecklist li,
+.commentMeta span,
+.tableCard td,
+.dashboardInterestList span,
+.dashboardMeetingMeta,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardRankItem strong,
+.dashboardScheduleItem strong,
+.dashboardStatGrid span {
+  font-weight: var(--weight-body-strong);
+}
+
+.dashboardCategoryItem i,
+.dashboardSummaryGrid i,
+.dashboardActivityItem i,
+.dashboardInterestList i {
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.dashboardCategoryItem i,
+.dashboardSummaryGrid i,
+.dashboardActivityItem i,
+.dashboardInterestList i {
+  border-radius: 14px;
+  background: linear-gradient(145deg, #eaf2ff, #f8fbff);
+  color: #1d4ed8;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.dashboardCategoryItem i,
+.dashboardSummaryGrid i,
+.dashboardRankItem b,
+.dashboardActivityItem i,
+.dashboardInterestList i {
+  background: #f4f5f7 !important;
+  background-image: none !important;
+  color: #3f6fd8 !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.96),
+    0 5px 12px rgba(15, 23, 42, 0.035) !important;
+}
+
+.dashboardCategoryItem i,
+.dashboardSummaryGrid i,
+.dashboardRankItem b,
+.dashboardActivityItem i,
+.dashboardInterestList i,
+.profileAvatar,
+.commentAvatar,
+.avatar,
+.host i {
+  background: #f3f4f6 !important;
+  background-image: none !important;
+  color: #4b5563 !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 520px) {
+  .dashboardCategoryStrip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dashboardLoginButton,
+  .dashboardSignupButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.dashboardLoginButton,
+.dashboardSignupButton {
+  height: 42px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.dashboardLoginButton {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: #fff;
+  color: #49627f;
+}
+
+@media (max-width: 520px) {
+  .dashboardLoginButton,
+  .dashboardSignupButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.dashboardLoginButton,
+.dashboardSignupButton {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+}
+
+.dashboardLoginButton {
+  border-color: rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.88);
+  color: #42586f;
+}
+
+@media (max-width: 520px) {
+  .dashboardCategoryStrip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dashboardLoginButton,
+  .dashboardSignupButton {
+    width: 100%;
+  }
+}
+
+.kicker,
+.sectionKicker,
+.searchCard span,
+.heroVisualCopy span,
+.highlightBand span,
+.sectionHead a,
+.categoryGrid span,
+.cover span,
+.badge,
+.sidebar h3,
+.rightbar h3,
+.notice a,
+.tabButton,
+.pageTabs button,
+.dateBox span,
+.detailSummary span,
+.sideInfo span,
+.primaryButton,
+.secondaryButton,
+.formCard label span,
+.choiceGroup > span,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard th,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.reviewScore,
+.ratingButton,
+.dashboardCreateButton,
+.dashboardProfile,
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardSidebarHead button,
+.dashboardSidebarHead span,
+.dashboardPanelHead a,
+.dashboardInviteCard button,
+.dashboardHeroFilters select,
+.dashboardHeroButton,
+.dashboardSummaryGrid span,
+.dashboardCategoryItem,
+.dashboardPills button,
+.dashboardMeetingBadges span,
+.dashboardSectionHead > a,
+.dashboardScheduleItem span,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a,
+.dashboardLoginButton,
+.dashboardSignupButton {
+  font-weight: var(--weight-button);
+}
+
+.sectionHead a,
+.dashboardSectionHead > a,
+.dashboardPanelHead a,
+.dashboardQuickLinks a,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardProfile,
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.listCard aside button,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.ratingButton {
+  height: var(--control-height-md);
+  padding: var(--control-padding-md);
+  border-radius: var(--control-radius-md);
+  font-size: 0.86rem;
+  letter-spacing: 0;
+}
+
+.dashboardLoginButton,
+.dashboardSignupButton {
+  min-width: 92px;
+}
+
+.sectionHead a,
+.tabButton,
+.pageTabs button,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.ratingButton,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a,
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardHeroButton {
+  height: var(--control-height-md);
+  padding: var(--control-padding-md);
+  letter-spacing: var(--tracking-body);
+}
+
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardHeroButton,
+.listCard aside button {
+  border-radius: var(--control-radius-md);
+}
+
+.dashboardLoginButton,
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.myList aside a,
+.tableHead button,
+.tableCard td button {
+  border-color: rgba(18, 32, 59, 0.12);
+  background: #fff;
+  color: #344054;
+}
+
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardHeroButton,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.listCard aside button,
+.ratingButton {
+  border-radius: 14px;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.dashboardLoginButton,
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.myList aside a,
+.tableHead button,
+.tableCard td button {
+  border-color: rgba(18, 32, 59, 0.1);
+  background: rgba(255, 255, 255, 0.86);
+  color: #334155;
+}
+
+.dashboardLogo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboardLogo span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #2d6fff, #5aa9ff);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 19px;
+  box-shadow: 0 16px 32px rgba(23, 105, 255, 0.2);
+}
+
+.dashboardLogo strong {
+  font-family: var(--font-display);
+  font-size: 26px;
+  letter-spacing: -0.03em;
+}
+
+.dashboardLogo strong,
+.dashboardPanelHead h3,
+.dashboardSectionHead h2,
+.dashboardPageIntro h1,
+.dashboardMeetingBody h3,
+.dashboardHeroContent h1,
+.dashboardStatGrid strong,
+.profileCard h2 {
+  font-family: var(--font-ui);
+  font-weight: 800;
+}
+
+.dashboardLogo strong {
+  font-size: 28px;
+  letter-spacing: -0.05em;
+}
+
+.dashboardLogo span {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #205fe1, #4e8cff);
+  box-shadow: none;
+}
+
+.pageTitle h1,
+.hero h1,
+.heroVisualCopy strong,
+.highlightBand strong,
+.sectionHead h2,
+.how h2,
+.meetingCard h3,
+.listCard h3,
+.myList h3,
+.notice h1,
+.listHead h2,
+.dateBox strong,
+.detailCover h1,
+.detailPanel h3,
+.profileCard h2,
+.statGrid strong,
+.tableHead h2,
+.formIntro h2,
+.softPanel h2,
+.dashboardLogo strong,
+.dashboardInviteCard strong,
+.dashboardHeroContent h1,
+.dashboardSectionHead h2,
+.dashboardMeetingBody h3,
+.dashboardPanelHead h3,
+.dashboardPageIntro h1,
+.dashboardStatGrid strong {
+  font-weight: var(--weight-display);
+}
+
+.dashboardLogo span,
+.logo::before,
+.footer-brand::before {
+  border-radius: 8px;
+  background: #2563eb;
+  box-shadow: none;
+}
+
+.dashboardLogo strong,
+.logo,
+.footer-brand {
+  color: #172033;
+  letter-spacing: 0;
+}
+
+.dashboardLogo span,
+.logo::before {
+  border-radius: 14px;
+  background: linear-gradient(145deg, #1d4ed8, #3b82f6 58%, #60a5fa);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.28);
+}
+
+.dashboardLogo strong,
+.logo {
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.dashboardLogo span {
+  background: url("/wemove-mark.svg") center/cover no-repeat !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.28) !important;
+}
+
+.dashboardMain {
+  display: grid;
+  gap: 18px;
+}
+
+.dashboardShell,
+.dashboardMain {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+.dashboardPage::before,
+.dashboardPage::after,
+.dashboardShell::before,
+.dashboardShell::after,
+.dashboardMain::before,
+.dashboardMain::after {
+  display: none !important;
+  content: none !important;
+}
+
+.dashboardNav {
+  display: grid;
+  gap: 8px;
+}
+
+.dashboardNav {
+  gap: 4px;
+}
+
+.dashboardNav {
+  gap: 6px;
+}
+
+.dashboardNavIcon {
+  width: 17px;
+  height: 17px;
+}
+
+.dashboardMeetingBody p,
+.listCard p,
+.myList p,
+.detailBody p,
+.detailCover p,
+.pageTitle p,
+.formIntro p,
+.profileCard p,
+.dashboardCategoryItem span,
+.dashboardRankItem small,
+.dashboardActivityItem small,
+.dashboardNavItem .dashboardNavIcon {
+  color: #4b5563 !important;
+}
+
+.dashboardNavItem,
+.dashboardNavItemActive {
+  min-height: 48px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  color: #516579;
+  font-weight: 800;
+  text-align: left;
+}
+
+.dashboardNavItem i,
+.dashboardNavItemActive i {
+  width: 24px;
+  color: #94a5b7;
+  font-style: normal;
+  text-align: center;
+}
+
+.dashboardNavItem small,
+.dashboardNavItemActive small {
+  margin-left: auto;
+  min-width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #edf3ff;
+  color: var(--color-primary-strong);
+  font-size: 11px;
+}
+
+.dashboardNavItem,
+.dashboardNavItemActive {
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 12px;
+  color: #5a6f86;
+  font-size: 14px;
+}
+
+.dashboardNavItem i,
+.dashboardNavItemActive i {
+  color: #8ea0b3;
+}
+
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardProfile,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a {
+  min-height: 44px;
+  font-size: 0.92rem;
+  letter-spacing: var(--tracking-body);
+}
+
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a,
+.tabButton,
+.pageTabs button,
+.dashboardPills button,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.participantActions button,
+.myList aside a,
+.listCard aside button,
+.ratingButton,
+.ratingStar,
+.ratingStarActive {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a,
+.tabButton,
+.pageTabs button,
+.dashboardPills button {
+  border-radius: 16px;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.dashboardNavItem {
+  color: #52657d;
+}
+
+.dashboardNavItem:hover,
+.dashboardFilterButton:hover,
+.dashboardQuickLinks a:hover,
+.tabButton:hover {
+  transform: translateY(-1px);
+  border-color: rgba(37, 99, 235, 0.18);
+  background: #f7fbff;
+  color: #1747b8;
+}
+
+.dashboardNavItemActive {
+  background: linear-gradient(135deg, #edf3ff, #f7faff);
+  color: var(--color-primary-strong);
+  box-shadow: inset 0 0 0 1px rgba(23, 105, 255, 0.08);
+}
+
+.dashboardNavItemActive {
+  background: #eff5ff;
+  color: #1d56cf;
+  box-shadow: none;
+}
+
+.dashboardNavItemActive,
+.dashboardFilterButtonActive,
+.tabButtonActive,
+.ratingStarActive,
+.ratingStar:hover {
+  border-color: rgba(37, 99, 235, 0.18);
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.dashboardNavItemActive,
+.dashboardFilterButtonActive,
+.tabButtonActive {
+  border-color: rgba(37, 99, 235, 0.16);
+  background: linear-gradient(135deg, #edf5ff, #f7fbff);
+  color: #1747b8;
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.06);
+}
+
+.dashboardPage {
+  width: min(100%, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 18px 0 28px;
+  color: var(--color-text);
+}
+
+.dashboardPage a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dashboardPage {
+  font-family: var(--font-ui);
+  width: min(100%, calc(100% - 40px));
+  padding: 26px 0 34px;
+}
+
+/* Production-style brand pass */
+.dashboardPage,
+.page {
+  color: #172033;
+}
+
+/* Premium brand polish */
+.dashboardPage,
+.page {
+  color: #111827;
+}
+
+.dashboardPage {
+  width: min(100%, calc(100% - 56px));
+  padding: 22px 0 36px;
+}
+
+.dashboardPage::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(37, 99, 235, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 78%);
+}
+
+/* Absolute final neutral homepage background pass. Keep blue only on action controls. */
+.dashboardPage,
+.page {
+  background: #f7f7f8 !important;
+  background-image: none !important;
+}
+
+/* White background + subtle blue card surfaces. */
+.dashboardPage,
+.page {
+  background: #fff !important;
+  background-image: none !important;
+}
+
+/* Balance pass: keep page neutral, give cards a little more blue surface depth. */
+.dashboardPage,
+.page {
+  background: #f7f8fa !important;
+  background-image: none !important;
+}
+
+/* Final card contrast pass */
+.dashboardPage,
+.page {
+  background: #f5f6f8 !important;
+  background-image: none !important;
+}
+
+/* 2026-05-18 final neutral service override */
+.dashboardPage,
+.page {
+  background: #f6f7f8 !important;
+  background-image: none !important;
+}
+
+.dashboardPageIntro {
+  padding: 6px 4px 2px;
+}
+
+.dashboardPageIntro h1 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 42px;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.dashboardPageIntro p,
+.dashboardSectionCopy {
+  margin: 0;
+  color: #6f849d;
+  line-height: 1.75;
+}
+
+@media (max-width: 720px) {
+  .dashboardPageIntro h1 {
+    font-size: 34px;
+  }
+  .dashboardStatGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.dashboardPageIntro {
+  padding: 4px 4px 0;
+}
+
+.dashboardPageIntro h1 {
+  margin-bottom: 8px;
+  font-size: 38px;
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+  color: #10233f;
+}
+
+.dashboardPageIntro p,
+.dashboardSectionCopy {
+  max-width: 720px;
+  color: #71839a;
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+
+.dashboardPageIntro h1 {
+  font-size: var(--font-list-title);
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+
+.pageTitle p,
+.listHead span,
+.detailCover p,
+.dashboardPageIntro p,
+.dashboardSectionCopy,
+.dashboardHeroContent p {
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+@media (max-width: 720px) {
+  .reviewPreviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardHeroContent h1 {
+    font-size: clamp(2.5rem, 9vw, 3.5rem);
+    max-width: 12ch;
+  }
+
+  .dashboardSectionHead h2 {
+    font-size: clamp(1.7rem, 6vw, 2.15rem);
+  }
+
+  .dashboardPageIntro h1,
+  .detailCover h1,
+  .notice h1,
+  .pageTitle h1 {
+    font-size: clamp(1.9rem, 7vw, 2.45rem);
+  }
+
+  .dashboardMeetingBody h3,
+  .listCard h3,
+  .dashboardCompactBody h3 {
+    font-size: 1.45rem;
+  }
+}
+
+.meetingCard p,
+.listCard p,
+.myList p,
+.dashboardPageIntro p,
+.dashboardSectionCopy,
+.dashboardMeetingBody p,
+.dashboardCompactBody p,
+.dashboardCompactBody small {
+  font-weight: var(--weight-body);
+}
+
+.pageTitle h1,
+.notice h1,
+.detailCover h1,
+.dashboardPageIntro h1 {
+  font-size: var(--font-page-title);
+  letter-spacing: var(--tracking-tight);
+}
+
+.pageTitle p,
+.heroCopy > p:not(.kicker),
+.sectionHead p,
+.how p,
+.notice p,
+.detailBody p,
+.commentItem p,
+.dashboardPageIntro p,
+.dashboardSectionCopy,
+.dashboardHeroContent p,
+.dashboardMeetingBody p {
+  font-size: var(--font-body-lg);
+  letter-spacing: var(--tracking-body);
+}
+
+.notice p,
+.dashboardPageIntro p,
+.dashboardSectionCopy,
+.dashboardMeetingBody p,
+.listCard p,
+.detailCover p,
+.softPanel p,
+.formIntro p {
+  color: #667085;
+}
+
+.pageTitle h1,
+.dashboardPageIntro h1,
+.dashboardHeroContent h1,
+.dashboardSectionHead h2,
+.notice h1,
+.detailCover h1,
+.listCard h3,
+.dashboardMeetingBody h3,
+.softPanel h2,
+.formIntro h2,
+.detailPanel h3 {
+  letter-spacing: 0;
+}
+
+.dashboardSectionHead h2,
+.dashboardPageIntro h1,
+.pageTitle h1,
+.notice h1,
+.detailCover h1 {
+  letter-spacing: -0.045em;
+}
+
+.dashboardSearch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 52px;
+  padding: 0 18px;
+  gap: 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: #fdfefe;
+}
+
+.dashboardSearch span {
+  color: #91a1b5;
+  font-size: 18px;
+}
+
+.dashboardSearch input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  outline: 0;
+  color: #4f627a;
+}
+
+.dashboardSearch {
+  height: 54px;
+  border-radius: 16px;
+  border-color: rgba(15, 23, 42, 0.08);
+  background: rgba(249, 251, 255, 0.9);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.dashboardSearch input {
+  font-size: 14px;
+  color: #27384d;
+}
+
+.dashboardSearch,
+.filterRow select,
+.filterRow input,
+.formCard input,
+.formCard select,
+.formCard textarea,
+.reviewTextarea,
+.uploadInput {
+  border-color: rgba(15, 23, 42, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.dashboardSearch:focus-within,
+.filterRow select:focus,
+.filterRow input:focus,
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus,
+.reviewTextarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.dashboardSearch {
+  height: 50px;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: 18px;
+  background: rgba(248, 251, 255, 0.92);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86);
+}
+
+.dashboardSearch:focus-within {
+  border-color: rgba(37, 99, 235, 0.36);
+  box-shadow:
+    0 0 0 5px rgba(37, 99, 235, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.dashboardSearchIcon {
+  width: 17px;
+  height: 17px;
+  color: #8ea0b3;
+}
+
+.dashboardShell {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 300px;
+  gap: 18px;
+  margin-top: 18px;
+  align-items: start;
+}
+
+.dashboardShell {
+  grid-template-columns: 232px minmax(0, 1fr) 316px;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1100px) {
+  .dashboardShell,
+  .dashboardHeroRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboardShell {
+  grid-template-columns: 220px minmax(0, 1fr) 300px;
+  gap: 20px;
+  margin-top: 18px;
+}
+
+@media (min-width: 1200px) {
+  .dashboardShell {
+    grid-template-columns: 224px minmax(0, 1fr) 300px;
+  }
+
+  .dashboardHeroCard {
+    min-height: 286px;
+  }
+
+  .dashboardPanel,
+  .dashboardSummaryCard,
+  .filterPanel,
+  .tabsPanel,
+  .profileCard {
+    padding: 18px;
+  }
+
+  .dashboardMeetingCard,
+  .listCard {
+    padding: 16px;
+  }
+}
+
+/* Brand color pass: add depth so the app feels less plain-white. */
+.dashboardShell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(37, 99, 235, 0.08),
+      transparent 24%,
+      rgba(14, 165, 233, 0.08) 78%,
+      transparent
+    ),
+    radial-gradient(circle at 48% 0%, rgba(29, 78, 216, 0.1), transparent 34%);
+}
+
+.dashboardSidebar {
+  padding: 18px;
+  border-radius: 26px;
+  display: grid;
+  gap: 18px;
+}
+
+.dashboardSidebar {
+  padding: 14px;
+  gap: 14px;
+}
+
+.dashboardSidebar {
+  padding: 14px;
+}
+
+.dashboardSidebarHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboardSidebarHead strong,
+.dashboardSidebarHead span,
+.dashboardPanelHead h3 {
+  font-size: 15px;
+}
+
+.dashboardSidebarHead button,
+.dashboardSidebarHead span,
+.dashboardPanelHead a {
+  color: #7c90a8;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.dashboardSidebarHead strong {
+  font-size: 13px;
+  color: #7e8fa5;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.kicker,
+.sectionKicker,
+.searchCard span,
+.heroVisualCopy span,
+.highlightBand span,
+.sidebar h3,
+.rightbar h3,
+.dateBox span,
+.detailSummary span,
+.sideInfo span,
+.formCard label span,
+.choiceGroup > span,
+.tableCard th,
+.reviewScore,
+.dashboardSidebarHead button,
+.dashboardSidebarHead span,
+.dashboardPanelHead a,
+.dashboardSummaryGrid span,
+.dashboardMeetingBadges span,
+.dashboardStatGrid span {
+  font-size: var(--font-meta);
+  letter-spacing: 0.02em;
+}
+
+.dashboardSignupButton {
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, var(--color-primary), #4b92ff);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(23, 105, 255, 0.2);
+}
+
+.dashboardSignupButton {
+  background: linear-gradient(135deg, #1f5fff, #3c8bff);
+  box-shadow: 0 12px 24px rgba(31, 95, 255, 0.16);
+}
+
+.dashboardSignupButton,
+.dashboardHeroButton,
+.dashboardMeetingActions a,
+.primaryButton,
+.formActions button,
+.profileCard button,
+.participantActions button:last-child,
+.listCard aside button,
+.notice a {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #fff;
+  box-shadow: none;
+}
+
+.dashboardSignupButton,
+.dashboardHeroButton,
+.dashboardMeetingActions a,
+.primaryButton,
+.formActions button,
+.profileCard button,
+.participantActions button:last-child,
+.listCard aside button,
+.notice a {
+  border-color: transparent;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb 52%, #3b82f6);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.22);
+}
+
+.dashboardSignupButton:hover,
+.dashboardHeroButton:hover,
+.dashboardMeetingActions a:hover,
+.primaryButton:hover,
+.formActions button:hover,
+.listCard aside button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 36px rgba(37, 99, 235, 0.28);
+}
+
+/* 2026-05-18 primary button gradient polish */
+.dashboardHeroButton,
+.primaryButton,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child,
+.myList aside a,
+.tabButtonActive,
+.pageTabs button:first-child,
+.dashboardPills button:first-child,
+.dashboardSignupButton {
+  background: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #2563eb 56%,
+    #1d4ed8 100%
+  ) !important;
+  background-image: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #2563eb 56%,
+    #1d4ed8 100%
+  ) !important;
+  border-color: #2563eb !important;
+  color: #fff !important;
+  box-shadow:
+    0 6px 14px rgba(37, 99, 235, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+.dashboardHeroButton:hover,
+.primaryButton:hover,
+.formActions button:hover,
+.profileCard button:hover,
+.tableHead button:hover,
+.participantActions button:last-child:hover,
+.myList aside a:hover,
+.tabButtonActive:hover,
+.pageTabs button:first-child:hover,
+.dashboardPills button:first-child:hover,
+.dashboardSignupButton:hover {
+  background: linear-gradient(
+    180deg,
+    #4b8eff 0%,
+    #2d6df1 56%,
+    #1d4ed8 100%
+  ) !important;
+  border-color: #1d4ed8 !important;
+  box-shadow:
+    0 8px 18px rgba(37, 99, 235, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.dashboardUserName {
+  max-width: 160px;
+  overflow: hidden;
+  color: #24415f;
+  font-size: 14px;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Auto-split from DashboardShell.jsx. Page/component styles compose shared WeMove design rules. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dashboardPageEyebrow {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: 999px;
+  background: rgba(239, 246, 255, 0.92);
+  color: #2563eb;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.dashboardIntroMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.dashboardIntroMeta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #475569;
+  font-size: 0.84rem;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+}
+
+.dashboardIntroIcon {
+  width: 15px;
+  height: 15px;
+  color: #2563eb;
+}
+
+.dashboardSearch {
+
+  flex: 0 1 920px;
+  max-width: 920px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.dashboardUserAvatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  background: #eef4ff;
+  flex-shrink: 0;
+}
+
+.dashboardUserInfo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 6px 14px 6px 6px;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), #f8fbff);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.05);
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dashboardUserName {
+
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.mobileMenuButton {
+  display: none;
+}
+
+.mobileMenuBackdrop {
+  display: none;
+}
+
+.mobileDrawerHead {
+  display: none;
+}
+
+
+
+@media (max-width: 720px) {
+  .dashboardPage {
+    padding-top: 0 !important;
+  }
+
+  .dashboardHeader {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    z-index: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 78px !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    grid-template-rows: auto auto !important;
+    align-items: center !important;
+    gap: 5px 12px !important;
+    padding: 10px 12px !important;
+    margin-bottom: 14px !important;
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(18px) saturate(145%) !important;
+    box-shadow:
+      0 14px 34px rgba(18, 32, 59, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.94) !important;
+  }
+
+  .dashboardShell {
+    margin-top: 0 !important;
+  }
+
+  .dashboardMain {
+    padding-top: 0 !important;
+  }
+
+  .dashboardLogo {
+    min-width: 0;
+    justify-self: start !important;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  .dashboardLogo span {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 11px !important;
+    font-size: 16px !important;
+  }
+
+  .dashboardLogo strong {
+    font-size: 22px !important;
+    letter-spacing: -0.05em !important;
+  }
+
+  .dashboardSearch {
+    display: none !important;
+  }
+
+  .dashboardActions {
+    justify-self: end;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    order: initial !important;
+  }
+
+  .dashboardUserInfo {
+    padding: 4px 8px 4px 4px !important;
+    gap: 8px !important;
+  }
+
+  .dashboardUserAvatar {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .dashboardLoginButton,
+  .dashboardSignupButton {
+    width: auto !important;
+    height: 36px !important;
+    min-width: 58px !important;
+    padding: 0 10px !important;
+    border-radius: 12px !important;
+    font-size: 0.76rem !important;
+    white-space: nowrap !important;
+  }
+
+  .mobileMenuButton {
+    justify-self: start;
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    gap: 4px;
+    padding: 9px;
+    border: 1px solid rgba(37, 99, 235, 0.14);
+    border-radius: 13px;
+    background: #eff6ff;
+    color: #1747b8;
+  }
+
+  .mobileMenuButton span {
+    width: 17px;
+    height: 2px;
+    display: block;
+    border-radius: 999px;
+    background: currentColor;
+  }
+
+  .mobileMenuBackdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    display: block;
+    border: 0;
+    background: rgba(15, 23, 42, 0.28);
+    backdrop-filter: blur(2px);
+  }
+
+  .dashboardSidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    z-index: 90 !important;
+    width: min(310px, 82vw) !important;
+    max-width: 82vw !important;
+    height: 100vh !important;
+    padding: 18px !important;
+    display: grid !important;
+    align-content: start !important;
+    gap: 16px !important;
+    border-radius: 0 28px 28px 0 !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    box-shadow: 28px 0 70px rgba(15, 23, 42, 0.18) !important;
+    transform: translateX(calc(-100% - 24px));
+    transition: transform 0.24s ease;
+    overflow-y: auto !important;
+  }
+
+  .dashboardSidebarOpen {
+    transform: translateX(0) !important;
+  }
+
+  .mobileDrawerHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  }
+
+  .mobileDrawerHead strong {
+    color: #172033;
+    font-size: 1.05rem;
+    font-weight: 800;
+  }
+
+  .mobileDrawerHead button {
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 999px;
+    background: #fff;
+    color: #52657d;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .dashboardNav {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .dashboardNavItem,
+  .dashboardNavItemActive {
+    min-height: 48px !important;
+    padding: 0 14px !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 12px !important;
+    border-radius: 16px !important;
+    font-size: 0.95rem !important;
+    text-align: left !important;
+  }
+
+  .dashboardNavIcon {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .dashboardInterestCard {
+    display: block !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .dashboardPage {
+    padding-top: 0 !important;
+  }
+
+  .dashboardHeader {
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    grid-template-rows: auto auto !important;
+  }
+
+  .dashboardLogo strong {
+    font-size: 20px !important;
+  }
+
+  .dashboardActions {
+    gap: 5px !important;
+  }
+
+  .dashboardLoginButton,
+  .dashboardSignupButton {
+    min-width: 52px !important;
+    height: 34px !important;
+    padding: 0 8px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .mobileMenuButton {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Sidebar icon tone pass: keep navigation readable, soften decorative interest icons. */
+.dashboardInterestList i {
+  background: #f2f6ff !important;
+  color: #3b6edc !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.dashboardInterestList span:nth-child(2n) i {
+  background: #eef8f7 !important;
+  color: #2e7d78 !important;
+}
+
+.dashboardInterestList span:nth-child(3n) i {
+  background: #fff7e8 !important;
+  color: #b46b18 !important;
+}
+
+.dashboardInterestMore {
+  width: max-content;
+  min-height: 30px;
+  margin-top: 10px;
+  border: 1px solid #dbe3ef;
+  border-radius: 999px;
+  background: #fff;
+  padding: 0 10px;
+  color: #44566c;
+  font-size: 11px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.dashboardHeader {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid rgba(15, 23, 42, 0.07) !important;
+  box-shadow:
+    0 18px 38px rgba(15, 23, 42, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+.dashboardSearch {
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.dashboardSearch input {
+  color: #0f172a !important;
+}
+
+.dashboardPageIntro {
+  padding: 18px 22px 20px !important;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(96, 165, 250, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 255, 0.98));
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.045);
+}
+
+.dashboardPageIntro h1 {
+  font-size: clamp(2rem, 2.8vw, 2.8rem) !important;
+  line-height: 1.02 !important;
+}
+
+.dashboardPageIntro p {
+  max-width: 760px;
+  color: #64748b !important;
+  font-size: 0.96rem;
+}
+
+.dashboardNavItem .dashboardNavIcon {
+  color: #64748b;
+}
+
+.dashboardNavItemActive .dashboardNavIcon {
+  color: #2563eb;
+}
+
+/* Keep the shell surfaces crisp against the neutral page background. */
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardInterestCard {
+  background: rgba(255, 255, 255, 0.97) !important;
+  border-color: rgba(15, 23, 42, 0.06) !important;
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.97) !important;
+}
+
+.dashboardInterestList i {
+  background: #f4f5f7 !important;
+  color: #3f6fd8 !important;
+}
+
+/* Shell final: white canvas, blue-tinted surfaces only. */
+.dashboardPage,
+.dashboardShell,
+.dashboardMain {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardInterestCard {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+  background-image: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f8fbff 100%
+  ) !important;
+  border-color: rgba(37, 99, 235, 0.08) !important;
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+.dashboardInterestList i,
+.dashboardInterestList span:nth-child(2n) i,
+.dashboardInterestList span:nth-child(3n) i {
+  background: #eef4ff !important;
+  background-image: none !important;
+  color: #3f6fd8 !important;
+}
+
+/* Shell balance pass. */
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardInterestCard {
+  background: linear-gradient(180deg, #ffffff 0%, #f3f7ff 100%) !important;
+  background-image: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f3f7ff 100%
+  ) !important;
+  border-color: rgba(37, 99, 235, 0.105) !important;
+  box-shadow:
+    0 16px 40px rgba(15, 23, 42, 0.052),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+/* Final shell card contrast pass */
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardInterestCard {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid rgba(15, 23, 42, 0.07) !important;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.045) !important;
+}
+
+/* 2026-05-18 shell cleanup: neutral header/sidebar on all breakpoints */
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardInterestCard {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.035) !important;
+  backdrop-filter: none !important;
+}
+
+.dashboardInterestList i,
+.dashboardInterestList span:nth-child(2n) i,
+.dashboardInterestList span:nth-child(3n) i {
+  background: #f3f4f6 !important;
+  background-image: none !important;
+  color: #4b5563 !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 720px) {
+  .dashboardPageIntro {
+    padding: 16px 16px 18px !important;
+    border-radius: 22px;
+  }
+
+  .dashboardIntroMeta {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardHeader {
+    background: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06) !important;
+    backdrop-filter: none !important;
+  }
+
+  .mobileMenuButton {
+    border: 1px solid #e5e7eb !important;
+    background: #ffffff !important;
+    color: #374151 !important;
+  }
+
+  .dashboardSidebar {
+    background: #ffffff !important;
+    box-shadow: 18px 0 36px rgba(15, 23, 42, 0.08) !important;
+  }
+}
+
+/* Dashboard recovery: make active navigation clearly visible after CSS split. */
+.dashboardNavItem,
+.dashboardNavItemActive {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  border: 1px solid transparent !important;
+  border-radius: 16px !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+}
+
+.dashboardNavItemActive {
+  background: linear-gradient(135deg, #edf5ff, #f7fbff) !important;
+  border-color: rgba(37, 99, 235, 0.16) !important;
+  color: #1747b8 !important;
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.06) !important;
+}
+
+.dashboardNavItemActive .dashboardNavIcon,
+.dashboardNavItemActive span {
+  color: #1747b8 !important;
+}
+
+.dashboardSearchSpacer {
+  min-width: 0;
+}

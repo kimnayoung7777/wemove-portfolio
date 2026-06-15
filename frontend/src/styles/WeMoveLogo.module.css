@@ -1,0 +1,52 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  white-space: nowrap;
+}
+
+.mark {
+  display: block;
+  flex: 0 0 auto;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.sm {
+  width: 34px;
+  height: 34px;
+}
+
+.md {
+  width: 42px;
+  height: 42px;
+}
+
+.lg {
+  width: 48px;
+  height: 48px;
+}
+
+.dark {
+  filter: drop-shadow(0 14px 28px rgba(29, 78, 216, 0.2));
+}
+
+.light {
+  filter: drop-shadow(0 16px 32px rgba(13, 38, 96, 0.24));
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.darkWord {
+  color: #172033;
+}
+
+.lightWord {
+  color: #ffffff;
+}

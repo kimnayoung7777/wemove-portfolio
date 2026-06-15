@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="auth">
+
+    <select id="selectByLoginId" resultType="kr.co.iei.member.model.vo.Member">
+        SELECT
+            u.*,
+            (SELECT reason
+             FROM reports
+             WHERE targetUserId = u.userId
+             ORDER BY createdAt DESC
+                LIMIT 1) AS reportReason
+        FROM users u
+        WHERE u.loginId = #{loginId}
+    </select>
+
+    <select id="selectByUserId" resultType="kr.co.iei.member.model.vo.Member">
+        SELECT *
+        FROM users
+        WHERE userId=#{userId}
+    </select>
+
+    <select id="selectByEmail" resultType="kr.co.iei.member.model.vo.Member">
+        SELECT *
+        FROM users
+        WHERE LOWER(email)=LOWER(#{email})
+    </select>
+
+    <select id="selectByNickname" resultType="kr.co.iei.member.model.vo.Member">
+        SELECT *
+        FROM users
+        WHERE nickname=#{nickname}
+    </select>
+
+    <insert id="insertMember" parameterType="kr.co.iei.member.model.vo.Member" useGeneratedKeys="true" keyProperty="userId">
+        INSERT INTO users(
+            loginId,
+            email,
+            password,
+            nickname,
+            gender,
+            birthyear,
+            phone,
+            regionId,
+            role,
+            status
+        )
+        VALUES(
+            #{loginId},
+            #{email},
+            #{password},
+            #{nickname},
+            #{gender},
+            #{birthYear},
+            #{phone},
+            #{regionId},
+            #{role},
+            #{status}
+        )
+    </insert>
+
+    <insert id="insertUserSport">
+        INSERT INTO userSports(
+            userId,
+            sportId
+        )
+        VALUES(
+            #{userId},
+            #{sportId}
+        )
+    </insert>
+
+    <update id="updatePassword">
+        UPDATE users
+        SET password=#{password}
+        WHERE userId=#{userId}
+    </update>
+
+    <update id="updateMemberStatus">
+        UPDATE users
+        SET
+            status = #{status},
+            suspendedUntil = CASE
+                WHEN #{status} = 'SUSPENDED' THEN COALESCE(suspendedUntil, DATE_ADD(NOW(), INTERVAL 24 HOUR))
+                ELSE NULL
+            END,
+            suspendReason = CASE
+                WHEN #{status} = 'SUSPENDED' THEN suspendReason
+                ELSE NULL
+            END,
+            updatedAt = NOW()
+        WHERE userId = #{userId}
+    </update>
+
+    <update id="suspendUser">
+        UPDATE users
+        SET
+            status = 'SUSPENDED',
+            suspendedUntil = #{suspendedUntil},
+            updatedAt = NOW()
+        WHERE userId = #{userId}
+    </update>
+
+    <update id="restoreExpiredSuspensions">
+        UPDATE users
+        SET
+            status = 'ACTIVE',
+            suspendedUntil = NULL,
+            suspendReason = NULL,
+            updatedAt = NOW()
+        WHERE status = 'SUSPENDED'
+          AND suspendedUntil IS NOT NULL
+          AND suspendedUntil &lt;= NOW()
+    </update>
+
+</mapper>

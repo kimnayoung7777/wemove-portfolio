@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: wemove-backend
+    runtime: docker
+    rootDir: .
+    healthCheckPath: /api/health

@@ -1,0 +1,4050 @@
+/* Inlined from composed CSS modules to keep this page self-contained. */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 11px;
+  border-radius: 999px;
+  background: rgba(219, 233, 255, 0.88);
+  color: var(--color-primary-strong);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.kicker,
+.sectionKicker,
+.searchCard span,
+.heroVisualCopy span,
+.highlightBand span,
+.sectionHead a,
+.categoryGrid span,
+.cover span,
+.badge,
+.sidebar h3,
+.rightbar h3,
+.notice a,
+.tabButton,
+.pageTabs button,
+.dateBox span,
+.detailSummary span,
+.sideInfo span,
+.primaryButton,
+.secondaryButton,
+.formCard label span,
+.choiceGroup > span,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard th,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.reviewScore,
+.ratingButton,
+.dashboardCreateButton,
+.dashboardProfile,
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardSidebarHead button,
+.dashboardSidebarHead span,
+.dashboardPanelHead a,
+.dashboardInviteCard button,
+.dashboardHeroFilters select,
+.dashboardHeroButton,
+.dashboardSummaryGrid span,
+.dashboardCategoryItem,
+.dashboardPills button,
+.dashboardMeetingBadges span,
+.dashboardSectionHead > a,
+.dashboardScheduleItem span,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a,
+.dashboardLoginButton,
+.dashboardSignupButton {
+  font-weight: var(--weight-button);
+}
+
+.badge,
+.dashboardMeetingBadges span,
+.reviewScore,
+.kicker,
+.sectionKicker {
+  font-size: var(--font-micro);
+  letter-spacing: 0.01em;
+}
+
+.badge,
+.dashboardMeetingBadges span,
+.reviewScore {
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.badge,
+.dashboardMeetingBadges span,
+.reviewScore,
+.kicker,
+.sectionKicker {
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  background: linear-gradient(135deg, #eff6ff, #f8fbff);
+  color: #1747b8;
+}
+
+/* Mobile finder visual polish */
+@media (max-width: 720px) {
+  .dashboardPage {
+    padding-top: 10px;
+  }
+
+  .dashboardHeader {
+    padding: 14px;
+    gap: 11px;
+    border-radius: 24px;
+  }
+
+  .dashboardLogo {
+    justify-self: start;
+  }
+
+  .dashboardLogo span {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    font-size: 17px;
+  }
+
+  .dashboardLogo strong {
+    font-size: 24px;
+  }
+
+  .dashboardSearch {
+    order: 2;
+    height: 46px;
+    padding: 0 14px;
+    border-radius: 16px;
+    background: #f8fbff;
+  }
+
+  .dashboardActions {
+    order: 3;
+  }
+
+  .dashboardLoginButton,
+  .dashboardSignupButton {
+    height: 44px;
+    border-radius: 15px;
+    font-size: 0.86rem;
+  }
+
+  .dashboardSidebar {
+    position: sticky;
+    top: 8px;
+    z-index: 20;
+    padding: 8px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(18px) saturate(140%);
+  }
+
+  .dashboardInterestCard {
+    display: none;
+  }
+
+  .dashboardNav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .dashboardNavItem,
+  .dashboardNavItemActive {
+    min-height: 54px;
+    padding: 7px 6px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 4px;
+    border-radius: 16px;
+    font-size: 0.72rem;
+    text-align: center;
+    line-height: 1.15;
+  }
+
+  .dashboardNavIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dashboardPageIntro {
+    display: none;
+  }
+
+  .notice {
+    margin-top: 2px;
+    border-radius: 28px;
+    background:
+      radial-gradient(
+        circle at 88% 12%,
+        rgba(147, 197, 253, 0.36),
+        transparent 30%
+      ),
+      linear-gradient(145deg, #08214a, #1747b8 58%, #3b82f6);
+    box-shadow: 0 24px 58px rgba(37, 99, 235, 0.2);
+  }
+
+  .notice h1 {
+    margin-bottom: 9px;
+    max-width: 11.5ch;
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.07em;
+  }
+
+  .notice p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .notice a {
+    height: 48px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1747b8;
+    box-shadow: 0 14px 28px rgba(3, 12, 31, 0.16);
+  }
+
+  .filterPanel {
+    margin-top: 0;
+    padding: 12px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.88);
+  }
+
+  .tabs {
+    margin-bottom: 12px;
+    padding: 2px 1px 4px;
+    gap: 7px;
+  }
+
+  .tabButton,
+  .pageTabs button {
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 999px;
+    background: #fff;
+  }
+
+  .tabButtonActive {
+    background: #2563eb;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.2);
+  }
+
+  .filterRow {
+    gap: 9px;
+  }
+
+  .filterRow select,
+  .filterRow input {
+    height: 46px;
+    border-radius: 15px;
+    background: #fbfdff;
+  }
+
+  .listHead {
+    margin: 4px 2px 12px;
+    padding: 0 2px;
+  }
+
+  .listHead h2 {
+    font-size: 1.35rem;
+    letter-spacing: -0.045em;
+  }
+
+  .listHead span {
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 999px;
+    background: #eaf2ff;
+    color: #1747b8;
+    font-size: 0.78rem;
+  }
+
+  .meetingList {
+    gap: 12px;
+  }
+
+  .listCard {
+    padding: 12px;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 16px 42px rgba(18, 32, 59, 0.08);
+  }
+
+  .listCardImage {
+    height: 176px;
+    border-radius: 22px;
+  }
+
+  .listTags {
+    margin-top: 2px;
+  }
+
+  .badge,
+  .dashboardMeetingBadges span {
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+  }
+
+  .listCard h3 {
+    margin: 10px 0 6px;
+    font-size: 1.35rem;
+    line-height: 1.22;
+    letter-spacing: -0.045em;
+  }
+
+  .listCard p {
+    font-size: 0.9rem;
+    line-height: 1.62;
+  }
+
+  .listMeta {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 11px;
+    color: #61758d;
+  }
+
+  .listMeta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .host {
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+
+  .dateBox {
+    padding: 13px 14px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #f2f7ff, #eaf2ff);
+  }
+
+  .dateBox strong {
+    font-size: 1.25rem;
+  }
+
+  .listCard aside button {
+    height: 48px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+  }
+}
+
+.badge,
+.dashboardMeetingBadges span,
+.reviewScore {
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  background: linear-gradient(135deg, #eaf2ff, #f5fbff) !important;
+  color: #1747b8 !important;
+}
+
+.dashboardMeetingBadges span:first-child,
+.listTags .badge:first-child {
+  background: linear-gradient(135deg, #1d4ed8, #38bdf8) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+.badge,
+.dashboardMeetingBadges span,
+.reviewScore {
+  border-color: rgba(37, 99, 235, 0.1) !important;
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+}
+
+.badge,
+.dashboardMeetingBadges span,
+.reviewScore {
+  background: #f3f4f6 !important;
+  color: #374151 !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.page {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  gap: 56px;
+  color: var(--color-text);
+}
+
+.page a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page button,
+.page input,
+.page select,
+.page textarea {
+  font: inherit;
+}
+
+.page button {
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .page,
+  .finderLayout {
+    width: min(100%, calc(100% - 24px));
+  }
+  .page {
+    gap: 40px;
+  }
+  .pageTitle h1,
+  .sectionHead h2,
+  .how h2 {
+    font-size: 30px;
+  }
+  .hero {
+    min-height: auto;
+    padding-top: 8px;
+    gap: 28px;
+  }
+  .hero h1 {
+    font-size: 46px;
+  }
+  .searchCard,
+  .cardGrid,
+  .categoryGrid,
+  .filterRow,
+  .listCard,
+  .formCard,
+  .myList article,
+  .statGrid,
+  .rightbar,
+  .formHintGrid,
+  .subGrid,
+  .heroMiniGrid,
+  .detailSummary {
+    grid-template-columns: 1fr;
+  }
+  .sectionHead,
+  .pageTitle,
+  .profileCard,
+  .tableHead,
+  .notice {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .detailSummary,
+  .commentItem {
+    grid-template-columns: 1fr;
+  }
+  .searchCard {
+    padding: 10px;
+    border-radius: 22px;
+  }
+  .searchCard label {
+    min-height: 56px;
+  }
+  .primaryLink {
+    min-height: 54px;
+  }
+  .listCard aside,
+  .myList aside {
+    border-left: 0;
+    border-top: 1px solid rgba(148, 163, 184, 0.16);
+    padding-left: 0;
+    padding-top: 14px;
+  }
+  .listCard aside {
+    gap: 12px;
+  }
+  .tableCard {
+    overflow-x: auto;
+  }
+  .tableCard table {
+    min-width: 760px;
+  }
+  .notice {
+    padding: 24px;
+  }
+  .notice h1,
+  .detailCover h1 {
+    font-size: 32px;
+  }
+  .detailCover,
+  .detailSection,
+  .detailPanel,
+  .softPanel,
+  .formCard,
+  .formIntro {
+    padding: 22px;
+  }
+  .how {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    width: min(100%, calc(100% - 18px));
+  }
+  .hero h1 {
+    font-size: 38px;
+  }
+  .metrics {
+    gap: 14px;
+  }
+  .categoryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .filterPanel {
+    padding: 14px;
+  }
+  .notice h1 {
+    font-size: 28px;
+  }
+  .formActions {
+    justify-content: stretch;
+  }
+  .formActions a,
+  .formActions button,
+  .participantActions button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page {
+    width: min(1360px, calc(100% - 72px));
+    gap: 44px;
+  }
+
+  .dashboardPage {
+    width: min(100%, calc(100% - 72px));
+    padding: 18px 0 26px;
+  }
+
+  .dashboardShell {
+    grid-template-columns: 208px minmax(0, 1fr) 284px;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .dashboardHeader {
+    padding: 13px 16px;
+    border-radius: 20px;
+  }
+
+  .dashboardHeroCard,
+  .notice,
+  .dashboardPanel,
+  .dashboardSummaryCard,
+  .dashboardMeetingCard,
+  .listCard,
+  .profileCard,
+  .filterPanel,
+  .tabsPanel {
+    border-radius: 20px;
+  }
+
+  .dashboardHeroCard {
+    min-height: 242px;
+    padding: 26px;
+  }
+
+  .dashboardHeroFilters {
+    margin-top: 20px;
+    padding: 7px;
+  }
+
+  .dashboardSummaryCard,
+  .dashboardPanel,
+  .filterPanel,
+  .tabsPanel,
+  .profileCard {
+    padding: 15px;
+  }
+
+  .dashboardMeetingCard,
+  .listCard {
+    padding: 13px;
+  }
+
+  .dashboardCategoryStrip {
+    padding: 10px 12px;
+    gap: 4px;
+  }
+
+  .dashboardCategoryItem {
+    min-height: 72px;
+    padding: 8px 4px 6px;
+  }
+
+  .dashboardMeetingImage {
+    height: 122px;
+  }
+
+  .listCardImage {
+    width: 116px;
+    height: 116px;
+  }
+}
+
+/* Production-style brand pass */
+.dashboardPage,
+.page {
+  color: #172033;
+}
+
+/* Premium brand polish */
+.dashboardPage,
+.page {
+  color: #111827;
+}
+
+/* Mobile meeting finder hardening */
+@media (max-width: 720px) {
+  .dashboardPage,
+  .page,
+  .finderLayout {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .dashboardShell,
+  .dashboardMain,
+  .meetingList,
+  .filterPanel,
+  .tabsPanel,
+  .notice,
+  .listHead,
+  .listCard,
+  .listCardBody,
+  .listCardContent,
+  .listCard aside,
+  .dashboardHeader,
+  .dashboardSearch,
+  .dashboardActions {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .dashboardShell,
+  .filterRow,
+  .listCard,
+  .listCardBody,
+  .listCard aside {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .dashboardAside {
+    display: none;
+  }
+
+  .dashboardHeader {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px;
+  }
+
+  .dashboardActions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .dashboardLoginButton,
+  .dashboardSignupButton {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .notice {
+    padding: 24px 20px;
+    gap: 18px;
+  }
+
+  .notice a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .filterPanel {
+    padding: 14px;
+    overflow: hidden;
+  }
+
+  .tabs {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filterRow select,
+  .filterRow input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .listHead {
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .listCard {
+    padding: 14px;
+    overflow: hidden;
+  }
+
+  .listCardBody {
+    gap: 14px;
+  }
+
+  .listCardImage {
+    width: 100%;
+    height: 188px;
+  }
+
+  .listMeta {
+    gap: 8px;
+  }
+
+  .listMeta span,
+  .host span {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .listCard aside {
+    border-left: 0;
+    border-top: 1px solid rgba(148, 163, 184, 0.16);
+    padding-left: 0;
+    padding-top: 14px;
+    gap: 12px;
+  }
+
+  .dateBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .listCard aside button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .dashboardPage,
+  .page,
+  .finderLayout {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .dashboardActions {
+    grid-template-columns: 1fr;
+  }
+
+  .notice h1 {
+    font-size: clamp(1.75rem, 8vw, 2.15rem);
+  }
+}
+
+/* Cross-page polish: align non-home pages with the finalized HomePage design system. */
+.page {
+  gap: 28px;
+}
+
+/* Absolute final neutral homepage background pass. Keep blue only on action controls. */
+.dashboardPage,
+.page {
+  background: #f7f7f8 !important;
+  background-image: none !important;
+}
+
+/* White background + subtle blue card surfaces. */
+.dashboardPage,
+.page {
+  background: #fff !important;
+  background-image: none !important;
+}
+
+/* Balance pass: keep page neutral, give cards a little more blue surface depth. */
+.dashboardPage,
+.page {
+  background: #f7f8fa !important;
+  background-image: none !important;
+}
+
+/* Final card contrast pass */
+.dashboardPage,
+.page {
+  background: #f5f6f8 !important;
+  background-image: none !important;
+}
+
+/* 2026-05-18 final neutral service override */
+.dashboardPage,
+.page {
+  background: #f6f7f8 !important;
+  background-image: none !important;
+}
+
+.pageTitle {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.pageTitle h1 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.pageTitle p {
+  margin: 0;
+  color: var(--color-text-soft);
+  line-height: 1.75;
+}
+
+.pageTitle h1,
+.hero h1,
+.heroVisualCopy strong,
+.highlightBand strong,
+.sectionHead h2,
+.how h2,
+.meetingCard h3,
+.listCard h3,
+.myList h3,
+.notice h1,
+.listHead h2,
+.dateBox strong,
+.detailCover h1,
+.detailPanel h3,
+.profileCard h2,
+.statGrid strong,
+.tableHead h2,
+.formIntro h2,
+.softPanel h2,
+.dashboardLogo strong,
+.dashboardInviteCard strong,
+.dashboardHeroContent h1,
+.dashboardSectionHead h2,
+.dashboardMeetingBody h3,
+.dashboardPanelHead h3,
+.dashboardPageIntro h1,
+.dashboardStatGrid strong {
+  font-weight: var(--weight-display);
+}
+
+.pageTitle h1 {
+  font-size: clamp(2.05rem, 2.8vw, 3rem);
+  line-height: 1.06;
+}
+
+.pageTitle p,
+.listHead span,
+.detailCover p,
+.dashboardPageIntro p,
+.dashboardSectionCopy,
+.dashboardHeroContent p {
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.pageTitle,
+.pageTitle > div,
+.formIntro,
+.formHintGrid article,
+.detailSummary article,
+.participantCard,
+.participantMeta,
+.reviewCard,
+.reviewMeta,
+.hostCard,
+.hostCard > div,
+.sideInfo p,
+.uploadBlock,
+.reviewPreviewCard,
+.reviewPreviewMeta,
+.dashboardCompactCard,
+.dashboardCompactBody,
+.dashboardCompactBody > div,
+.listCard,
+.listCardBody,
+.listCardContent,
+.dashboardSummaryGrid article > div {
+  min-width: 0;
+}
+
+.pageTitle p,
+.formIntro p,
+.formHintGrid strong,
+.detailSummary strong,
+.participantMeta strong,
+.participantMeta p,
+.reviewMeta strong,
+.reviewMeta p,
+.hostCard p,
+.sideInfo b,
+.uploadHint,
+.reviewTextarea,
+.dashboardCompactBody h3,
+.dashboardCompactBody p,
+.dashboardCompactBody small,
+.listCard h3,
+.listCard p,
+.listMeta span,
+.host span,
+.dashboardSummaryGrid span {
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+}
+
+@media (max-width: 720px) {
+  .reviewPreviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardHeroContent h1 {
+    font-size: clamp(2.5rem, 9vw, 3.5rem);
+    max-width: 12ch;
+  }
+
+  .dashboardSectionHead h2 {
+    font-size: clamp(1.7rem, 6vw, 2.15rem);
+  }
+
+  .dashboardPageIntro h1,
+  .detailCover h1,
+  .notice h1,
+  .pageTitle h1 {
+    font-size: clamp(1.9rem, 7vw, 2.45rem);
+  }
+
+  .dashboardMeetingBody h3,
+  .listCard h3,
+  .dashboardCompactBody h3 {
+    font-size: 1.45rem;
+  }
+}
+
+.pageTitle h1,
+.notice h1,
+.detailCover h1,
+.dashboardPageIntro h1 {
+  font-size: var(--font-page-title);
+  letter-spacing: var(--tracking-tight);
+}
+
+.pageTitle p,
+.heroCopy > p:not(.kicker),
+.sectionHead p,
+.how p,
+.notice p,
+.detailBody p,
+.commentItem p,
+.dashboardPageIntro p,
+.dashboardSectionCopy,
+.dashboardHeroContent p,
+.dashboardMeetingBody p {
+  font-size: var(--font-body-lg);
+  letter-spacing: var(--tracking-body);
+}
+
+.pageTitle h1,
+.dashboardPageIntro h1,
+.dashboardHeroContent h1,
+.dashboardSectionHead h2,
+.notice h1,
+.detailCover h1,
+.listCard h3,
+.dashboardMeetingBody h3,
+.softPanel h2,
+.formIntro h2,
+.detailPanel h3 {
+  letter-spacing: 0;
+}
+
+.dashboardSectionHead h2,
+.dashboardPageIntro h1,
+.pageTitle h1,
+.notice h1,
+.detailCover h1 {
+  letter-spacing: -0.045em;
+}
+
+.pageTitle {
+  padding: 24px 26px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(18px) saturate(125%);
+}
+
+.pageTitle h1,
+.detailCover h1,
+.formIntro h2,
+.softPanel h2,
+.tableHead h2,
+.profileCard h2 {
+  color: #10233f;
+}
+
+.pageTitle p,
+.detailCover p,
+.formIntro p,
+.softPanel p,
+.profileCard p,
+.reviewMeta p,
+.participantMeta p {
+  color: #6f8298;
+}
+
+@media (max-width: 720px) {
+  .pageTitle,
+  .formCard,
+  .detailSection,
+  .detailPanel,
+  .softPanel {
+    border-radius: 22px;
+  }
+
+  .notice {
+    min-height: unset;
+  }
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardInterestCard,
+.filterPanel,
+.listCard,
+.detailHero,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formCard,
+.profileCard,
+.tabsPanel,
+.tableCard,
+.statGrid article,
+.myList article,
+.reviewCard,
+.participantCard,
+.pageTitle {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 18px !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.035) !important;
+  backdrop-filter: none !important;
+}
+
+.dashboardMeetingBody h3,
+.listCard h3,
+.myList h3,
+.detailCover h1,
+.pageTitle h1,
+.dashboardPanelHead h3,
+.sectionHead h2,
+.listHead h2,
+.tableHead h2 {
+  color: #111827 !important;
+}
+
+.dashboardMeetingBody p,
+.listCard p,
+.myList p,
+.detailBody p,
+.detailCover p,
+.pageTitle p,
+.formIntro p,
+.profileCard p,
+.dashboardCategoryItem span,
+.dashboardRankItem small,
+.dashboardActivityItem small,
+.dashboardNavItem .dashboardNavIcon {
+  color: #4b5563 !important;
+}
+
+.highlightBand article,
+.softPanel,
+.participantCard,
+.reviewCard,
+.statGrid article,
+.tabsPanel,
+.tableCard,
+.profileCard,
+.formIntro {
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.statGrid article,
+.tabsPanel,
+.tableCard {
+  border-radius: 20px;
+}
+
+.statGrid article {
+  padding: 20px;
+}
+
+.statGrid span {
+  color: #7890ac;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.statGrid strong {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-size: 30px;
+  letter-spacing: -0.04em;
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardInterestCard,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardCompactCard,
+.filterPanel,
+.tabsPanel,
+.listCard,
+.profileCard,
+.notice,
+.detailHero,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formIntro,
+.formCard,
+.participantCard,
+.reviewCard,
+.statGrid article,
+.tableCard {
+  border-color: rgba(15, 23, 42, 0.08);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 8px 22px rgba(15, 23, 42, 0.04);
+  backdrop-filter: none;
+}
+
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardInterestCard,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardCompactCard,
+.filterPanel,
+.tabsPanel,
+.listCard,
+.profileCard,
+.detailHero,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formIntro,
+.formCard,
+.participantCard,
+.reviewCard,
+.statGrid article,
+.tableCard,
+.rightbar section,
+.sidebar {
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px) saturate(130%);
+  box-shadow:
+    0 18px 46px rgba(18, 32, 59, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.filterPanel,
+.listCard,
+.detailHero,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formCard,
+.profileCard,
+.tabsPanel,
+.tableCard,
+.statGrid article,
+.myList article,
+.reviewCard,
+.participantCard {
+  border-color: rgba(45, 111, 255, 0.13) !important;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.94),
+    rgba(244, 249, 255, 0.86) 54%,
+    rgba(235, 244, 255, 0.72)
+  ) !important;
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Stronger visual identity: colored surfaces, rails, and richer component accents. */
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardMeetingCard,
+.filterPanel,
+.listCard,
+.detailSection,
+.detailPanel,
+.softPanel,
+.formCard,
+.profileCard,
+.tabsPanel,
+.tableCard,
+.statGrid article,
+.myList article,
+.reviewCard,
+.participantCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboardPanel::after,
+.dashboardSummaryCard::after,
+.dashboardMeetingCard::after,
+.filterPanel::after,
+.listCard::after,
+.detailSection::after,
+.detailPanel::after,
+.softPanel::after,
+.formCard::after,
+.profileCard::after,
+.tabsPanel::after,
+.tableCard::after,
+.statGrid article::after,
+.myList article::after,
+.reviewCard::after,
+.participantCard::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.78),
+    rgba(56, 189, 248, 0.72)
+  );
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.dashboardPanel::before,
+.dashboardSummaryCard::before,
+.dashboardMeetingCard::before,
+.filterPanel::before,
+.listCard::before,
+.detailSection::before,
+.detailPanel::before,
+.softPanel::before,
+.formCard::before,
+.profileCard::before,
+.tabsPanel::before,
+.tableCard::before,
+.statGrid article::before,
+.myList article::before,
+.reviewCard::before,
+.participantCard::before {
+  content: "";
+  position: absolute;
+  right: -58px;
+  top: -70px;
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.11),
+    rgba(59, 130, 246, 0) 68%
+  );
+  pointer-events: none;
+}
+
+.statGrid article {
+  min-height: 132px;
+  padding: 24px !important;
+  background:
+    radial-gradient(
+      circle at 86% 16%,
+      rgba(37, 99, 235, 0.18),
+      transparent 38%
+    ),
+    linear-gradient(150deg, #ffffff, #eef6ff) !important;
+}
+
+.statGrid article:nth-child(2) {
+  background:
+    radial-gradient(
+      circle at 86% 16%,
+      rgba(14, 165, 233, 0.2),
+      transparent 38%
+    ),
+    linear-gradient(150deg, #ffffff, #ecfeff) !important;
+}
+
+.statGrid article:nth-child(3) {
+  background:
+    radial-gradient(
+      circle at 86% 16%,
+      rgba(16, 185, 129, 0.18),
+      transparent 38%
+    ),
+    linear-gradient(150deg, #ffffff, #effdf7) !important;
+}
+
+.statGrid article:nth-child(4) {
+  background:
+    radial-gradient(
+      circle at 86% 16%,
+      rgba(245, 158, 11, 0.18),
+      transparent 38%
+    ),
+    linear-gradient(150deg, #ffffff, #fff7ed) !important;
+}
+
+.statGrid strong {
+  color: #12325a;
+}
+
+.filterPanel,
+.listCard,
+.detailHero,
+.detailSection,
+.detailPanel,
+.formCard,
+.formIntro,
+.softPanel,
+.participantCard,
+.reviewCard,
+.reviewPreviewCard,
+.profileCard,
+.tabsPanel,
+.tableCard,
+.statGrid article,
+.myList article {
+  border-color: rgba(15, 23, 42, 0.06) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
+}
+
+.listCard::after,
+.detailSection::after,
+.detailPanel::after,
+.softPanel::after,
+.formCard::after,
+.profileCard::after,
+.tableCard::after,
+.statGrid article::after,
+.myList article::after,
+.reviewCard::after,
+.participantCard::after {
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.45),
+    rgba(96, 165, 250, 0.4)
+  );
+}
+
+.listCard::before,
+.detailSection::before,
+.detailPanel::before,
+.softPanel::before,
+.formCard::before,
+.profileCard::before,
+.tableCard::before,
+.statGrid article::before,
+.myList article::before,
+.reviewCard::before,
+.participantCard::before {
+  opacity: 0.42;
+}
+
+.dashboardPanel::before,
+.dashboardPanel::after,
+.dashboardSummaryCard::before,
+.dashboardSummaryCard::after,
+.dashboardMeetingCard::before,
+.dashboardMeetingCard::after,
+.filterPanel::before,
+.filterPanel::after,
+.listCard::before,
+.listCard::after,
+.detailSection::before,
+.detailSection::after,
+.detailPanel::before,
+.detailPanel::after,
+.softPanel::before,
+.softPanel::after,
+.formCard::before,
+.formCard::after,
+.profileCard::before,
+.profileCard::after,
+.tabsPanel::before,
+.tabsPanel::after,
+.tableCard::before,
+.tableCard::after,
+.statGrid article::before,
+.statGrid article::after,
+.myList article::before,
+.myList article::after,
+.reviewCard::before,
+.reviewCard::after,
+.participantCard::before,
+.participantCard::after {
+  display: none !important;
+  content: none !important;
+}
+
+.meetingCard,
+.listCard,
+.detailHero,
+.detailSection,
+.detailPanel,
+.sidebar,
+.rightbar section,
+.filterPanel,
+.myList article,
+.formCard {
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar,
+.rightbar section,
+.filterPanel {
+  border-radius: 24px;
+}
+
+.filterPanel {
+  padding: 16px 16px 14px;
+  margin-bottom: 18px;
+}
+
+.dashboardHeader,
+.dashboardSidebar,
+.dashboardHeroCard,
+.dashboardSummaryCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.dashboardPanel,
+.dashboardInterestCard,
+.dashboardStatGrid article,
+.dashboardCompactCard,
+.profileCard,
+.tabsPanel,
+.filterPanel,
+.listCard,
+.notice {
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.05);
+}
+
+.dashboardSidebar,
+.dashboardPanel,
+.dashboardSummaryCard,
+.dashboardInterestCard,
+.dashboardCategoryStrip,
+.dashboardMeetingCard,
+.profileCard,
+.tabsPanel,
+.filterPanel,
+.listCard,
+.notice {
+  border-radius: 22px;
+}
+
+.dashboardHostMeta strong,
+.dashboardHostMeta span,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardRankItem strong,
+.dashboardRankItem span,
+.dashboardScheduleItem span,
+.dashboardScheduleItem strong,
+.dashboardScheduleItem p,
+.dashboardActivityItem strong,
+.dashboardActivityItem p,
+.dashboardActivityItem > span,
+.dashboardSimpleList span,
+.dashboardSimpleList strong,
+.dashboardQuickLinks a,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardPanelHead a,
+.dashboardPanelHead h3,
+.dashboardPanel,
+.dashboardSidebar,
+.dashboardHeader,
+.notice,
+.filterPanel,
+.tabsPanel,
+.listCard,
+.profileCard {
+  font-family: var(--font-ui);
+}
+
+.profileCard,
+.tabsPanel,
+.filterPanel,
+.listCard,
+.notice {
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.filterPanel {
+  padding: 14px;
+}
+
+@media (min-width: 1200px) {
+  .dashboardShell {
+    grid-template-columns: 224px minmax(0, 1fr) 300px;
+  }
+
+  .dashboardHeroCard {
+    min-height: 286px;
+  }
+
+  .dashboardPanel,
+  .dashboardSummaryCard,
+  .filterPanel,
+  .tabsPanel,
+  .profileCard {
+    padding: 18px;
+  }
+
+  .dashboardMeetingCard,
+  .listCard {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  .dashboardPage {
+    width: min(100%, calc(100% - 20px));
+    padding: 12px 0 28px;
+  }
+
+  .dashboardHeader,
+  .dashboardHeroCard,
+  .dashboardSidebar,
+  .dashboardPanel,
+  .dashboardInterestCard,
+  .dashboardSummaryCard,
+  .dashboardCategoryStrip,
+  .dashboardMeetingCard,
+  .dashboardCompactCard,
+  .filterPanel,
+  .tabsPanel,
+  .listCard,
+  .profileCard,
+  .detailHero,
+  .detailSection,
+  .detailPanel,
+  .softPanel,
+  .formIntro,
+  .formCard {
+    border-radius: 22px;
+  }
+
+  .dashboardHeroCard {
+    padding: 24px;
+  }
+}
+
+.filterRow {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr 0.8fr 1.2fr;
+  gap: 10px;
+}
+
+.filterRow select,
+.filterRow input,
+.commentForm textarea,
+.formCard input,
+.formCard select,
+.formCard textarea {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--color-text);
+  outline: 0;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.filterRow select,
+.filterRow input {
+  height: 48px;
+  border-radius: 16px;
+  padding: 0 14px;
+}
+
+.filterRow select:focus,
+.filterRow input:focus,
+.commentForm textarea:focus,
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus {
+  border-color: rgba(23, 105, 255, 0.28);
+  box-shadow: 0 0 0 4px rgba(23, 105, 255, 0.1);
+  background: #fff;
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .how,
+  .finderLayout,
+  .detailLayout {
+    grid-template-columns: 1fr;
+  }
+  .highlightBand {
+    grid-template-columns: 1fr;
+  }
+  .sidebar,
+  .rightbar,
+  .detailSidebar {
+    position: static;
+  }
+  .rightbar {
+    grid-template-columns: 1fr 1fr;
+  }
+  .categoryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cardGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .filterRow,
+  .detailSummary,
+  .formHintGrid,
+  .subGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero h1 {
+    font-size: 62px;
+  }
+}
+
+.dashboardHeroFilters label,
+.filterRow select,
+.filterRow input,
+.formCard input,
+.formCard select {
+  height: 50px;
+  border-radius: 14px;
+}
+
+.dashboardSearch,
+.filterRow select,
+.filterRow input,
+.formCard input,
+.formCard select,
+.formCard textarea,
+.reviewTextarea,
+.uploadInput {
+  border-color: rgba(15, 23, 42, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.dashboardSearch:focus-within,
+.filterRow select:focus,
+.filterRow input:focus,
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus,
+.reviewTextarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.filterRow select,
+.filterRow input,
+.formCard input,
+.formCard select,
+.formCard textarea,
+.reviewTextarea,
+.uploadInput {
+  border-color: rgba(18, 32, 59, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.filterRow select:focus,
+.filterRow input:focus,
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus,
+.reviewTextarea:focus {
+  border-color: rgba(37, 99, 235, 0.38);
+  box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.1);
+}
+
+.filterRow select,
+.filterRow input,
+.commentForm textarea,
+.formCard input,
+.formCard select,
+.formCard textarea {
+  background: linear-gradient(180deg, #ffffff, #f7fbff) !important;
+  border-color: rgba(37, 99, 235, 0.12) !important;
+}
+
+.filterRow select,
+.filterRow input,
+.commentForm textarea,
+.formCard input,
+.formCard select,
+.formCard textarea,
+.reviewTextarea {
+  min-height: 48px;
+  border-color: rgba(15, 23, 42, 0.09) !important;
+  border-radius: 14px;
+  background: #fff !important;
+  color: #10233f;
+}
+
+.filterRow select:focus,
+.filterRow input:focus,
+.commentForm textarea:focus,
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus,
+.reviewTextarea:focus {
+  border-color: rgba(37, 99, 235, 0.36) !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.09) !important;
+}
+
+.filterRow select,
+.filterRow input,
+.commentForm textarea,
+.formCard input,
+.formCard select,
+.formCard textarea,
+.reviewTextarea {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  color: #111827 !important;
+  box-shadow: none !important;
+}
+
+.filterRow select:focus,
+.filterRow input:focus,
+.commentForm textarea:focus,
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus,
+.reviewTextarea:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+}
+
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 14px;
+  background: #fff;
+  color: #59708f;
+  padding: 11px 15px;
+  font-weight: 900;
+}
+
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tableCard {
+  padding: 0;
+  overflow: hidden;
+}
+
+.tableCard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableCard th,
+.tableCard td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  text-align: left;
+  font-size: 14px;
+}
+
+.tableCard th {
+  background: #f8fbff;
+  color: #7890ac;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.tableCard td {
+  color: #5a7391;
+  font-weight: 700;
+}
+
+.tableCard tr:last-child td {
+  border-bottom: 0;
+}
+
+.tableCard td button {
+  height: 34px;
+  padding: 0 12px;
+}
+
+.sectionHead a,
+.dashboardSectionHead > a,
+.dashboardPanelHead a,
+.dashboardQuickLinks a,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardNavItem,
+.dashboardNavItemActive,
+.dashboardProfile,
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.listCard aside button,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.ratingButton {
+  height: var(--control-height-md);
+  padding: var(--control-padding-md);
+  border-radius: var(--control-radius-md);
+  font-size: 0.86rem;
+  letter-spacing: 0;
+}
+
+.metrics,
+.meetingCard footer,
+.listHead span,
+.listMeta,
+.host,
+.detailChecklist li,
+.commentMeta span,
+.tableCard td,
+.dashboardInterestList span,
+.dashboardMeetingMeta,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardRankItem strong,
+.dashboardScheduleItem strong,
+.dashboardStatGrid span {
+  font-weight: var(--weight-body-strong);
+}
+
+.kicker,
+.sectionKicker,
+.searchCard span,
+.heroVisualCopy span,
+.highlightBand span,
+.sidebar h3,
+.rightbar h3,
+.dateBox span,
+.detailSummary span,
+.sideInfo span,
+.formCard label span,
+.choiceGroup > span,
+.tableCard th,
+.reviewScore,
+.dashboardSidebarHead button,
+.dashboardSidebarHead span,
+.dashboardPanelHead a,
+.dashboardSummaryGrid span,
+.dashboardMeetingBadges span,
+.dashboardStatGrid span {
+  font-size: var(--font-meta);
+  letter-spacing: 0.02em;
+}
+
+.sectionHead a,
+.tabButton,
+.pageTabs button,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.ratingButton,
+.dashboardFilterButton,
+.dashboardFilterButtonActive,
+.dashboardQuickLinks a,
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardHeroButton {
+  height: var(--control-height-md);
+  padding: var(--control-padding-md);
+  letter-spacing: var(--tracking-body);
+}
+
+.dashboardLoginButton,
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.myList aside a,
+.tableHead button,
+.tableCard td button {
+  border-color: rgba(18, 32, 59, 0.12);
+  background: #fff;
+  color: #344054;
+}
+
+.dashboardLoginButton,
+.dashboardSignupButton,
+.dashboardMeetingActions button,
+.dashboardMeetingActions a,
+.dashboardHeroButton,
+.primaryButton,
+.secondaryButton,
+.formActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.tableCard td button,
+.participantActions button,
+.myList aside a,
+.listCard aside button,
+.ratingButton {
+  border-radius: 14px;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.dashboardLoginButton,
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.myList aside a,
+.tableHead button,
+.tableCard td button {
+  border-color: rgba(18, 32, 59, 0.1);
+  background: rgba(255, 255, 255, 0.86);
+  color: #334155;
+}
+
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.tableCard td button {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  background: #fff !important;
+  color: #49627f !important;
+  box-shadow: none !important;
+}
+
+.tableCard th {
+  background: #f8fbff !important;
+  color: #6f8298;
+}
+
+.tableCard td {
+  color: #4b6380;
+}
+
+.tableCard tr:hover td {
+  background: #f8fbff;
+}
+
+.dashboardCategoryItem,
+.dashboardSummaryGrid article,
+.dashboardScheduleItem,
+.dashboardRankItem,
+.dashboardActivityItem,
+.detailSummary article,
+.detailChecklist li,
+.hostCard,
+.sideInfo p,
+.commentItem,
+.tableCard th,
+.tableCard tr:hover td {
+  background: #f9fafb !important;
+  background-image: none !important;
+  border-color: #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.secondaryButton,
+.formActions a,
+.participantActions button:first-child,
+.tableCard td button,
+.tabButton,
+.pageTabs button,
+.dashboardFilterButton,
+.dashboardQuickLinks a {
+  background: #ffffff !important;
+  background-image: none !important;
+  color: #374151 !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--color-primary), #2b8cff);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(23, 105, 255, 0.18);
+}
+
+.tableHead {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.tableHead h2 {
+  margin: 0 0 4px;
+  font-family: var(--font-display);
+}
+
+.tableHead p {
+  margin: 0;
+  color: var(--color-text-soft);
+}
+
+.detailSection .sectionHead h2,
+.detailPanel h3,
+.softPanel h2,
+.tableHead h2,
+.formIntro h2 {
+  font-size: var(--font-detail-section);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+.detailPanel h3,
+.softPanel h2,
+.tableHead h2,
+.dashboardPanelHead h3 {
+  font-size: var(--font-panel-title);
+  letter-spacing: var(--tracking-title);
+}
+
+.dashboardPanelHead,
+.sectionHead,
+.listHead,
+.tableHead {
+  position: relative;
+}
+
+.dashboardPanelHead::before,
+.sectionHead::before,
+.listHead::before,
+.tableHead::before {
+  content: "";
+  width: 7px;
+  min-width: 7px;
+  height: 26px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #2563eb, #58a7ff);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+}
+
+.primaryButton,
+.dashboardHeroButton,
+.dashboardMeetingActions a,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child,
+.myList aside a {
+  background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.18) !important;
+}
+
+.dashboardHeroButton,
+.primaryButton,
+.dashboardMeetingActions a,
+.dashboardMeetingActions button:last-child,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child,
+.myList aside a,
+.tabButtonActive,
+.pageTabs button:first-child,
+.dashboardPills button:first-child {
+  background: #2563eb !important;
+  background-image: none !important;
+  color: #fff !important;
+  border-color: #2563eb !important;
+  box-shadow: none !important;
+}
+
+.dashboardPanelHead::before,
+.sectionHead::before,
+.listHead::before,
+.tableHead::before {
+  width: 4px !important;
+  min-width: 4px !important;
+  height: 20px !important;
+  background: #2563eb !important;
+  box-shadow: none !important;
+}
+
+/* 2026-05-18 primary button gradient polish */
+.dashboardHeroButton,
+.primaryButton,
+.formActions button,
+.profileCard button,
+.tableHead button,
+.participantActions button:last-child,
+.myList aside a,
+.tabButtonActive,
+.pageTabs button:first-child,
+.dashboardPills button:first-child,
+.dashboardSignupButton {
+  background: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #2563eb 56%,
+    #1d4ed8 100%
+  ) !important;
+  background-image: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #2563eb 56%,
+    #1d4ed8 100%
+  ) !important;
+  border-color: #2563eb !important;
+  color: #fff !important;
+  box-shadow:
+    0 6px 14px rgba(37, 99, 235, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+.dashboardHeroButton:hover,
+.primaryButton:hover,
+.formActions button:hover,
+.profileCard button:hover,
+.tableHead button:hover,
+.participantActions button:last-child:hover,
+.myList aside a:hover,
+.tabButtonActive:hover,
+.pageTabs button:first-child:hover,
+.dashboardPills button:first-child:hover,
+.dashboardSignupButton:hover {
+  background: linear-gradient(
+    180deg,
+    #4b8eff 0%,
+    #2d6df1 56%,
+    #1d4ed8 100%
+  ) !important;
+  border-color: #1d4ed8 !important;
+  box-shadow:
+    0 8px 18px rgba(37, 99, 235, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.success {
+  background: rgba(221, 248, 238, 0.95);
+  color: var(--color-success);
+}
+
+.success {
+  border-color: rgba(18, 128, 92, 0.16);
+  background: #ecfdf3;
+  color: #12805c;
+}
+
+.success,
+.dashboardStatusBadge {
+  border-color: rgba(18, 128, 92, 0.16);
+  background: linear-gradient(135deg, #ecfdf3, #f7fffb);
+  color: #12805c;
+}
+
+.success,
+.dashboardStatusBadge {
+  border-color: rgba(18, 128, 92, 0.14) !important;
+  background: linear-gradient(135deg, #ddf8ee, #f2fffb) !important;
+  color: #0f766e !important;
+}
+
+.success,
+.dashboardStatusBadge {
+  border-color: rgba(16, 185, 129, 0.12) !important;
+  background: #ecfdf3 !important;
+  color: #0f8a62 !important;
+}
+
+.success,
+.dashboardStatusBadge {
+  background: #ecfdf3 !important;
+  color: #15803d !important;
+  border: 1px solid rgba(21, 128, 61, 0.12) !important;
+}
+
+.warning {
+  background: rgba(255, 241, 224, 0.95);
+  color: var(--color-warning);
+}
+
+.warning {
+  border-color: rgba(183, 110, 0, 0.18);
+  background: #fffaeb;
+  color: #b76e00;
+}
+
+.warning {
+  border-color: rgba(183, 110, 0, 0.18);
+  background: linear-gradient(135deg, #fffaeb, #fffdf7);
+  color: #b76e00;
+}
+
+.warning {
+  border-color: rgba(183, 110, 0, 0.14) !important;
+  background: linear-gradient(135deg, #fff4e6, #fffaf1) !important;
+  color: #b76e00 !important;
+}
+
+.warning,
+.PENDING,
+.CLOSED {
+  border-color: rgba(245, 158, 11, 0.14) !important;
+  background: #fff7ed !important;
+  color: #b76e00 !important;
+}
+
+.warning,
+.PENDING,
+.CLOSED {
+  background: #fff7ed !important;
+  color: #b45309 !important;
+  border: 1px solid rgba(180, 83, 9, 0.12) !important;
+}
+
+.SUSPENDED,
+.danger,
+.rejected {
+  border-color: rgba(239, 68, 68, 0.14) !important;
+  background: #fff1f2 !important;
+  color: #dc2626 !important;
+}
+
+.danger,
+.rejected,
+.SUSPENDED {
+  background: #fef2f2 !important;
+  color: #dc2626 !important;
+  border: 1px solid rgba(220, 38, 38, 0.12) !important;
+}
+
+.summaryEyebrow {
+  color: #6b7280;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.summaryCaption {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.summaryCardMembers,
+.summaryCardMeetings,
+.summaryCardReports,
+.summaryCardSports {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 24px;
+  border-radius: 24px;
+}
+
+.summaryCardMembers::after,
+.summaryCardMeetings::after,
+.summaryCardReports::after,
+.summaryCardSports::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.summaryCardMembers::after {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(96, 165, 250, 0.2), transparent 32%),
+    radial-gradient(circle at 18% 90%, rgba(191, 219, 254, 0.22), transparent 28%);
+}
+
+.summaryCardMeetings::after {
+  background:
+    radial-gradient(circle at 82% 20%, rgba(56, 189, 248, 0.18), transparent 30%),
+    radial-gradient(circle at 14% 86%, rgba(186, 230, 253, 0.24), transparent 30%);
+}
+
+.summaryCardReports::after {
+  background:
+    radial-gradient(circle at 82% 20%, rgba(248, 113, 113, 0.16), transparent 28%),
+    radial-gradient(circle at 16% 88%, rgba(254, 202, 202, 0.24), transparent 28%);
+}
+
+.summaryCardSports::after {
+  background:
+    radial-gradient(circle at 82% 20%, rgba(251, 191, 36, 0.18), transparent 30%),
+    radial-gradient(circle at 16% 88%, rgba(254, 240, 138, 0.22), transparent 30%);
+}
+
+
+
+
+
+.regionPickerRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.regionPickerButton {
+  min-width: 124px;
+  height: 46px;
+  border: 1px solid #2563eb;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 56%, #1d4ed8 100%);
+  color: #ffffff;
+  font-size: 0.94rem;
+  font-weight: 800;
+  box-shadow:
+    0 8px 18px rgba(37, 99, 235, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.regionPickerSummary {
+  flex: 1;
+  min-height: 46px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.regionPickerLabel {
+  color: #6b7280;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.regionPickerSummary strong {
+  color: #10233f;
+  font-size: 0.95rem;
+}
+
+.pageTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pageTabsShell {
+  display: inline-flex;
+  margin-bottom: 18px;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+.tabButton {
+  min-width: 110px;
+  height: 42px;
+  border: 1px solid #dbe3ef;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #53657c;
+  font-size: 0.94rem;
+  font-weight: 800;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tabButtonCurrent {
+  border-color: #2563eb;
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 56%, #1d4ed8 100%);
+  color: #ffffff;
+  box-shadow:
+    0 8px 18px rgba(37, 99, 235, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.tableCard {
+
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04) !important;
+}
+
+.tableHead {
+
+  background: #ffffff !important;
+}
+.tableHead{
+  justify-content: flex-start !important;
+}
+
+.tableToolbar {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.searchField {
+  width: min(360px, 100%);
+  display: grid;
+  gap: 8px;
+}
+
+.searchField span {
+  color: #6b7280;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.searchField input,
+.inlineSelect {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #111827;
+}
+
+.searchField input:focus,
+.inlineSelect:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  outline: none;
+}
+
+.memberIdentity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.memberIdentity strong {
+  color: #111827;
+  font-size: 0.94rem;
+}
+
+.memberAvatar,
+.detailAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid #dbe3ef;
+  background: #f8fafc;
+}
+
+.detailModalProfile {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.detailAvatar {
+  width: 72px;
+  height: 72px;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+}
+
+.inlineSelect {
+  min-width: 138px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+.emptyCell {
+  padding: 26px 18px !important;
+  color: #6b7280 !important;
+  font-size: 0.94rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.filterHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.filterHead h2 {
+  margin: 0 0 6px;
+  color: #111827;
+  font-size: 1.08rem;
+}
+
+.filterHead p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.filterMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  color: #6b7280;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.filterMeta strong {
+  color: #1f2937;
+}
+
+.filterSummaryBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fbfdff 0%, #f8fafc 100%);
+}
+
+.filterSummaryKicker {
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.meetingFilterRow {
+  margin-top: 14px;
+}
+
+.categorySection {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.categoryLabel {
+  color: #374151;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.categoryChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.categoryChip {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid #dbe3ef;
+  border-radius: 999px;
+  background: #f8fbff;
+  color: #53657c;
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.categoryChip:hover {
+  transform: translateY(-1px);
+  border-color: #93c5fd;
+}
+
+.categoryChipCurrent {
+  border-color: #2563eb;
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+  color: #1d4ed8;
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.08);
+}
+
+.categoryPill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.scheduleCell {
+  display: grid;
+  gap: 4px;
+}
+
+.scheduleCell strong {
+  color: #1f2937;
+  font-size: 0.92rem;
+}
+
+.scheduleCell span {
+  color: #64748b;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.sectionHint {
+  margin: 8px 20px;
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.stackCell {
+  display: grid;
+  gap: 4px;
+}
+
+.stackCell strong {
+  color: #1f2937;
+}
+
+.stackCell span {
+  color: #6b7280;
+  font-size: 0.84rem;
+}
+
+.modalSection {
+  display: grid;
+  gap: 14px;
+}
+
+.modalPanel {
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.modalTitle,
+.modalField span {
+  color: #111827;
+  font-size: 0.96rem;
+  font-weight: 800;
+}
+
+.sportFormGrid {
+  display: grid;
+  gap: 14px;
+}
+
+.modalField {
+  display: grid;
+  gap: 8px;
+}
+
+.modalField input,
+.modalField select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 0 14px;
+  background: #ffffff;
+  color: #111827;
+}
+
+.modalErrorText {
+  margin: 0;
+  color: #dc2626;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.modalCheck {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #374151;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.sportList {
+  display: grid;
+  gap: 10px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.sportCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+}
+
+.sportCard p {
+  margin: 4px 0 0;
+  color: #6b7280;
+}
+
+.sportCardBody {
+  min-width: 0;
+}
+
+.sportCardControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.deleteButton {
+  min-width: 72px;
+  height: 44px;
+  border: 1px solid rgba(220, 38, 38, 0.16);
+  border-radius: 12px;
+  background: #fff1f2;
+  color: #dc2626;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.tableCard th {
+  background: #f9fafb !important;
+  color: #6b7280 !important;
+}
+
+.tableCard td {
+  background: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+.reportActionCell {
+  vertical-align: middle;
+}
+
+.reportReasonCell {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.reportReasonCell strong {
+  color: #111827;
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.reportReasonCell span {
+  display: block;
+  max-width: 280px;
+  overflow: hidden;
+  color: #6b7280;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reportReasonCell strong.reportReasonBadge,
+.detailModalItem strong.reportReasonBadge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 30px;
+  padding: 0 11px;
+  border: 1px solid #fecaca;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fff7f7 0%, #fef2f2 100%);
+  color: #be123c;
+  font-size: 0.84rem;
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.reportCustomReasonPreview {
+  display: block;
+  max-width: 280px;
+  overflow: hidden;
+  color: #c2410c;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reportCustomReasonBox {
+  display: grid;
+  gap: 4px;
+  padding: 13px 14px;
+  border: 1px solid #fed7aa;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(251, 146, 60, 0.16), transparent 32%),
+    linear-gradient(180deg, #fff7ed 0%, #ffffff 100%);
+}
+
+.reportCustomReasonBox strong {
+  color: #111827;
+  font-size: 0.98rem;
+  font-weight: 950;
+  line-height: 1.55;
+  word-break: break-word;
+}
+
+.processedLabel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.tableCard tr:hover td {
+  background: #f8fbff !important;
+}
+
+.clickableRow {
+  cursor: pointer;
+}
+
+.detailModalGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.detailModalItem {
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.detailModalItem span {
+  display: block;
+  margin-bottom: 6px;
+  color: #6b7280;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.detailModalItem strong {
+  color: #111827;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.reportContentText {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.filterHead button,
+.tableHead button {
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid #dbe3ef !important;
+  background: #ffffff !important;
+  color: #374151 !important;
+  font-weight: 800;
+}
+
+.filterHead button:last-child,
+.tableHead button:last-child {
+  border-color: #2563eb !important;
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 56%, #1d4ed8 100%) !important;
+  color: #ffffff !important;
+  box-shadow:
+    0 6px 14px rgba(37, 99, 235, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+@media (max-width: 960px) {
+  .filterHead,
+  .filterMeta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filterSummaryBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tableToolbar {
+    justify-content: stretch;
+  }
+
+  .searchField {
+    width: 100%;
+  }
+
+  .regionPickerRow,
+  .regionPickerSummary {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sportCard,
+  .sportCardControls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .detailModalGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Admin tab active-state recovery: only the selected tab should be highlighted. */
+.pageTabs .tabButton,
+.pageTabs button:first-child:not(.tabButtonCurrent) {
+  border: 1px solid #dbe3ef !important;
+  background: #ffffff !important;
+  color: #53657c !important;
+  box-shadow: none !important;
+}
+
+.pageTabs .tabButtonCurrent,
+.pageTabs .tabButtonCurrent:hover,
+.pageTabs button.tabButtonCurrent:first-child {
+  border-color: #2563eb !important;
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 56%, #1d4ed8 100%) !important;
+  color: #ffffff !important;
+  box-shadow:
+    0 8px 18px rgba(37, 99, 235, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+.pageTabs .tabButtonCurrent::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 8px;
+  border-radius: 999px;
+  background: currentColor;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.18);
+}
+
+/* Admin console redesign: keep current features, present them as an operation tower. */
+.page {
+  width: min(1440px, calc(100% - 48px)) !important;
+  gap: 18px !important;
+  padding: 22px 0 42px !important;
+  background:
+    linear-gradient(rgba(37, 99, 235, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, #f7fbff 0%, #eef6ff 42%, #f8fafc 100%) !important;
+  background-size: 42px 42px, 42px 42px, auto !important;
+}
+
+.adminShell {
+  display: grid;
+  grid-template-columns: 244px minmax(0, 1fr);
+  gap: 22px;
+  min-height: 760px;
+  padding: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 22px 56px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.adminSidebar {
+  position: sticky;
+  top: 18px;
+  align-self: start;
+  display: grid;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid rgba(30, 64, 175, 0.16);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #0f3673 0%, #123d7d 56%, #0f2f64 100%);
+  color: #ffffff;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.16);
+}
+
+.adminBrand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.adminBrand > span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #174ea6;
+  font-size: 1.25rem;
+  font-weight: 950;
+}
+
+.adminBrand strong,
+.adminBrand small {
+  display: block;
+}
+
+.adminBrand strong {
+  font-size: 1rem;
+  font-weight: 950;
+}
+
+.adminBrand small {
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.adminNav {
+  display: grid;
+  gap: 8px;
+}
+
+.adminNavButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.92rem;
+  font-weight: 850;
+  text-align: left;
+}
+
+.adminNavButtonActive,
+.adminNavButton:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+.adminNavDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.72;
+}
+
+.adminSidebarStatus {
+  display: grid;
+  gap: 5px;
+  margin-top: 8px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.adminSidebarStatus span,
+.adminSidebarStatus small {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.adminSidebarStatus strong {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.adminWorkspace {
+  display: grid;
+  min-width: 0;
+  gap: 18px;
+}
+
+.pageTitle {
+  align-items: center !important;
+  padding: 18px 20px !important;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.045);
+}
+
+.adminEyebrow {
+  display: inline-flex;
+  margin-bottom: 7px;
+  color: #1d4ed8;
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.06em;
+}
+
+.pageTitle h1 {
+  margin-bottom: 7px !important;
+  color: #12366d !important;
+  font-size: clamp(1.8rem, 3vw, 2.45rem) !important;
+  letter-spacing: -0.02em !important;
+}
+
+.pageTitle p {
+  color: #53657c !important;
+  font-size: 0.96rem;
+  line-height: 1.65 !important;
+}
+
+.adminTopMeta {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+  min-width: 132px;
+}
+
+.adminTopMeta span {
+  color: #64748b;
+  font-size: 0.74rem;
+  font-weight: 850;
+}
+
+.adminTopMeta strong {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  border-radius: 999px;
+  background: #ecfdf5;
+  color: #047857;
+  font-size: 0.84rem;
+  font-weight: 950;
+}
+
+.statGrid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.summaryCardMembers,
+.summaryCardMeetings,
+.summaryCardReports,
+.summaryCardSports {
+  min-height: 136px;
+  padding: 18px !important;
+  border: 1px solid rgba(148, 163, 184, 0.22) !important;
+  border-radius: 14px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.045) !important;
+}
+
+.summaryEyebrow {
+  color: #64748b !important;
+  font-size: 0.76rem !important;
+  font-weight: 900 !important;
+}
+
+.summaryCardMembers strong,
+.summaryCardMeetings strong,
+.summaryCardReports strong,
+.summaryCardSports strong {
+  display: block;
+  margin: 10px 0 8px;
+  color: #0f3673 !important;
+  font-size: 2rem !important;
+  line-height: 1;
+}
+
+.summaryCaption {
+  color: #64748b !important;
+  font-size: 0.8rem !important;
+  line-height: 1.5 !important;
+}
+
+.pageTabsShell {
+  width: 100%;
+  margin: 0 !important;
+  padding: 7px !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.86) !important;
+}
+
+.pageTabs {
+  width: 100%;
+}
+
+.pageTabs .tabButton {
+  min-height: 40px;
+  border-radius: 10px !important;
+}
+
+.filterPanel,
+.tableCard {
+  border: 1px solid rgba(148, 163, 184, 0.22) !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05) !important;
+}
+
+.filterPanel {
+  display: grid;
+  gap: 14px;
+  padding: 16px !important;
+}
+
+.filterHead {
+  padding: 0 !important;
+}
+
+.filterHead h2,
+.tableHead h2 {
+  color: #12366d !important;
+  font-size: 1.14rem !important;
+}
+
+.filterSummaryBar,
+.regionPickerRow,
+.categorySection,
+.filterMeta,
+.tableToolbar {
+  border-radius: 12px !important;
+  background: #f8fbff !important;
+}
+
+.tableCard {
+  overflow: hidden;
+}
+
+.tableHead {
+  padding: 18px 20px !important;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tableToolbar {
+  margin: 0 20px 14px;
+  padding: 12px !important;
+}
+
+.tableCard table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.tableCard th {
+  height: 46px;
+  background: #12366d !important;
+  color: #ffffff !important;
+  font-size: 0.78rem !important;
+}
+
+.tableCard td {
+  height: 58px;
+  border-bottom: 1px solid #edf2f7 !important;
+  color: #24364b !important;
+}
+
+.badge {
+  min-height: 28px;
+  border-radius: 999px !important;
+}
+
+@media (max-width: 1100px) {
+  .adminShell {
+    grid-template-columns: 1fr;
+  }
+
+  .adminSidebar {
+    position: static;
+  }
+
+  .adminNav {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .adminSidebarStatus {
+    display: none;
+  }
+
+  .statGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    width: min(100%, calc(100% - 18px)) !important;
+    padding-top: 10px !important;
+  }
+
+  .adminShell {
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .adminNav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pageTitle,
+  .filterHead,
+  .tableHead {
+    align-items: stretch !important;
+    flex-direction: column;
+  }
+
+  .adminTopMeta {
+    justify-items: start;
+  }
+
+  .statGrid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Admin dashboard visual pass: closer to the PPT reference layout. */
+.page {
+  width: min(1480px, calc(100% - 44px)) !important;
+  min-height: calc(100vh - 32px) !important;
+  padding: 24px 0 48px !important;
+  background:
+    linear-gradient(rgba(59, 130, 246, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.075) 1px, transparent 1px),
+    radial-gradient(circle at 16% 4%, rgba(96, 165, 250, 0.18), transparent 34%),
+    linear-gradient(180deg, #eff8ff 0%, #f8fbff 54%, #eef7ff 100%) !important;
+  background-size: 34px 34px, 34px 34px, auto, auto !important;
+}
+
+.adminShell {
+  grid-template-columns: 232px minmax(0, 1fr) !important;
+  gap: 0 !important;
+  min-height: 840px !important;
+  padding: 0 !important;
+  overflow: hidden;
+  border: 1px solid #bfd8ff !important;
+  border-radius: 22px !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  box-shadow:
+    0 26px 58px rgba(37, 99, 235, 0.14),
+    0 2px 0 rgba(255, 255, 255, 0.8) inset !important;
+  backdrop-filter: blur(14px);
+}
+
+.adminSidebar {
+  position: relative !important;
+  top: auto !important;
+  align-self: stretch !important;
+  align-content: start;
+  min-height: 840px;
+  padding: 26px 18px !important;
+  border: 0 !important;
+  border-right: 1px solid #e5edf8 !important;
+  border-radius: 0 !important;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%) !important;
+  color: #0f172a !important;
+  box-shadow: none !important;
+}
+
+.adminBrand {
+  gap: 10px !important;
+  padding: 0 10px 26px !important;
+  border-bottom: 0 !important;
+}
+
+.adminBrand > span {
+  width: 36px !important;
+  height: 30px !important;
+  border-radius: 9px !important;
+  background: linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%) !important;
+  color: #ffffff !important;
+  font-size: 1.18rem !important;
+  box-shadow: 0 10px 18px rgba(37, 99, 235, 0.25);
+}
+
+.adminBrand strong {
+  color: #071633 !important;
+  font-size: 1.24rem !important;
+  font-weight: 950 !important;
+  letter-spacing: -0.04em;
+}
+
+.adminBrand small {
+  display: none !important;
+}
+
+.adminNav {
+  gap: 8px !important;
+}
+
+.adminNavButton {
+  position: relative;
+  min-height: 46px !important;
+  padding: 0 14px !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  color: #536179 !important;
+  font-size: 0.92rem !important;
+  font-weight: 850 !important;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.adminNavButton:hover {
+  transform: translateX(2px);
+  background: #f3f7ff !important;
+  color: #2563eb !important;
+}
+
+.adminNavButtonActive {
+  background: linear-gradient(135deg, #eef5ff 0%, #f7fbff 100%) !important;
+  color: #2563eb !important;
+  box-shadow: inset 3px 0 0 #2f7df6, 0 8px 20px rgba(37, 99, 235, 0.08);
+}
+
+.adminNavDot {
+  display: grid !important;
+  place-items: center;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 8px !important;
+  background: #f1f5fb !important;
+  opacity: 1 !important;
+}
+
+.adminNavDot::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  background: currentColor;
+}
+
+.adminNavButtonActive .adminNavDot {
+  background: #dbeafe !important;
+}
+
+.adminSidebarStatus {
+  align-self: end;
+  margin-top: 210px !important;
+  padding: 16px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.adminSidebarStatus span,
+.adminSidebarStatus small {
+  color: #64748b !important;
+  font-size: 0.76rem !important;
+}
+
+.adminSidebarStatus strong {
+  color: #ef4444 !important;
+  font-size: 2.15rem !important;
+}
+
+.adminWorkspace {
+  gap: 16px !important;
+  padding: 0 24px 24px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.pageTitle {
+  min-height: 86px;
+  margin: 0 -24px 8px !important;
+  padding: 20px 24px !important;
+  border: 0 !important;
+  border-bottom: 1px solid #e5edf8 !important;
+  border-radius: 0 !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: none !important;
+}
+
+.adminEyebrow {
+  display: none !important;
+}
+
+.pageTitle h1 {
+  margin: 0 0 6px !important;
+  color: #0f1f3d !important;
+  font-size: 1.45rem !important;
+  font-weight: 950 !important;
+}
+
+.pageTitle p {
+  color: #66758c !important;
+  font-size: 0.86rem !important;
+  line-height: 1.45 !important;
+}
+
+.adminTopMeta {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: 230px;
+}
+
+.adminTopMeta::before {
+  content: "A";
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0f58c7 0%, #0b3f9a 100%);
+  color: #ffffff;
+  font-weight: 950;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.22);
+}
+
+.adminTopMeta span {
+  color: #0f1f3d !important;
+  font-size: 0.86rem !important;
+  font-weight: 950 !important;
+}
+
+.adminTopMeta strong {
+  min-height: auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #64748b !important;
+  font-size: 0.76rem !important;
+  font-weight: 800 !important;
+}
+
+.statGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.summaryCardMembers,
+.summaryCardMeetings,
+.summaryCardReports,
+.summaryCardSports {
+  position: relative;
+  min-height: 118px !important;
+  padding: 20px 20px 16px 82px !important;
+  border: 1px solid #dbe4f0 !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06) !important;
+}
+
+.summaryCardMembers::before,
+.summaryCardMeetings::before,
+.summaryCardReports::before,
+.summaryCardSports::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  box-shadow: 0 12px 22px rgba(37, 99, 235, 0.18);
+}
+
+.summaryCardMembers::before {
+  background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+}
+
+.summaryCardMeetings::before {
+  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+}
+
+.summaryCardReports::before {
+  background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
+}
+
+.summaryCardSports::before {
+  background: linear-gradient(135deg, #22c55e 0%, #86efac 100%);
+}
+
+.summaryCardMembers::after,
+.summaryCardMeetings::after,
+.summaryCardReports::after,
+.summaryCardSports::after {
+  position: absolute !important;
+  left: 37px !important;
+  top: 35px !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 950;
+  box-shadow: none !important;
+}
+
+.summaryCardMembers::after {
+  content: "U" !important;
+}
+
+.summaryCardMeetings::after {
+  content: "M" !important;
+}
+
+.summaryCardReports::after {
+  content: "R" !important;
+}
+
+.summaryCardSports::after {
+  content: "S" !important;
+}
+
+.summaryEyebrow {
+  color: #475569 !important;
+  font-size: 0.82rem !important;
+  font-weight: 850 !important;
+}
+
+.summaryCardMembers strong,
+.summaryCardMeetings strong,
+.summaryCardReports strong,
+.summaryCardSports strong {
+  margin: 6px 0 8px !important;
+  color: #08142f !important;
+  font-size: 1.72rem !important;
+  font-weight: 950 !important;
+}
+
+.summaryCaption {
+  color: #64748b !important;
+  font-size: 0.76rem !important;
+}
+
+.filterPanel,
+.tableCard {
+  border: 1px solid #dfe7f2 !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.055) !important;
+}
+
+.filterPanel {
+  gap: 12px !important;
+  padding: 14px 18px !important;
+}
+
+.filterHead h2,
+.tableHead h2 {
+  color: #0f1f3d !important;
+  font-size: 1.03rem !important;
+  font-weight: 950 !important;
+}
+
+.filterHead p,
+.tableHead p {
+  color: #6b778c !important;
+  font-size: 0.82rem !important;
+}
+
+.filterSummaryBar,
+.regionPickerRow,
+.categorySection,
+.filterMeta,
+.tableToolbar {
+  border: 1px solid #edf2f7 !important;
+  border-radius: 10px !important;
+  background: #f8fbff !important;
+}
+
+.tableHead {
+  padding: 16px 20px !important;
+  border-bottom: 1px solid #e5edf8 !important;
+  background: #ffffff !important;
+}
+
+.tableToolbar {
+  margin: 0 20px 12px !important;
+  padding: 12px !important;
+}
+
+.tableCard th {
+  height: 42px !important;
+  border-top: 1px solid #edf2f7 !important;
+  border-bottom: 1px solid #e5eaf2 !important;
+  background: #f8fafc !important;
+  color: #44546a !important;
+  font-size: 0.76rem !important;
+  font-weight: 900 !important;
+}
+
+.tableCard td {
+  height: 50px !important;
+  border-bottom: 1px solid #edf2f7 !important;
+  color: #253348 !important;
+  font-size: 0.84rem !important;
+}
+
+.tableCard tr:hover td {
+  background: #f8fbff !important;
+}
+
+.tableCard td button,
+.filterHead button,
+.regionPickerButton {
+  border-radius: 8px !important;
+  border-color: #d4e0ee !important;
+  background: #ffffff !important;
+  color: #37506f !important;
+  font-weight: 850 !important;
+}
+
+.tableCard td button:hover,
+.filterHead button:hover,
+.regionPickerButton:hover {
+  border-color: #93c5fd !important;
+  background: #eef6ff !important;
+  color: #2563eb !important;
+}
+
+@media (max-width: 1100px) {
+  .adminShell {
+    grid-template-columns: 1fr !important;
+  }
+
+  .adminSidebar {
+    min-height: auto;
+    border-right: 0 !important;
+    border-bottom: 1px solid #e5edf8 !important;
+  }
+
+  .adminSidebarStatus {
+    margin-top: 0 !important;
+  }
+
+  .adminWorkspace {
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    width: min(100%, calc(100% - 16px)) !important;
+    padding-top: 10px !important;
+  }
+
+  .adminShell {
+    border-radius: 16px !important;
+  }
+
+  .adminWorkspace {
+    padding: 0 12px 16px !important;
+  }
+
+  .pageTitle {
+    margin-inline: -12px !important;
+    padding: 16px 12px !important;
+  }
+
+  .summaryCardMembers,
+  .summaryCardMeetings,
+  .summaryCardReports,
+  .summaryCardSports {
+    padding-left: 76px !important;
+  }
+}
+
+/* Admin refinements requested after preview. */
+.page {
+  background: #f6f8fb !important;
+}
+
+.adminShell {
+  overflow: visible !important;
+  border-color: #dde7f3 !important;
+  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.08) !important;
+}
+
+.adminSidebar {
+  position: sticky !important;
+  top: 16px !important;
+  align-self: start !important;
+  min-height: auto !important;
+  max-height: calc(100vh - 32px);
+}
+
+.adminSidebarStatus {
+  display: none !important;
+}
+
+#meetings.tableCard {
+  overflow-x: auto;
+}
+
+#meetings table {
+  table-layout: fixed;
+  min-width: 1080px;
+}
+
+#meetings th:nth-child(1),
+#meetings td:nth-child(1) {
+  width: 84px;
+}
+
+#meetings th:nth-child(2),
+#meetings td:nth-child(2) {
+  width: 230px;
+}
+
+#meetings th:nth-child(3),
+#meetings td:nth-child(3) {
+  width: 118px;
+}
+
+#meetings th:nth-child(4),
+#meetings td:nth-child(4) {
+  width: 132px;
+}
+
+#meetings th:nth-child(5),
+#meetings td:nth-child(5) {
+  width: 120px;
+}
+
+#meetings th:nth-child(6),
+#meetings td:nth-child(6) {
+  width: 150px;
+}
+
+#meetings th:nth-child(7),
+#meetings td:nth-child(7) {
+  width: 94px;
+  text-align: center;
+}
+
+#meetings th:nth-child(8),
+#meetings td:nth-child(8) {
+  width: 112px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#meetings td:nth-child(2) {
+  overflow: hidden;
+}
+
+#meetings .stackCell {
+  min-width: 0;
+}
+
+#meetings .stackCell strong {
+  display: -webkit-box !important;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: normal !important;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+#meetings .stackCell span {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#meetings .badge {
+  display: inline-flex;
+  justify-content: center;
+  min-width: 76px;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+@media (max-width: 1100px) {
+  .adminSidebar {
+    position: static !important;
+    max-height: none;
+  }
+}

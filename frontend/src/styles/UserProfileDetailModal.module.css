@@ -1,0 +1,624 @@
+.modalOverlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(15, 23, 42, 0.46) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 2000 !important;
+  animation: fadeIn 0.22s ease-out !important;
+}
+
+/* Report flow cleanup */
+.reportTargetCard {
+  display: grid !important;
+  gap: 6px !important;
+  padding: 14px !important;
+  border: 1px solid #fee2e2 !important;
+  border-radius: 18px !important;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(248, 113, 113, 0.13), transparent 34%),
+    linear-gradient(180deg, #fff7f7 0%, #ffffff 100%) !important;
+}
+
+.reportTargetCard span {
+  color: #ef4444 !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+}
+
+.reportTargetCard strong {
+  color: #111827 !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+}
+
+.reportTargetCard p {
+  display: none !important;
+}
+
+.reportGuide {
+  display: none !important;
+}
+
+.reportGuideList {
+  display: none !important;
+  gap: 6px !important;
+  padding: 14px 16px !important;
+  border: 1px solid #dbeafe !important;
+  border-radius: 16px !important;
+  background: #eff6ff !important;
+}
+
+.reportGuideList strong {
+  color: #1d4ed8 !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+}
+
+.reportGuideList span {
+  color: #475569 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  line-height: 1.55 !important;
+}
+
+.reasonChoiceGrid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 7px !important;
+}
+
+.reasonChoiceButton,
+.reasonChoiceActive {
+  min-height: 50px !important;
+  padding: 10px 11px !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 14px !important;
+  background: #ffffff !important;
+  color: #334155 !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  transition:
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease !important;
+}
+
+.reasonChoiceButton:hover {
+  border-color: #bfdbfe !important;
+  background: #f8fbff !important;
+  transform: translateY(-1px) !important;
+}
+
+.reasonChoiceActive {
+  border-color: #ef4444 !important;
+  background: #fff7ed !important;
+  box-shadow: 0 10px 22px rgba(239, 68, 68, 0.12) !important;
+}
+
+.reasonChoiceButton strong,
+.reasonChoiceActive strong {
+  display: block !important;
+  margin-bottom: 4px !important;
+  color: #111827 !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+}
+
+.reasonChoiceButton span,
+.reasonChoiceActive span {
+  display: none !important;
+  color: #64748b !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+}
+
+.reportForm .formField:has(#reportReasonSelect) {
+  display: none !important;
+}
+
+.reportMetaRow {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  color: #94a3b8 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+}
+
+.customReasonPreview {
+  display: grid !important;
+  gap: 4px !important;
+  padding: 10px 12px !important;
+  border: 1px solid #fed7aa !important;
+  border-radius: 12px !important;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(251, 146, 60, 0.16), transparent 34%),
+    linear-gradient(180deg, #fff7ed 0%, #ffffff 100%) !important;
+}
+
+.customReasonPreview span {
+  color: #c2410c !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+}
+
+.customReasonPreview strong {
+  color: #111827 !important;
+  font-size: 13px !important;
+  font-weight: 950 !important;
+  line-height: 1.45 !important;
+  word-break: break-word !important;
+}
+
+.reportForm {
+  gap: 12px !important;
+}
+
+.reportForm textarea {
+  min-height: 104px !important;
+}
+
+.reportError {
+  margin: 0 !important;
+  padding: 11px 13px !important;
+  border: 1px solid #fecaca !important;
+  border-radius: 14px !important;
+  background: #fef2f2 !important;
+  color: #dc2626 !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  line-height: 1.5 !important;
+}
+
+.cancelReportButton:disabled,
+.submitReportButton:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.62 !important;
+  transform: none !important;
+}
+
+@media (max-width: 520px) {
+  .reasonChoiceGrid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.modalContent {
+  width: 90% !important;
+  max-width: 460px !important;
+  min-height: 480px !important;
+  background: #ffffff !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(148, 163, 184, 0.16) !important;
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.12) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  animation: slideUp 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.modalHeader {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 18px 24px !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.modalHeader h2 {
+  margin: 0 !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+}
+
+.closeIconButton {
+  border: 0 !important;
+  background: transparent !important;
+  color: #94a3b8 !important;
+  cursor: pointer !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+}
+
+.closeIconButton:hover {
+  background: #f1f5f9 !important;
+  color: #475569 !important;
+}
+
+.closeIconButton svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.modalBody {
+  padding: 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+/* 👥 프로필 카드 메인부 */
+.profileContainer {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+}
+
+.profileMainRow {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  gap: 16px !important;
+}
+
+.profileAvatar {
+  width: 72px !important;
+  height: 72px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08) !important;
+  flex-shrink: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+}
+
+.profileAvatarFallback {
+  width: 72px !important;
+  height: 72px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(145deg, #e0f2fe, #bae6fd) !important;
+  border: 1px solid rgba(148, 163, 184, 0.18) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06) !important;
+  flex-shrink: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+}
+
+.fallbackIcon {
+  width: 32px !important;
+  height: 32px !important;
+  color: #0284c7 !important;
+}
+
+.profileMetaGroup {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;
+  min-width: 0 !important;
+}
+
+.nicknameText {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  letter-spacing: -0.03em !important;
+}
+
+.metaJoinDate {
+  font-size: 13px !important;
+  color: #0ea5e9 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.metaSubText {
+  font-size: 13px !important;
+  color: #64748b !important;
+  font-weight: 600 !important;
+}
+
+/* 🏆 관심 스포츠 칩 리스트 (3줄 높이 제한 및 커스텀 스크롤) */
+.sportsSection {
+  margin-top: 6px !important;
+}
+
+.sportsChipsWrapper {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important; /* 칩 중앙 정렬 및 줄바꿈 시에도 가운데 정렬 보장 */
+  gap: 8px !important;
+  max-height: 112px !important; /* 3줄만 완벽하게 보이고 4번째 줄은 단 1px도 안보이도록 칼같이 제한 */
+  overflow-y: auto !important;
+  padding-right: 4px !important;
+}
+
+/* 칩 스크롤바 커스텀 */
+.sportsChipsWrapper::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+.sportsChipsWrapper::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.sportsChipsWrapper::-webkit-scrollbar-thumb {
+  border-radius: 999px !important;
+  background: #cbd5e1 !important;
+}
+
+.sportChip {
+  padding: 6px 14px !important;
+  background: #f1f5f9 !important;
+  color: #475569 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  border-radius: 999px !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.sportChip:hover {
+  background: #e2e8f0 !important;
+  color: #1e293b !important;
+}
+
+.emptySports {
+  font-size: 13px !important;
+  color: #94a3b8 !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  padding: 16px 0 !important;
+  background: #f8fafc !important;
+  border-radius: 14px !important;
+}
+
+/* 🚨 신고화면 폼 스타일링 */
+.reportForm {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.reportGuide {
+  margin: 0 !important;
+  font-size: 13px !important;
+  color: #475569 !important;
+  line-height: 1.6 !important;
+  font-weight: 500 !important;
+}
+
+.reportGuide strong {
+  color: #0f172a !important;
+  font-weight: 800 !important;
+}
+
+.formField {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.formField label {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  color: #475569 !important;
+}
+
+.formField select,
+.formField textarea,
+.customReasonInput {
+  border: 1px solid rgba(148, 163, 184, 0.24) !important;
+  background: #f8fafc !important;
+  border-radius: 12px !important;
+  font: inherit !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  outline: 0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.formField select:focus,
+.formField textarea:focus,
+.customReasonInput:focus {
+  border-color: #3b82f6 !important;
+  background: #ffffff !important;
+}
+
+.formField select {
+  height: 42px !important;
+  padding: 0 12px !important;
+}
+
+.formField textarea {
+  min-height: 140px !important; /* 상세 내용 입력창 크기 대폭 확대 */
+  padding: 10px 12px !important;
+  resize: none !important;
+  line-height: 1.5 !important;
+  font-size: 13px !important;
+}
+
+.reportActions {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
+  margin-top: 6px !important;
+}
+
+.cancelReportButton {
+  height: 44px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
+  color: #475569 !important;
+  font-weight: 800 !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+}
+
+.cancelReportButton:hover {
+  background: #f8fafc !important;
+  color: #1e293b !important;
+}
+
+.submitReportButton {
+  height: 44px !important;
+  border: 0 !important;
+  background: linear-gradient(135deg, #ef4444, #f97316) !important; /* WeMove dangerButton 그라데이션 통일 */
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  font-size: 15px !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  box-shadow: 0 6px 14px rgba(239, 68, 68, 0.2) !important;
+  transition: all 0.2s ease !important;
+}
+
+.submitReportButton:hover {
+  background: linear-gradient(135deg, #dc2626, #ea580c) !important;
+  box-shadow: 0 8px 18px rgba(239, 68, 68, 0.28) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* 🔘 모달 푸터 액션 */
+.modalFooter {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 16px 24px !important;
+  background: #f8fafc !important;
+  border-top: 1px solid #f1f5f9 !important;
+}
+
+.footerActions {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.directChatButton {
+  height: 34px !important;
+  border: 0 !important;
+  background: #2563eb !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 12px !important;
+  border-radius: 10px !important;
+  transition: all 0.2s ease !important;
+}
+
+.directChatButton:hover {
+  background: #1d4ed8 !important;
+}
+
+.reportTriggerButton {
+  border: 0 !important;
+  background: transparent !important;
+  color: #ef4444 !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 12px !important;
+  border-radius: 10px !important;
+  transition: all 0.2s ease !important;
+}
+
+.reportTriggerButton:hover {
+  background: #fef2f2 !important;
+}
+
+.reportTriggerButton svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.myProfileTag {
+  font-size: 12px !important;
+  color: #0ea5e9 !important;
+  background: #f0f9ff !important;
+  border: 1px solid rgba(14, 165, 233, 0.16) !important;
+  padding: 4px 10px !important;
+  border-radius: 8px !important;
+  font-weight: 800 !important;
+}
+
+.closeFooterButton {
+  height: 38px !important;
+  padding: 0 18px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
+  color: #475569 !important;
+  font-weight: 800 !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.closeFooterButton:hover {
+  background: #f1f5f9 !important;
+  color: #1f2937 !important;
+}
+
+/* 🎬 애니메이션 효과 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🚨 직접 입력 인풋창 세부 비주얼 디테일 튜닝 */
+.customReasonInput {
+  height: 44px !important; /* 42px와 46px의 최적 접점인 44px로 조율 */
+  border-radius: 12px !important; /* 아래 상세내용 textarea와 100% 동일하게 12px로 통일 */
+  font-size: 13px !important;
+  padding: 0 14px !important;
+}
+
+.customReasonInput::placeholder {
+  font-size: 13px !important; /* 아래 textarea 플레이스홀더 크기와 동일화 */
+  font-weight: 500 !important; /* 아래 textarea 플레이스홀더 굵기와 동일화 */
+  color: #475569 !important; /* 아래 textarea 플레이스홀더 색상과 100% 동일하게 통일 */
+}
+
+.formField textarea::placeholder {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #475569 !important; /* 상세내용 플레이스홀더 색상 명시 고정 */
+}
+
+/* ==========================================
+   👤 기본 프로필 이미지 전용 스케일 다운 및 Contain 튜닝 (2px)
+   ========================================== */
+.profileAvatar[src*="default-user"] {
+  object-fit: contain !important;
+  padding: 2px !important; /* 패딩 2px 미세 조정 반영 */
+  background: #f1f5f9 !important; /* 캐릭터가 돋보이도록 깔끔한 은회색 백그라운드 매핑 */
+}

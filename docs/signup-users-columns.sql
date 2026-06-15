@@ -1,0 +1,3 @@
+ALTER TABLE users
+  ADD COLUMN IF NOT EXISTS birthyear INT NULL COMMENT '출생년도',
+  ADD COLUMN IF NOT EXISTS gender INT NULL COMMENT '성별: 1=남성, 2=여성';

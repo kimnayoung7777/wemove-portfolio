@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="directChat">
+
+    <select id="selectRooms" resultType="kr.co.iei.chat.model.vo.DirectChatRoomResponse">
+        SELECT
+            r.roomId,
+            target.userId AS targetUserId,
+            target.nickname AS targetNickname,
+            target.profileImage AS targetProfileImage,
+            lm.messageId AS lastMessageId,
+            lm.content AS lastMessage,
+            DATE_FORMAT(lm.createdAt, '%Y-%m-%d %H:%i:%s') AS lastMessageAt
+        FROM directChatRooms r
+        JOIN directChatParticipants me
+          ON me.roomId = r.roomId
+         AND me.userId = #{userId}
+        JOIN directChatParticipants other
+          ON other.roomId = r.roomId
+         AND other.userId != #{userId}
+        JOIN users target
+          ON target.userId = other.userId
+        LEFT JOIN directChatMessages lm
+          ON lm.messageId = (
+            SELECT dcm.messageId
+            FROM directChatMessages dcm
+            WHERE dcm.roomId = r.roomId
+            ORDER BY dcm.createdAt DESC, dcm.messageId DESC
+            LIMIT 1
+          )
+        WHERE r.isActive = 1
+          AND (
+              me.leftAt IS NULL
+              OR EXISTS (
+                  SELECT 1
+                  FROM directChatMessages visibleMessage
+                  WHERE visibleMessage.roomId = r.roomId
+                    AND visibleMessage.createdAt > me.leftAt
+              )
+          )
+        ORDER BY COALESCE(lm.createdAt, r.updatedAt, r.createdAt) DESC, r.roomId DESC
+    </select>
+
+    <select id="selectRoom" resultType="kr.co.iei.chat.model.vo.DirectChatRoomResponse">
+        SELECT
+            r.roomId,
+            target.userId AS targetUserId,
+            target.nickname AS targetNickname,
+            target.profileImage AS targetProfileImage,
+            lm.messageId AS lastMessageId,
+            lm.content AS lastMessage,
+            DATE_FORMAT(lm.createdAt, '%Y-%m-%d %H:%i:%s') AS lastMessageAt
+        FROM directChatRooms r
+        JOIN directChatParticipants me
+          ON me.roomId = r.roomId
+         AND me.userId = #{userId}
+        JOIN directChatParticipants other
+          ON other.roomId = r.roomId
+         AND other.userId != #{userId}
+        JOIN users target
+          ON target.userId = other.userId
+        LEFT JOIN directChatMessages lm
+          ON lm.messageId = (
+            SELECT dcm.messageId
+            FROM directChatMessages dcm
+            WHERE dcm.roomId = r.roomId
+            ORDER BY dcm.createdAt DESC, dcm.messageId DESC
+            LIMIT 1
+          )
+        WHERE r.roomId = #{roomId}
+    </select>
+
+    <select id="canAccessDirectChat" resultType="int">
+        SELECT COUNT(*)
+        FROM meetings m
+        WHERE m.deletedAt IS NULL
+          AND (
+            m.hostUserId = #{userId}
+            OR EXISTS (
+                SELECT 1
+                FROM meetingParticipants mp
+                WHERE mp.meetingId = m.meetingId
+                  AND mp.userId = #{userId}
+                  AND mp.status = 'APPROVED'
+            )
+          )
+          AND (
+            m.hostUserId = #{targetUserId}
+            OR EXISTS (
+                SELECT 1
+                FROM meetingParticipants targetMp
+                WHERE targetMp.meetingId = m.meetingId
+                  AND targetMp.userId = #{targetUserId}
+                  AND targetMp.status = 'APPROVED'
+            )
+          )
+    </select>
+
+    <select id="selectExistingRoomId" resultType="long">
+        SELECT p1.roomId
+        FROM directChatParticipants p1
+        JOIN directChatParticipants p2
+          ON p2.roomId = p1.roomId
+        WHERE p1.userId = #{userId}
+          AND p2.userId = #{targetUserId}
+        LIMIT 1
+    </select>
+
+    <update id="reactivateRoom">
+        UPDATE directChatRooms
+        SET isActive = 1,
+            updatedAt = NOW()
+        WHERE roomId = #{roomId}
+    </update>
+
+    <insert id="insertRoom" parameterType="kr.co.iei.chat.model.vo.DirectChatRoom" useGeneratedKeys="true" keyProperty="roomId">
+        INSERT INTO directChatRooms(
+            createdAt,
+            updatedAt
+        )
+        VALUES(
+            NOW(),
+            NOW()
+        )
+    </insert>
+
+    <insert id="insertParticipant">
+        INSERT INTO directChatParticipants(
+            roomId,
+            userId
+        )
+        VALUES(
+            #{roomId},
+            #{userId}
+        )
+    </insert>
+
+    <select id="canAccessRoom" resultType="int">
+        SELECT COUNT(*)
+        FROM directChatRooms r
+        JOIN directChatParticipants p
+          ON p.roomId = r.roomId
+         AND p.userId = #{userId}
+        WHERE r.roomId = #{roomId}
+          AND r.isActive = 1
+    </select>
+
+    <select id="selectMessages" resultType="kr.co.iei.chat.model.vo.DirectChatMessageResponse">
+        SELECT
+            recent.messageId,
+            recent.roomId,
+            recent.userId,
+            recent.nickname,
+            recent.profileImage,
+            recent.content,
+            recent.messageType,
+            recent.createdAt
+        FROM (
+            SELECT
+                dcm.messageId,
+                dcm.roomId,
+                dcm.userId,
+                u.nickname,
+                u.profileImage,
+                dcm.content,
+                dcm.messageType,
+                dcm.createdAt
+            FROM directChatMessages dcm
+            JOIN users u
+              ON u.userId = dcm.userId
+            JOIN directChatParticipants viewer
+              ON viewer.roomId = dcm.roomId
+             AND viewer.userId = #{userId}
+            WHERE dcm.roomId = #{roomId}
+              AND (
+                  viewer.leftAt IS NULL
+                  OR dcm.createdAt > viewer.leftAt
+              )
+            ORDER BY dcm.createdAt DESC, dcm.messageId DESC
+            LIMIT #{limit}
+        ) recent
+        ORDER BY recent.createdAt ASC, recent.messageId ASC
+    </select>
+
+    <insert id="insertMessage" parameterType="kr.co.iei.chat.model.vo.DirectChatMessage" useGeneratedKeys="true" keyProperty="messageId">
+        INSERT INTO directChatMessages(
+            roomId,
+            userId,
+            content,
+            messageType
+        )
+        VALUES(
+            #{roomId},
+            #{userId},
+            #{content},
+            #{messageType}
+        )
+    </insert>
+
+    <select id="selectMessage" resultType="kr.co.iei.chat.model.vo.DirectChatMessageResponse">
+        SELECT
+            dcm.messageId,
+            dcm.roomId,
+            dcm.userId,
+            u.nickname,
+            u.profileImage,
+            dcm.content,
+            dcm.messageType,
+            dcm.createdAt
+        FROM directChatMessages dcm
+        JOIN users u
+          ON u.userId = dcm.userId
+        WHERE dcm.messageId = #{messageId}
+    </select>
+
+    <select id="selectNotificationTargetUserIds" resultType="long">
+        SELECT userId
+        FROM directChatParticipants
+        WHERE roomId = #{roomId}
+          AND userId != #{senderUserId}
+    </select>
+
+    <update id="leaveRoom">
+        UPDATE directChatParticipants
+        SET leftAt = NOW()
+        WHERE roomId = #{roomId}
+          AND userId = #{userId}
+    </update>
+
+    <update id="deactivateRoomIfEmpty">
+        UPDATE directChatRooms
+        SET isActive = 0,
+            updatedAt = NOW()
+        WHERE roomId = #{roomId}
+          AND NOT EXISTS (
+              SELECT 1
+              FROM directChatParticipants p
+              WHERE p.roomId = #{roomId}
+                AND p.leftAt IS NULL
+          )
+    </update>
+
+</mapper>
