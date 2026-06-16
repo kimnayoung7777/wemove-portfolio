@@ -148,11 +148,9 @@ const createMarkerImage = async (kakao, meeting) => {
   }
 
   const markerSource = await markerImageCache.get(thumbnailSource);
-  return new kakao.maps.MarkerImage(
-    markerSource,
-    new kakao.maps.Size(58, 68),
-    { offset: new kakao.maps.Point(29, 65) },
-  );
+  return new kakao.maps.MarkerImage(markerSource, new kakao.maps.Size(58, 68), {
+    offset: new kakao.maps.Point(29, 65),
+  });
 };
 
 const createPopup = (meeting, onSelectMeeting, onClose) => {
@@ -201,8 +199,7 @@ const createPopup = (meeting, onSelectMeeting, onClose) => {
 
   const status = document.createElement("span");
   status.className = styles.popupStatus;
-  status.textContent =
-    meeting.status === "RECRUITING" ? "모집중" : "일정 확인";
+  status.textContent = meeting.status === "RECRUITING" ? "모집중" : "일정 확인";
 
   const title = document.createElement("strong");
   title.className = styles.popupTitle;
@@ -298,6 +295,7 @@ export default function MeetingMap({
         setMapStatus("ready");
       })
       .catch((error) => {
+        console.log(error);
         if (!active) {
           return;
         }
@@ -374,39 +372,37 @@ export default function MeetingMap({
       }
 
       const bounds = new kakao.maps.LatLngBounds();
-      const markers = await Promise.all(positionedMeetings.map(async ({ meeting, coordinate }) => {
-        const position = new kakao.maps.LatLng(
-          coordinate.latitude,
-          coordinate.longitude,
-        );
-        const marker = new kakao.maps.Marker({
-          position,
-          image: await createMarkerImage(kakao, meeting),
-          title: meeting.title,
-        });
-        const clickHandler = () => {
-          closeInfoOverlay();
-          infoOverlayRef.current = new kakao.maps.CustomOverlay({
-            map: mapRef.current,
+      const markers = await Promise.all(
+        positionedMeetings.map(async ({ meeting, coordinate }) => {
+          const position = new kakao.maps.LatLng(
+            coordinate.latitude,
+            coordinate.longitude,
+          );
+          const marker = new kakao.maps.Marker({
             position,
-            content: createPopup(
-              meeting,
-              onSelectMeeting,
-              closeInfoOverlay,
-            ),
-            xAnchor: 0.5,
-            yAnchor: 1.35,
-            zIndex: 10,
-            clickable: true,
+            image: await createMarkerImage(kakao, meeting),
+            title: meeting.title,
           });
-          mapRef.current.panTo(position);
-        };
+          const clickHandler = () => {
+            closeInfoOverlay();
+            infoOverlayRef.current = new kakao.maps.CustomOverlay({
+              map: mapRef.current,
+              position,
+              content: createPopup(meeting, onSelectMeeting, closeInfoOverlay),
+              xAnchor: 0.5,
+              yAnchor: 1.35,
+              zIndex: 10,
+              clickable: true,
+            });
+            mapRef.current.panTo(position);
+          };
 
-        kakao.maps.event.addListener(marker, "click", clickHandler);
-        eventListeners.push({ marker, clickHandler });
-        bounds.extend(position);
-        return marker;
-      }));
+          kakao.maps.event.addListener(marker, "click", clickHandler);
+          eventListeners.push({ marker, clickHandler });
+          bounds.extend(position);
+          return marker;
+        }),
+      );
 
       if (!active || !mapRef.current || !clustererRef.current) {
         return;
@@ -457,7 +453,10 @@ export default function MeetingMap({
         <div>
           <span className={styles.eyebrow}>MEETING MAP</span>
           <h2>지도에서 가까운 모임을 찾아보세요</h2>
-          <p>마커를 누르면 장소와 일정을 확인하고 상세 페이지로 이동할 수 있습니다.</p>
+          <p>
+            마커를 누르면 장소와 일정을 확인하고 상세 페이지로 이동할 수
+            있습니다.
+          </p>
         </div>
         <span className={styles.mapCount}>
           <UiIcon name="location" className={styles.mapCountIcon} />
@@ -479,7 +478,9 @@ export default function MeetingMap({
           <div className={styles.mapState}>
             <UiIcon name="location" className={styles.stateIcon} />
             <strong>카카오 지도 키 설정이 필요합니다</strong>
-            <p>Vercel에 VITE_KAKAO_MAP_APP_KEY를 등록하면 실제 지도가 표시됩니다.</p>
+            <p>
+              Vercel에 VITE_KAKAO_MAP_APP_KEY를 등록하면 실제 지도가 표시됩니다.
+            </p>
           </div>
         ) : null}
 
@@ -487,7 +488,9 @@ export default function MeetingMap({
           <div className={styles.mapState}>
             <UiIcon name="location" className={styles.stateIcon} />
             <strong>지도를 불러오지 못했습니다</strong>
-            <p>카카오 개발자 콘솔의 JavaScript 키와 웹 도메인을 확인해주세요.</p>
+            <p>
+              카카오 개발자 콘솔의 JavaScript 키와 웹 도메인을 확인해주세요.
+            </p>
           </div>
         ) : null}
       </div>
