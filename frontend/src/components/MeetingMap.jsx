@@ -295,11 +295,9 @@ export default function MeetingMap({
         setMapStatus("ready");
       })
       .catch((error) => {
-        console.log(error);
         if (!active) {
           return;
         }
-        console.log(error);
         setMapStatus(
           error.message === "KAKAO_MAP_APP_KEY_MISSING"
             ? "missing-key"
