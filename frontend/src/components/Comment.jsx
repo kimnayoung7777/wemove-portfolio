@@ -100,7 +100,6 @@ export default function Comment({meetingId, hostUserId, comments, setComments}) 
                     <p>아직 작성된 댓글이 없습니다. 첫 댓글을 남겨보세요!</p>
                 ) : (
                     parentComments.map((comment) => {
-
                         // 권한 체크
                         const isAuthor = Number(user?.memberId) === Number(comment.writerId);
                         const isHost = Number(user?.memberId) === Number(hostUserId);
@@ -109,7 +108,9 @@ export default function Comment({meetingId, hostUserId, comments, setComments}) 
                         // 현재 부모의 자식 댓글 필터링
                         const childComments = comments.filter(c => c.parentCommentId === comment.commentId);
 
-                        console.log("댓글 삭제 여부:", comment.commentId, comment.isDeleted);
+                        // 💡 핵심 로직: 모임장 삭제(2) 처리
+                        const isDeletedByHost = comment.isDeleted === 2;
+
                         return (
                             <div key={comment.commentId} className={styles.commentGroup}>
 
@@ -125,12 +126,14 @@ export default function Comment({meetingId, hostUserId, comments, setComments}) 
                                             <strong>{comment.nickname}</strong>
                                             <span>{new Date(comment.createdAt).toLocaleString()}</span>
                                         </div>
-                                        <p>{comment.content}</p>
+                                        <p style={isDeletedByHost ? { color: "#999", fontStyle: "italic" } : {}}>
+                                            {isDeletedByHost ? "모임 주최자에 의해 삭제된 댓글입니다." : comment.content}
+                                        </p>
 
                                         {/* 아이콘 액션 버튼 영역 */}
                                         <div className={styles.actionWrap}>
                                             {/* 1. 답글 아이콘 버튼 */}
-                                            {!comment.isDeleted && (
+                                            {!isDeletedByHost && (
 
                                                 <button
                                                     className={styles.iconBtn}
@@ -157,10 +160,8 @@ export default function Comment({meetingId, hostUserId, comments, setComments}) 
                                 </article>
 
                                 {/* --- 대댓글 폼 (리스트 하단에 노출) --- */}
-                                {replyingTo === comment.commentId && !comment.isDeleted && (
+                                {replyingTo === comment.commentId && !isDeletedByHost && (
                                     <div className={styles.replyIndentBox}>
-
-
                                         {/* --- 대댓글 리스트 렌더링 --- */}
                                         {childComments.length > 0 &&  (
                                             <div className={styles.replyIndentBox}>
@@ -168,6 +169,8 @@ export default function Comment({meetingId, hostUserId, comments, setComments}) 
                                                     const isChildAuthor = user?.memberId && child.writerId && String(user.memberId) === String(child.writerId);
                                                     const isChildHost = user?.memberId && hostUserId && String(user.memberId) === String(hostUserId);
                                                     const canChildDelete = isChildAuthor || isChildHost;
+                                                    // 💡 대댓글 삭제 여부 판별
+                                                    const isChildDeletedByHost = child.isDeleted === 2;
 
                                                     return (
                                                         <article key={child.commentId}
@@ -183,10 +186,12 @@ export default function Comment({meetingId, hostUserId, comments, setComments}) 
                                                                     <span>{new Date(child.createdAt).toLocaleString()}</span>
                                                                 </div>
                                                                 <div className={styles.replyContentWrap}>
-                                                                    <p>{child.content}</p>
+                                                                    <p style={isChildDeletedByHost ? { color: "#999", fontStyle: "italic" } : {}}>
+                                                                        {isChildDeletedByHost ? "모임 주최자에 의해 삭제된 댓글입니다." : child.content}
+                                                                    </p>
 
                                                                     {/* 자식 댓글 삭제 휴지통 아이콘 */}
-                                                                    {canChildDelete && (
+                                                                    {!isChildDeletedByHost && canChildDelete && (
                                                                         <div className={styles.actionWrap}>
                                                                             <button
                                                                                 className={`${styles.iconBtn} ${styles.iconBtnTrash}`}
@@ -206,8 +211,8 @@ export default function Comment({meetingId, hostUserId, comments, setComments}) 
                                                 })}
                                             </div>
                                         )}
-                                        {isAuthenticated? (
 
+                                        {isAuthenticated? (
                                         <form
                                             className={styles.replyCommentForm}
                                             onSubmit={(e) => handleReplySubmit(e, comment.commentId)}>
