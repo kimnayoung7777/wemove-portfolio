@@ -69,7 +69,7 @@ const intersectsCalendarDate = (item, targetDate) => {
   dayEnd.setDate(dayEnd.getDate() + 1);
 
   const start = new Date(
-    `${item.meetingDate}T${String(item.startTime).slice(0, 5)}:00`,
+    `${item.meetingDate}T${String(item.startTime).slice(0, 5)}:00`,  
   );
   const rawEndTime = String(item.endTime || "").slice(0, 5);
   const end = new Date(start);
