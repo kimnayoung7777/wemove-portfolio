@@ -123,7 +123,7 @@ export default function Comment({meetingId, hostUserId, comments, setComments}) 
                                     <div>
                                         <div className={styles.commentMeta}>
                                             <strong>{comment.nickname}</strong>
-                                            <span>{new Date(comment.createdAt).toLocaleString()}</span>
+                                            <span>{new Date(new Date(comment.createdAt).getTime() + 9 * 60 * 60 * 1000).toLocaleString("ko-KR")}</span>
                                         </div>
                                         <p>{comment.content}</p>
 
@@ -180,7 +180,7 @@ export default function Comment({meetingId, hostUserId, comments, setComments}) 
                                                             <div>
                                                                 <div className={styles.commentMeta}>
                                                                     <strong>{child.nickname}</strong>
-                                                                    <span>{new Date(child.createdAt).toLocaleString()}</span>
+                                                                    <span>{new Date(new Date(child.createdAt).getTime() + 9 * 60 * 60 * 1000).toLocaleString("ko-KR")}</span>
                                                                 </div>
                                                                 <div className={styles.replyContentWrap}>
                                                                     <p>{child.content}</p>
